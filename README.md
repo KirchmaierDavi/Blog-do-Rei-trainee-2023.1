@@ -1,6 +1,6 @@
 # **Trainee 2023.1**
 
-# **Nome do seu blog**
+# **Blog do Rei**
 
 ## **Projeto Trainee, Code Jr, Grupo 000, 2023.1**
 
@@ -21,13 +21,13 @@
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github, se quiser).
+* [Davi Kirchmaier Paiva](https://github.com/KirchmaierDavi).
 
 #### Links Úteis:
 
-* [Trello]()
+* [Trello](https://trello.com/b/qxcSGBVh/blog-do-rei-20231)
 
-* [Drive com ID Visual]()
+* [Drive com ID Visual](https://trello.com/c/T2FVURgc/1-identidade-visual)
 
 
 
