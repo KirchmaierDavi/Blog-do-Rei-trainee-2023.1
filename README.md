@@ -17,6 +17,7 @@
 * Trainee 2
 * Trainee 3
 * Trainee 4
+* Trainee 5
 
 
 #### Scrum Master:
