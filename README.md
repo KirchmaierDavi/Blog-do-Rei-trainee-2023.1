@@ -45,7 +45,7 @@
 ### Instalação
 
 Pra instalar, basta acessar a página de [downloads](https://git-scm.com/downloads) e seguir as instruções\
-Pra se conectar, utilize os seguinte comandos: <sub>(davi.kirchmaier99@gmail.com)<sub/>
+Pra se conectar, utilize os seguinte comandos: <sub>davi.kirchmaier99@gmail.com<sub/>
 ```
 git config --global user.name "nomeDeUsuario"
 ```
