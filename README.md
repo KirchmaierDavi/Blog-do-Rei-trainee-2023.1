@@ -14,7 +14,7 @@
 #### Desenvolvedores:
 
 * Trainee 1
-* Trainee 2
+* Gabriel Domingos de Souza
 * Trainee 3
 * Trainee 4
 
