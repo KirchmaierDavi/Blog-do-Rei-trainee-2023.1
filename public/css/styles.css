@@ -197,7 +197,16 @@ form {
 
 }
 
-@media (max-width: 870px) {
+@media (max-width: 920px) {
+
+  .container:before {
+    width: 900px;
+    height: 2200px;
+  }
+
+}
+
+@media (max-width: 685px) {
   .container {
     min-height: 800px;
     height: 100vh;
