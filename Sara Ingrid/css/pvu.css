@@ -1,0 +1,99 @@
+body{
+	background: linear-gradient(to bottom, #F0F0F0 0%, black 100%);
+
+}
+
+header img {
+	display: block; 
+	margin: 0 auto; 
+	height: 80px; 
+	width: 300px; 
+	
+}
+.caminho{
+	margin-left: 125px;
+	margin-top:25px;
+	margin-bottom: 10px;
+}
+.caminho li {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  background-color: #D9B328;
+  border-radius: 50px;
+  padding: 4px 10px 4px 10px;
+  margin-bottom: 0px;
+  font-size: 11px;
+}
+.caminho a{
+	color: #070601;
+	text-decoration: none;
+	font-size:11px;
+}
+
+.informations{
+	margin-left: 150px;
+	margin-right: 150px;
+	background-color: white;
+	border-radius: 20px;
+ 	padding: 6px 80px 80px 80px;
+}
+.informations h1{
+	text-align: center;
+	line-height:0.7;
+	font-size: 50px;
+	color: #070601;
+	position: relative;
+	
+	margin-bottom: 70px;
+	font-family: 'Roboto', sans-serif;
+}
+.informations h2{
+	text-align: justify;
+	color: #070601;
+	font-size:15px;
+	margin-top: 30px;
+	font-family: 'Roboto', sans-serif;
+
+}
+.informations h3{
+     color: #070601;
+     font-size: 12px;
+     font-family: 'Roboto', sans-serif;
+}
+.informations img{
+       height:400px;
+  	   width: 600px;
+  	   position: relative;
+  	   element: center;
+
+}
+
+.main a {
+	line-height: 30px;
+	font-size: 10px;
+	font-family: 'Roboto', sans-serif;
+
+}
+.main hr{
+	color: black;
+}
+.container{
+   text-align: center;
+   margin-top:30px;
+   display: block;
+   color: black;
+   margin:0;
+   font-size:12px;
+
+}
+figcaption {
+  grid-column-start: 2;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.voltar a{
+	color: #D9B328;
+	text-decoration: none;
+	font-size:16px;
+}
