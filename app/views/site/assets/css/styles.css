@@ -312,22 +312,22 @@ body{
   }
 
   .navbar-list{
-    display: none;
     position: absolute;
     width: 100%;
-    top: 60px;
+    top: 65px;
     right: 0;
     background-color:#D3A809 ;
-    height: 60px;
+    transition: .6s;
     z-index: 1000;
-
-    transition: all ease-in-out 0.4s;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: auto;
   }
 
   #navbar.active .navbar-list{
-    display: flex;
+    height: 60px;
+    visibility: visible;
 
-    transition: all ease-in-out 0.4s;
   }
 
 
@@ -380,6 +380,8 @@ body{
 }
 
 .footer-social{
+    margin: 10px 0;
+
     text-align: center;
     display: flex;
     flex-direction: column;
