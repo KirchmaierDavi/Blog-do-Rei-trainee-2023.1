@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../public/css/styles.css">
     <link rel="shortcut icon" href="../../../public/assets/logo_sem_texto.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
@@ -16,24 +15,56 @@
 
 </head>
 
-<body class="body-login">
-    <form class="form-login">
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="login">
+                <form action="login.html" class="login-form" method="POST">
 
-        <h3>Login</h3>
+                    <h2 class="title">Login</h2>
 
-        <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Informe seu email" id="usuario" class="input-login">
+                    <div class="input-login">
+                        <i class="fas fa-user"></i>
+                        <input name="login" type="email" placeholder="Email" />
+                    </div>
+
+                    <div class="input-login">
+                        <i class="fas fa-lock"></i>
+                        <input name="password" type="password" placeholder="Senha" />
+                    </div>
+
+                    <input type="submit" value="Entrar" class="btn solid" />
+                    <input type="reset" value="Limpar" class="btn solid" />
+
+                </form>
+            </div>
         </div>
 
-        <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Informe sua senha" id="senha" class="input-login">
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+
+                    <h3>Blog do rei</h3>
+
+                    <p>
+                        Volte ao blog para acompanhar todos os posts. Não perca nenhuma postagem!
+                    </p>
+
+                    <br>
+
+                    <button class="btn transparent">
+                        <a href="./index.html">Voltar</a>
+                    </button>
+
+                </div>
+
+                <img src="../../../public/assets/jogador.png" class="image" alt="Imagem do jogador" />
+
+            </div>
+
         </div>
-
-        <button type="submit" class="button-login">Entrar</button>
-
-    </form>
+    </div>
 </body>
 
 </html>
