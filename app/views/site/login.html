@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../public/css/styles.css">
     <link rel="shortcut icon" href="../../../public/assets/logo_sem_texto.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
     <title>Login</title>
 
@@ -17,13 +18,18 @@
 
 <body class="body-login">
     <form class="form-login">
+
         <h3>Login</h3>
 
-        <label for="usuario" class="label-login">Usuário</label>
-        <input type="text" placeholder="Informe seu email" id="usuario" class="input-login" >
+        <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Informe seu email" id="usuario" class="input-login">
+        </div>
 
-        <label for="senha" class="label-login">Senha</label>
-        <input type="password" placeholder="Informe sua senha" id="senha" class="input-login">
+        <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Informe sua senha" id="senha" class="input-login">
+        </div>
 
         <button type="submit" class="button-login">Entrar</button>
 
