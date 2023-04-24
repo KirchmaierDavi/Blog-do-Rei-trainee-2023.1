@@ -1,0 +1,412 @@
+*{
+    font-family: 'Saira';
+}
+body{
+    font-size: 16px;
+}
+
+.navbar{
+
+    padding-right: 1em;
+    padding-left: 1em;
+    display: flex;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    background-color: transparent;
+    background-image: linear-gradient(4deg, #00000075 0%, #d9b328cc 100%);
+    height: 65px;
+
+    box-shadow: 0px 1px 12px 0px rgba(211,168,9,0.8);
+
+    transition: background-color 1s ease !important;
+}
+
+
+
+.navbar-sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background-color: rgba(0,0,0,0.2)!important; 
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.navbar-logo-image{
+    height: 50px;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.navbar-logo-image:hover{
+    transform: scale(1.05);
+
+    cursor: pointer;
+}
+
+.navbar-btn{
+    display: none;
+}
+
+.navbar-list{
+    display: flex;
+
+    width: 50%;
+
+    justify-content: space-around;
+}
+
+.navbar-list-item{
+    display: flex;
+
+
+    align-items: center;
+
+    font-family: 'Saira';
+    font-size: 1.2em;
+    text-decoration: none;
+    color: black;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.navbar-list-item svg{
+    height: 28px;
+    width: 28px;
+    color: black;
+    padding-right: 5px;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.navbar-list-item:hover{
+    color: #fed647;
+    text-decoration: underline;
+}
+
+.navbar-list-item:hover svg{
+    color: #fed647;
+    height: 32px;
+    width: 32px;
+}
+
+.navbar-login{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-login svg{
+    display: none;
+}
+
+#my-account-button{
+    background-color: #D3A809;
+
+    border: none;
+    border-radius: 4px;
+
+    padding: 10px 15px;
+
+    box-shadow: 1px 1px 5px 1px rgb(170, 135, 8);
+}
+
+#my-account-button:hover{
+    background-color: #D9B328 ;
+    
+    border: none;
+    
+    cursor: pointer;
+}
+
+.footer{
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+    justify-content: space-between;
+
+    background-color: #D9B328;
+
+    padding: 10px 20px;
+
+    margin: auto;
+}
+
+
+.footer-signatures{
+
+    font-family: 'Saira';
+
+    padding-left: 3%;
+    padding-top: 2%;
+
+    
+}
+
+.footer-signatures a{
+    text-decoration: none;
+
+    font-size: 1.2em;
+
+    color: #f9f6b8;
+
+    transition: all ease-in-out 0.35s;
+}
+
+.footer-signatures a:hover{
+
+    color: #5d4d02;
+}
+
+.footer-signatures li{
+    padding-left: 0.8em;
+
+    padding-bottom: 0.5em;
+}
+
+.footer-signatures h1{
+
+    font-size: 2em;
+
+    padding-bottom: 0.2em;
+}
+
+.footer-logo img{
+    width: 180px;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.footer-logo img:hover{
+    transform: scale(1.05);
+
+    cursor: pointer;
+}
+
+.footer-social{
+    font-family: 'Saira';
+
+    display: block;
+
+    justify-content: left;
+
+    padding-top: 2%;
+
+}
+
+.footer-social h1{
+
+    font-size: 2em;
+
+    padding-bottom: 0.4em;
+}
+
+.footer-social a{
+    padding-right: 1em;
+}
+
+.footer-social-icon{
+    width: 46px;
+    height: 46px;
+
+    color: #D3A809;
+    background-color: #E0E0E0;
+
+    padding: 5px 5px;
+
+    border-radius: 5px;
+
+    transition: all ease-in-out 0.35s;
+}
+
+.footer-social-icon:hover{
+    background-color: #5d4d02;
+}
+
+.footer-social-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 1024px) {
+.navbar-logo-image{
+        height: 30px;
+      }
+
+      .footer{
+        display: flex;
+        flex-direction: row;
+    
+        align-items: top;
+        justify-content: space-between;
+    
+      }
+    
+      .footer-logo img{
+        width: 160px;
+        margin-right: -50px;
+      }
+    
+      .footer-signatures a{
+        font-size: 1.5em;
+
+    }
+    
+    .footer-signatures li{
+        display: flex;
+    
+        justify-content: center;
+    
+    }
+    
+    .footer-signatures h1{
+        
+        font-size: 2em;
+    }
+    
+    .footer-social{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .footer-social-icon{
+        width: 100%;
+    }
+    
+
+}
+
+@media only screen and (max-width: 767px) {
+    
+  .navbar-logo-image{
+    height: 30px;
+  }
+
+  .navbar-btn{
+    display: block;
+    background-color: #D3A809;
+
+    border: none;
+    border-radius: 4px;
+
+    padding: 10px 15px;
+
+    box-shadow: 1px 1px 5px 1px rgb(170, 135, 8);
+  }
+
+  .navbar-btn svg{
+    height: 1em;
+    width: 1em;
+  }
+
+  .navbar-list{
+    position: absolute;
+    width: 100%;
+    top: 65px;
+    right: 0;
+    background-color:#D3A809 ;
+    transition: .6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: auto;
+  }
+
+  #navbar.active .navbar-list{
+    height: 60px;
+    visibility: visible;
+
+  }
+
+
+  .navbar-item {
+    display: none;
+  }
+
+  .navbar-login svg{
+    display: block;
+
+    width: 16x;
+    height: 16px;
+
+    color: black;
+  }
+
+  .navbar-login span{
+    display: none;
+  }
+
+  .footer{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .footer-logo img{
+    width: 160px;
+    margin-right: 0;
+  }
+
+  .footer-signatures a{
+    font-size: 1.5em;
+  }
+
+  .footer-signatures li{
+    display: flex;
+
+    justify-content: center;
+
+    padding-left: 0;
+  }
+
+.footer-signatures h1{
+    
+    font-size: 2em;
+}
+
+.footer-social{
+    margin: 10px 0;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.footer-social-icon{
+    width: 100%;
+}
+
+
+}
+
+
+/*.dVoqTb{
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(30, 34, 66);
+}*/
+
