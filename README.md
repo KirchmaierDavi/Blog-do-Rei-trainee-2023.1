@@ -13,10 +13,10 @@
 
 #### Desenvolvedores:
 
-* Trainee 1
-* Gabriel Domingos de Souza
-* Trainee 3
-* Trainee 4
+* Sara Ingrid
+* Rayssa Amaral
+* Gabriel Domingos
+* Breno Lino
 
 
 #### Scrum Master:
