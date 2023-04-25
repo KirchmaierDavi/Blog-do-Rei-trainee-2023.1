@@ -1,0 +1,12 @@
+header img {
+	display: block; 
+	margin: 0 auto; 
+	height: 80px; 
+	width: 300px; 	
+}
+.titulo{
+	display:block;
+}
+.texto{
+	display: block;
+}
