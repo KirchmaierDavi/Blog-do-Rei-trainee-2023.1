@@ -1,0 +1,298 @@
+*{
+    /* margin: 0%;
+    padding: 0%;
+    border: 0;
+    outline: none; */
+    font-family: 'Lato', sans-serif;
+    /* background-color: #F0F0F0; */
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+.top{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main{
+    padding: 30px 40px 30px 40px;
+    margin-top: -8px;
+    display: flex;
+    flex-direction: row;
+}
+
+.faixa{
+    height: 70px;
+    background-color: #D3A809;
+    z-index: 1;
+}
+
+.logo-img{
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    width: max-content;
+    margin: -80px 0px -200px 0px;
+    overflow: hidden;
+}
+
+.post-container{
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 0px #00000032;
+    border-radius: 40px;
+
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-right: 60px;
+    margin-right: 60px;
+
+    width: 65%;
+    height: fit-content;
+}
+
+.post-container h1{
+    text-transform: uppercase;
+    color: #D3A809;
+}
+
+.title{
+    background-color: #FFFFFF;
+}
+
+.recents{
+    padding-top: 0px;
+    width: 40%;
+    height: fit-content;
+    /* background-color: aqua; */
+}
+
+.search-box{
+    width: 65%;
+    height: min-content;
+    vertical-align: top;
+    align-items: center;
+    margin-left: 70px;
+    background-color: #FFFFFF;
+
+    /* background-color: #FFFFFF; */
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.196);
+    height: 30px;
+    border-radius: 40px;
+    padding: 10px;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: center;
+}
+
+.search-text{
+    background: none;
+    border: 0;
+    outline: 0;
+
+    text-align: center;
+    font-size: 16px;
+}
+
+.icon{
+    width: 15px;
+    height: 15px;
+
+    cursor: pointer;
+    /* background-color: #FFFFFF; */
+}
+
+.memorium{
+    width: 400px;
+    height: 640px;
+
+    margin-left: 36px;
+    margin-top: 60px;
+
+    border-radius: 40px;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.196);
+    background-color: #FFFFFF;
+}
+
+.memorium p{
+    text-align: center;
+    margin-left: 26px;
+    margin-right: 26px;
+    margin-top: 10px;
+
+    font-style: italic;
+    background-color: #FFFFFF;
+}
+
+.memorium img{
+    filter: grayscale(1);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.196);
+
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.memorium .dates{
+    display: block;
+}
+
+.dates{
+    font-style: none;
+    padding-bottom: 16px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+.most-visualized-img{
+    width: 100%;
+    height: 100%;
+}
+
+.posts{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    margin-right: 60px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px #00000032;
+}
+
+.posts h2{
+    margin-left: 2%;
+}
+
+.posts img{
+    height: 230px;
+    border-radius: 5px;
+}
+
+.posts-text{
+    display: block;
+    font-size: 14px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.posts-text h1{
+    font-size: large;
+    margin-left: 46px;
+    text-transform: uppercase;
+}
+
+.posts-text h5{
+    margin-left: 46px;
+}
+
+.posts-text p{
+    margin-left: 46px;
+    text-align: justify;
+    margin-right: 46px;
+}
+
+.date{
+    letter-spacing: 2px;
+}
+
+.edge{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 16px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.edge h5{
+    display: inline;
+    text-align: bottom;
+    margin-right: 0px;
+    padding-left: 0px;
+    letter-spacing: 1px;
+}
+
+.edge hr{
+    width: 83%;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px){
+    .top{
+        overflow: hidden;
+        width: 100%;
+
+    }
+
+    .main{
+        width: 100%;
+        height: 100vh;
+
+        display: block;
+        /* flex-direction; */
+
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .post-container{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 30px;
+
+        box-shadow: none;
+        background-color: #F0F0F0;
+    }
+
+    .title{
+        display: none;
+    }
+
+    .posts{
+        margin-bottom: 20px;
+        display: block;
+        width: 100%;
+        height: fit-content;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .posts img{
+        width: auto;
+        max-width: 100%;
+    }
+
+    .posts p{
+        display: none;
+    }
+
+    .posts h1{
+        font-size: x-large;
+    }
+
+    .edge{
+        display: none;
+    }
+
+    .recents{
+        width: 100%;
+    }
+
+    .memorium{
+        display: none;
+    }
+}
