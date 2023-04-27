@@ -5,6 +5,8 @@ html {
 body{
     background-color: #E0E0E0;
     font-family: 'Saira';
+
+    height: fit-content;
 }
 
 .userlist-content{
@@ -25,13 +27,20 @@ body{
 .userlist-userboxD{
     background-color: white;
 
-    border-radius: 5px;
+    border-radius: 0px;
 
     border-left: #fed647 solid 5px;
 
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+
+    transition: all ease-in-out 0.2s;
+}
+
+.userlist-userboxD:hover{
+    background-color: rgb(165, 165, 165);
+    cursor: pointer;
 }
 
 .userlist-userboxM{
