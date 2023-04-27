@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: aquamarine;
+}
+
+.logout{
+    background-color: aqua;
+    height: fit-content;
+
+    display: flex;
+    justify-content: end;
+}
+
+.logout p{
+    height: fit-content;
+    width: fit-content;
+
+    position: relative;
+    right: 20px;
+
+    padding: 12px;
+
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.container{
+    width: 720px;
+    height: fit-content;
+    margin: auto;
+    margin-top: 6%;
+
+    background-color: antiquewhite;
+
+    display: block;
+}
+
+.container h1{
+    text-align: center;
+    padding-top: 3%;
+}
+
+.container-content{
+    display: flex;
+    justify-content: center;
+    
+    padding: 10% 0% 10% 0%;
+
+    background-color: aqua;
+}
+
+.admin{
+    width: 100%;
+
+    margin-left: 10%;
+    margin-right: 10%;
+
+    text-align: center;
+}
+
+.icons{
+    width: 40px;
+    margin-bottom: 10px;
+}
