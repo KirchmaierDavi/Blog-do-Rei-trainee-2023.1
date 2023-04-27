@@ -100,3 +100,32 @@ body{
     margin-bottom: 10px;
     fill: #d3a809
 }
+
+@media only screen and (max-width: 912px){
+
+    body{
+        margin-bottom: 10%;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .container-content{
+        display: block;
+        margin-top: 1%;
+        padding-top: 0;
+    }
+
+    .admin{
+        width: auto;
+        margin-top: 6%;
+        padding-top: 40px;
+    }
+
+    .admin-options{
+        font-size: xx-large;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
