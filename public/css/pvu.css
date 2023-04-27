@@ -6,19 +6,36 @@ body{
 header img {
 	display: block; 
 	margin: 0 auto; 
-	height: 100px; 
-	width: 320px; 
-	margin-bottom: 50px;
-	margin-top: 40px;
+	height: 80px; 
+	width: 300px; 
 	
+}
+.caminho{
+	margin-left: 125px;
+	margin-top:25px;
+	margin-bottom: 10px;
+}
+.caminho li {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  background-color: #D9B328;
+  border-radius: 50px;
+  padding: 4px 10px 4px 10px;
+  margin-bottom: 0px;
+  font-size: 11px;
+}
+.caminho a{
+	color: #070601;
+	text-decoration: none;
+	font-size:11px;
 }
 
 .informations{
-	margin-left: 0;
-	margin-right: 0;
+	margin-left: 150px;
+	margin-right: 150px;
 	background-color: white;
 	border-radius: 20px;
- 	padding: 6px 190px 80px 190px;
+ 	padding: 6px 80px 80px 80px;
 }
 .informations h1{
 	text-align: center;
@@ -26,6 +43,7 @@ header img {
 	font-size: 50px;
 	color: #070601;
 	position: relative;
+	
 	margin-bottom: 70px;
 	font-family: 'Roboto', sans-serif;
 }
@@ -59,19 +77,14 @@ header img {
 .main hr{
 	color: black;
 }
-.container {
-    max-width: 1200px; /* Largura máxima do elemento pai */
-    margin: 0 auto; /* Centralizar o elemento pai na tela */
-}
+.container{
+   text-align: center;
+   margin-top:30px;
+   display: block;
+   color: black;
+   margin:0;
+   font-size:12px;
 
-.container img {
-    display: block;
-    height: 400px;
-    width: 600px;
-    margin-top: 40px;
-    margin-bottom: 50px;
-    margin-left: auto; /* Centralizar a imagem na horizontal */
-    margin-right: auto;
 }
 figcaption {
   grid-column-start: 2;
@@ -82,11 +95,5 @@ figcaption {
 .voltar a{
 	color: #D9B328;
 	text-decoration: none;
-	font-size:12px;
-	display: inline-block;
-	font-family: 'Roboto', sans-serif;
-	border-radius: 40px;
-	padding: 0.8px 5px 0.8px 5px;
-	margin-bottom: 0px;
-
+	font-size:16px;
 }
