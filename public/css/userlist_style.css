@@ -39,8 +39,8 @@ body{
 }
 
 .userlist-userboxD:hover{
-    background-color: rgb(165, 165, 165);
-    cursor: pointer;
+    background-color: rgba(199, 195, 195, 0.405);
+
 }
 
 .userlist-userboxM{
@@ -50,6 +50,9 @@ body{
 .userlist-userboxM-header,.userlist-userboxM-body{
     border-left: #fed647 solid 5px;
     box-sizing: border-box;
+}
+.accordion-button{
+    border-radius:0!important;
 }
 
 .userlist-userboxM-header-title,.userlist-userboxM-body-title{
