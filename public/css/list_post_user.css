@@ -119,7 +119,7 @@ body{
     border:0;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
     .listPostUser-header, .listPost-header ,.listPostUser-userboxD, .listPost-boxD{
         display: none !important;
     }
