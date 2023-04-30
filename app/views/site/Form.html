@@ -3,46 +3,43 @@
 <html>
 
     <head>
-        <title>Form </title>
+        <title>Form Posts </title>
 
         <meta charset="utf-8">
         <link rel="stylesheet" href="../../../public/css/form.css">
     </head>
 
-    <body>
-
-        <header>
-            <img src="../../../public/assets/logo.png" alt="Logo do blog">
-        </header>	
-
-        <div style="" class='titulo'  >
-            <label
-                for='contact-form-comment-titulo'
-                class='titulo'
-                >Título<span></span></label>
-            <input
-                type='text'
-                name='titulo'
-                id='titulo'
-                value=''
-                class='name' 
-                required aria-required='true' />
-
+  <body>
+    <header>
+        <img src="../../../public/assets/logo.png" alt="Logo do blog">
+    </header>	
+    <div class="informations">
+        <h1>Novo Post</h1>
+        <form>
+        <div class="form-group">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" class="form-control">
         </div>
-
-        <div style="" class='texto'  >
-            <label
-                for='contact-form-comment-texto'
-                class='texto'
-                >Texto<span></span></label>
-            <textarea
-                    style=''
-                    name='-texto'
-                    id='contact-form-comment-texto'
-                    rows='30' class='textarea'  required aria-required='true'></textarea>
+        <div class="form-group">
+            <label for="texto">Texto:</label>
+            <textarea id="texto" name="texto" class="form-control"></textarea>
         </div>
-    
-
-    </body>
-        
-</html>
+        <div class="form-group">
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor" name="autor" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="data">Data de Criação:</label>
+            <input type="date" id="data" name="data" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="imagem">Imagem:</label>
+            <input type="file" id="imagem" name="imagem" class="form-control">
+        </div>
+        <div class="form-group">
+            <button type="submit" id="salvar">Salvar</button>
+            <button type="button" id="excluir">Excluir</button>
+        </div>
+        </form>
+    </div>
+  </body>
