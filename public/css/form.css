@@ -1,21 +1,21 @@
 @font-face {
-	font-family: 'Open Sans';
-	src: url('../fonts/OpenSans-Regular.ttf');
+	font-family: "Open Sans";
+	src: url("../fonts/OpenSans-Regular.ttf");
   }
   
-  body{
+  body {
 	background-image: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
   }
   
   header img {
-	display: block; 
-	margin: 0 auto; 
-	height: 80px; 
-	width: 300px;
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
   }
   
-  .informations{
+  .informations {
 	width: 80%;
 	margin: 50px auto;
   }
@@ -27,12 +27,16 @@
 	border-radius: 4px;
   }
   
+  #texto {
+	height: 180px;
+  }
+  
   label {
 	display: block;
 	margin-bottom: 5px;
 	font-weight: bold;
 	color: #555;
-  } 
+  }
   
   .form-control {
 	width: 100%;
@@ -60,9 +64,8 @@
   }
   
   #excluir {
-	background-color:#d9b32b;
+	background-color: #d9b32b;
   }
-  
-  #excluir:hover {
+  #excluir:hover{
 	background-color: #dd4444;
   }
