@@ -44,6 +44,7 @@
     top: 0;
     position: fixed;
     display: none;
+    overflow: auto;
   }
   
   .form-group {
@@ -145,4 +146,8 @@
 	.modal-content {
 	  width: 80%;
 	}
+
+    .informations{
+        width: 90%;
+    }
   }
