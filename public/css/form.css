@@ -36,7 +36,7 @@
     padding: 1rem;
   }
 
-  #modalContentExterno{
+  #modal{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.089);
@@ -90,10 +90,10 @@
 	background-color: green;
   }
   
-  #excluir {
+  #reset {
 	background-color: #d9b32b;
   }
-  #excluir:hover{
+  #reset:hover{
 	background-color: #dd4444;
   }
   .modal {

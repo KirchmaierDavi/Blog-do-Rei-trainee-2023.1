@@ -1,4 +1,4 @@
-var modal = document.getElementById("modalContentExterno");
+var modal = document.getElementById("modal");
 var span = document.getElementsByClassName("close")[0];
 var btn = document.getElementById("new-post");
 
@@ -11,7 +11,7 @@ span.onclick = function(){
 }
 
 window.onclick = function(event){
-    if(event.target == modalContentExterno){
+    if(event.target == modal){
         modal.style.display = "none";
     }
 }
