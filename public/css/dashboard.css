@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #F0F0F0;
+}
+
+.logout{
+    height: fit-content;
+
+    display: flex;
+    justify-content: end;
+    color: #d3a809;
+}
+
+.logout p{
+    height: fit-content;
+    width: fit-content;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;    
+}
+
+.logout-buttom{
+    display: flex;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 14px;  
+    padding-right: 10px;  
+    margin-top: 16px;
+    margin-right: 16px;
+    
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    box-shadow: 4px 5px 0px #00000032;
+    fill: #d3a809;
+}
+
+.container{
+    width: 720px;
+    height: fit-content;
+    margin: auto;
+    margin-top: 6%;
+
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 0px #00000032;
+    border-radius: 40px;
+
+    display: block;
+    overflow: hidden;
+}
+
+.container h1{
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin: 0;
+
+    background-color: #fceaaa;
+    color: #d3a809;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.container-content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    padding: 8% 0% 8% 0%;
+    margin: 0px;
+
+}
+
+.admin{
+    width: 100%;
+
+    margin-left: 8%;
+    margin-right: 8%;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    text-align: center;
+
+    background-color: #fceaaa;
+    border-radius: 40px;
+    box-shadow: 4px 5px 0px #00000032;
+    cursor: pointer;
+}
+
+.admin-options{
+    color: #d3a809;
+    font-weight: 400px;
+    letter-spacing: 1px;
+}
+
+.icons{
+    width: 40px;
+    margin-bottom: 10px;
+    fill: #d3a809
+}
+
+@media only screen and (max-width: 912px){
+
+    body{
+        margin-bottom: 10%;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .container-content{
+        display: block;
+        margin-top: 1%;
+        padding-top: 0;
+    }
+
+    .admin{
+        width: auto;
+        margin-top: 6%;
+        padding-top: 40px;
+    }
+
+    .admin-options{
+        font-size: xx-large;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
