@@ -7,8 +7,8 @@ header img {
 	margin: 0 auto; 
 	height: 100px; 
 	width: 320px; 
-	margin-bottom: 50px;
-	margin-top: 40px;
+	margin-bottom: 35px;
+	margin-top: 20px;
 	
 }
 
@@ -17,7 +17,7 @@ header img {
 	margin-right: 0;
 	background-color: white;
 	border-radius: 20px;
- 	padding: 6px 190px 80px 190px;
+ 	padding: 6px 160px 80px 160px;
 }
 .informations h1{
 	text-align: center;
@@ -26,20 +26,20 @@ header img {
 	color: #070601;
 	position: relative;
 	margin-bottom: 70px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 }
 .informations h2{
 	text-align: justify;
 	color: #070601;
-	font-size:15px;
+	font-size:20px;
 	margin-top: 30px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 
 }
 .informations h3{
      color: #070601;
      font-size: 12px;
-     font-family: 'Roboto', sans-serif;
+     font-family: 'Quicksand', sans-serif;
 }
 .informations img{
        height:400px;
@@ -52,7 +52,7 @@ header img {
 .main a {
 	line-height: 30px;
 	font-size: 10px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 
 }
 .main hr{
@@ -68,14 +68,14 @@ header img {
     height: 400px;
     width: 600px;
     margin-top: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     margin-left: auto; /* Centralizar a imagem na horizontal */
     margin-right: auto;
 }
 figcaption {
-  grid-column-start: 2;
-  font-size: 12px;
-  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
 }
 
 .voltar a{
@@ -83,7 +83,7 @@ figcaption {
 	text-decoration: none;
 	font-size:12px;
 	display: inline-block;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 	border-radius: 40px;
 	padding: 0.8px 5px 0.8px 5px;
 	margin-bottom: 0px;
