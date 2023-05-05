@@ -1,11 +1,11 @@
 @font-face {
-	font-family: "Open Sans";
+	font-family: 'Quicksand', sans-serif;
 	src: url("../fonts/OpenSans-Regular.ttf");
   }
   
   body {
 	background-image: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Quicksand', sans-serif;
   }
   
   header img {
