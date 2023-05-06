@@ -129,6 +129,17 @@ body{
     border:0;
 }
 
+@media only screen and (max-width: 1024px) {
+    .userlist-userboxD-actions button span{
+        display: none;
+    }
+
+    .userlist-content{
+        width: 90%;
+    }
+
+}
+
 @media only screen and (max-width: 767px) {
     .userlist-header,.userlist-userboxD{
         display: none !important;
