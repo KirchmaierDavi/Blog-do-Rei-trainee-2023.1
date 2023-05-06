@@ -4,7 +4,8 @@ html {
 
 body{
     background-color: #E0E0E0;
-    font-family: 'Saira';
+    font-family: 'Quicksand';   
+    font-weight: 500;
 
     height: fit-content;
 }
@@ -37,6 +38,7 @@ body{
 
 
 .userlist-title h1{
+    font-weight: 700;
     margin: 0;
 }
 
@@ -49,6 +51,7 @@ body{
     border-radius: 5px;
     
     font-size: 1.2rem;
+    font-weight: 600;
     color: black;
 
 
@@ -137,6 +140,11 @@ body{
 
     .userlist-userboxM{
         display: inline;
+    }
+
+    .userlist-title-card{
+        flex-direction: column;
+        text-align: center;
     }
 
 }

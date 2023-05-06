@@ -27,7 +27,7 @@ function dashboardFunctions(button){
 window.onclick = function(event){
     if(event.target == modal){
         modal.style.display = "none";
-        closeModals()
+        closeModals();
     }
 
 
@@ -36,7 +36,6 @@ window.onclick = function(event){
 function closeModals(){
     let modalElements = document.querySelectorAll('[id^="modal-"]');
 
-    // Loop through the selected elements and set their display to "none"
     modalElements.forEach(element => {
         element.style.display = "none";
       });
