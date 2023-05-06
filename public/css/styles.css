@@ -13,15 +13,14 @@ body{
 
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
 
     box-sizing: border-box;
 
-    background-color: transparent;
-    background-image: linear-gradient(4deg, #00000075 0%, #d9b328cc 100%);
+    background-color: #d9b32b;
     height: 65px;
 
-    box-shadow: 0px 1px 12px 0px rgba(211,168,9,0.8);
+    box-shadow: 0px 1px 12px 0px rgba(36, 31, 13, 0.8);
 
     transition: background-color 1s ease !important;
 }
@@ -35,14 +34,23 @@ body{
 
     box-sizing: border-box;
 
-    background-color: rgba(0,0,0,0.2)!important; 
+    background-color: #d9b32b; 
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
+.navbar-logo{
+    width: 20%;
+}
+
+.navbar-login{
+    width: 20%;
+    word-break: keep-all;
+}
+
 .navbar-logo-image{
     height: 50px;
-
+    filter: saturate(0%) brightness(70%) contrast(1000%);
     transition: all ease-in-out 0.3s;
 }
 
@@ -59,7 +67,7 @@ body{
 .navbar-list{
     display: flex;
 
-    width: 50%;
+    width: 80%;
 
     justify-content: space-around;
 }
@@ -88,12 +96,12 @@ body{
 }
 
 .navbar-list-item:hover{
-    color: #fed647;
+    color: #F0F0F0;
     text-decoration: underline;
 }
 
 .navbar-list-item:hover svg{
-    color: #fed647;
+    color: #F0F0F0;
     height: 32px;
     width: 32px;
 }
@@ -289,7 +297,14 @@ body{
 }
 
 @media only screen and (max-width: 767px) {
-    
+   .navbar-logo{
+    width: 50%;
+   } 
+
+   .navbar-mobile{
+    width: 20%;
+   }
+
   .navbar-logo-image{
     height: 30px;
   }
@@ -303,7 +318,7 @@ body{
 
     padding: 10px 15px;
 
-    box-shadow: 1px 1px 5px 1px rgb(170, 135, 8);
+    box-shadow: 1px 1px 5px 1px rgba(15, 14, 7, 0.495);
   }
 
   .navbar-btn svg{
@@ -312,22 +327,26 @@ body{
   }
 
   .navbar-list{
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     position: absolute;
     width: 100%;
     top: 65px;
     right: 0;
     background-color:#D3A809 ;
-    transition: .6s;
+    transition: all ease-in-out 0.2s;
     z-index: 1000;
-    height: 0px;
+    height: 0;
     visibility: hidden;
-    overflow-y: auto;
+    overflow-y:auto;
+    transition: .2s;
   }
 
   #navbar.active .navbar-list{
-    height: 60px;
+    height: auto;
     visibility: visible;
-
+    padding: 10px 0;
   }
 
 
@@ -335,17 +354,30 @@ body{
     display: none;
   }
 
+  .navbar-login{
+    width: 30%;
+    justify-content: end;
+    padding: 5px 0;
+    
+  }
+
   .navbar-login svg{
-    display: block;
+    display: inline;
 
     width: 16x;
     height: 16px;
+
+    padding-right: 5px;
 
     color: black;
   }
 
   .navbar-login span{
     display: none;
+  }
+
+#my-account-button{
+    box-shadow: 1px 1px 5px 1px rgba(15, 14, 7, 0.529);
   }
 
   .footer{
@@ -360,10 +392,11 @@ body{
   .footer-logo img{
     width: 160px;
     margin-right: 0;
+    margin-bottom: -25px;
   }
 
   .footer-signatures a{
-    font-size: 1.5em;
+    font-size: 1em;
   }
 
   .footer-signatures li{
@@ -374,10 +407,11 @@ body{
     padding-left: 0;
   }
 
-.footer-signatures h1{
+.footer-signatures h1,.footer-social h1{
     
-    font-size: 2em;
+    font-size: 1.5em;
 }
+
 
 .footer-social{
     margin: 10px 0;
