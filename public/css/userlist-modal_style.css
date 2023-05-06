@@ -1,0 +1,142 @@
+html {
+    font-size: 16px;
+}
+
+body{
+    background-color: #E0E0E0;
+    font-family: 'Saira';
+
+    height: fit-content;
+}
+
+.userlist-content{
+    margin-top: 100px;
+    width: 80%;
+}
+
+
+.userlist-title-card{
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-radius: 10px;
+    
+    padding: 15px 20px;
+
+    height: 150px;
+
+    margin-bottom: 15px;
+
+    background: linear-gradient(45deg, #D3A809, #d3a709a1), url("../assets/camisa10.jpeg") no-repeat center/cover;
+
+    border: solid 1px rgb(158, 158, 104);
+}
+
+
+.userlist-title h1{
+    margin: 0;
+}
+
+.userlist-newuser button{
+    font-size: 1.5em;
+}
+
+.userlist-header{
+    background-color: #D9B32B;
+    border-radius: 5px;
+    
+    font-size: 1.2rem;
+    color: black;
+
+
+}
+
+.userlist-userboxD{
+    background-color: white;
+
+    border-radius: 0px;
+
+    border-left: #fed647 solid 5px;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    transition: all ease-in-out 0.2s;
+}
+
+.userlist-userboxD:hover{
+    background-color: rgba(248, 231, 106, 0.304);
+
+}
+
+.userlist-userboxM{
+    display: none;
+}
+
+.userlist-userboxM-header,.userlist-userboxM-body{
+    border-left: #fed647 solid 5px;
+    box-sizing: border-box;
+}
+.accordion-button{
+    border-radius:0!important;
+}
+
+.userlist-userboxM-header-title,.userlist-userboxM-body-title{
+    color: #fed647;
+    text-decoration: underline;
+}
+
+.userlist-userboxM-header-title,.userlist-userboxM-header-content{
+    width: 50%;
+}
+
+.userlist-userboxM-body-title,.userlist-userboxM-body-content{
+    width: 100%;
+}
+
+.accordion-button::after{
+    margin: 0;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: white;
+}
+
+
+/* Layout dos itens */
+.userlist-header-item{
+    border-right: rgba(63, 63, 63, 0.415) solid 1px;
+}
+
+.userlist-header-item:nth-child(1),.userlist-userboxD-item:nth-child(1){
+    width: 10%;
+}
+.userlist-header-item:nth-child(2),.userlist-userboxD-item:nth-child(2){
+    width: 23%;
+}
+.userlist-header-item:nth-child(3),.userlist-userboxD-item:nth-child(3){
+    width: 27%;
+}
+.userlist-header-item:nth-child(4),.userlist-userboxD-item:nth-child(4){
+    width: 40%;
+    border:0;
+}
+
+@media only screen and (max-width: 767px) {
+    .userlist-header,.userlist-userboxD{
+        display: none !important;
+    }
+
+    .userlist-content{
+        width: 90%;
+    }
+
+    .userlist-userboxM{
+        display: inline;
+    }
+
+}
