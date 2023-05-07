@@ -9,15 +9,15 @@ header img {
 	width: 320px; 
 	margin-bottom: 35px;
 	margin-top: 20px;
-	
 }
 
 .informations{
-	margin-left: 0;
-	margin-right: 0;
+	margin-left: 50px;
+	margin-right: 50px;
 	background-color: white;
-	border-radius: 20px;
- 	padding: 6px 160px 80px 160px;
+ 	padding: 6px 100px 80px 100px;
+	box-shadow: 5px 5px 0px #00000032;
+	border-radius: 40px;
 }
 .informations h1{
 	text-align: center;
@@ -38,8 +38,9 @@ header img {
 }
 .informations h3{
      color: #070601;
-     font-size: 12px;
+     font-size: 14px;
      font-family: 'Quicksand', sans-serif;
+	 margin-top: 10px;
 }
 .informations img{
        height:400px;
@@ -81,11 +82,15 @@ figcaption {
 .voltar a{
 	color: #D9B328;
 	text-decoration: none;
-	font-size:12px;
+	font-size:18px;
 	display: inline-block;
 	font-family: 'Quicksand', sans-serif;
 	border-radius: 40px;
 	padding: 0.8px 5px 0.8px 5px;
-	margin-bottom: 0px;
-
+	margin-bottom: 8px;
+	margin-left: 50px;
+	transition: transform 0.3s ease;
+}
+.voltar a:hover {
+    transform: scale(1.4);
 }
