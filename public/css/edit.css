@@ -1,0 +1,32 @@
+.password-input {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="password"] {
+    width: 200px;
+  }
+  
+  #password-status, #confirm-password-status {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 5px;
+  }
+  
+  #password-status {
+    background-color: red;
+  }
+  
+  #confirm-password-status {
+    background-color: red;
+  }
+  
+  #password-status.valid, #confirm-password-status.valid {
+    background-color: green;
+  }

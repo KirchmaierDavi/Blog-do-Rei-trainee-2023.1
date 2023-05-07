@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Editar Usuário</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Quicksand:wght@300;400;600&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../../public/css/edit.css/">
+        <script src="../../../public/js/modal-usuario.js"></script>     
+    </head>
+
+    <body>
+        <div class="campo de edição">
+            <div id="modal-new-user" class="dashboard-modal shadow">
+                <div class="modal-header">
+                    <h2>Editar Usuário</h2>
+                    <span class="modal-close">&times;</span>
+                </div>
+                <form>
+                    <div class="edit-user">
+                        <label class="modal-label" for="username">Novo Usuário (@username):</label>
+                        <input type="text" id="new-username" name="new-username" class="form-control">
+                    </div>
+                    <div class="edit-user">
+                        <label class="modal-label" for="email">Novo E-mail:</label>
+                        <input type="email" id="email" name="email" class="form-control">
+                    </div>
+                    <div class="edit-user">
+                        <label class="modal-label" for="email">Confirmar E-mail:</label>
+                        <input type="email" id="confirm-email" name="confirm-email" class="form-control">
+                    </div>
+                    <div class="edit-user">
+                        <label class="modal-label" for="password">Nova Senha</label>
+                        <input type="password" id="password" name="password" class="form-control">
+                    </div>
+                    <div class="edit-user">
+                        <label class="modal-label" for="confirmpassword">Confirmar Senha</label>
+                        <input type="password" id="confirmpassword" name="confirm-password" class="form-control">
+                    </div>
+                    <div class="buttons">
+                        <button class="modal-button" type="reset" id="new-user-reset">Limpar</button>
+                        <button class="modal-button" type="submit" id="new-user-new">Salvar</button>
+                    </div>
+                </form>
+            </div>        
+        </div>  
+    </body>
+</html>
