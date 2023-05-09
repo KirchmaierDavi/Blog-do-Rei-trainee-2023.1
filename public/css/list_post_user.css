@@ -4,27 +4,60 @@ html {
 
 body{
     background-color: #E0E0E0;
-    font-family: 'Saira';
+    font-family: 'Quicksand';   
+    font-weight: 500;
 
     height: fit-content;
 }
 
-.listPostUser-content{
+.userlist-content{
     margin-top: 100px;
     width: 80%;
 }
 
-.listPostUser-header, .listPost-header{
-    background-color: transparent;
+
+.userlist-title-card{
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-radius: 10px;
+    
+    padding: 15px 20px;
+
+    height: 150px;
+
+    margin-bottom: 15px;
+
+    background: linear-gradient(45deg, #D3A809, #d3a709a1), url("../assets/camisa10.jpeg") no-repeat center/cover;
+
+    border: solid 1px rgb(158, 158, 104);
+}
+
+
+.userlist-title h1{
+    font-weight: 700;
+    margin: 0;
+}
+
+.userlist-newuser button{
+    font-size: 1.5em;
+}
+
+.userlist-header{
+    background-color: #D9B32B;
     border-radius: 5px;
     
     font-size: 1.2rem;
-    color: #fed647;
+    font-weight: 600;
+    color: black;
 
-    background-image: linear-gradient(4deg, #51515187 0%, #dcbf6e 100%);
+
 }
 
-.listPostUser-userboxD, .listPost-boxD{
+.userlist-userboxD{
     background-color: white;
 
     border-radius: 0px;
@@ -38,16 +71,16 @@ body{
     transition: all ease-in-out 0.2s;
 }
 
-.listPostUser-userboxD:hover, .listPost-boxD:hover{
-    background-color: rgba(199, 195, 195, 0.405);
+.userlist-userboxD:hover{
+    background-color: rgba(248, 231, 106, 0.304);
 
 }
 
-.listPostUser-userboxM{
+.userlist-userboxM{
     display: none;
 }
 
-.listPostUser-userboxM-header,.listPostUser-userboxM-body{
+.userlist-userboxM-header,.userlist-userboxM-body{
     border-left: #fed647 solid 5px;
     box-sizing: border-box;
 }
@@ -55,23 +88,16 @@ body{
     border-radius:0!important;
 }
 
-.listPostUser-userboxM-header-title,.listPostUser-userboxM-body-title{
+.userlist-userboxM-header-title,.userlist-userboxM-body-title{
     color: #fed647;
     text-decoration: underline;
 }
 
-.listPostUser-userboxM-header-title{
-    width: 30%;
+.userlist-userboxM-header-title,.userlist-userboxM-header-content{
+    width: 50%;
 }
 
-.listPostUser-userboxM-header-content{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 30%;
-}
-
-
-.listPostUser-userboxM-body-title,.listPostUser-userboxM-body-content{
+.userlist-userboxM-body-title,.userlist-userboxM-body-content{
     width: 100%;
 }
 
@@ -84,52 +110,49 @@ body{
 }
 
 
-/* Layout dos itens para user*/
-.listPostUser-header-item{
+/* Layout dos itens */
+.userlist-header-item{
     border-right: rgba(63, 63, 63, 0.415) solid 1px;
 }
 
-.listPostUser-header-item:nth-child(1),.listPostUser-userboxD-item:nth-child(1){
-    width: 10%;
-}
-.listPostUser-header-item:nth-child(2),.listPostUser-userboxD-item:nth-child(2){
-    width: 23%;
-}
-.listPostUser-header-item:nth-child(3),.listPostUser-userboxD-item:nth-child(3){
-    width: 27%;
-}
-.listPostUser-header-item:nth-child(4),.listPostUser-userboxD-item:nth-child(4){
-    width: 40%;
-    border:0;
-}
-
-/* Layout dos itens para posts*/
-.listPostUser-header-item{
-    border-right: rgba(63, 63, 63, 0.415) solid 1px;
-}
-
-.listPost-header-item:nth-child(1),.listPost-boxD-item:nth-child(1){
+.userlist-header-item:nth-child(1),.userlist-userboxD-item:nth-child(1){
     width: 30%;
 }
-.listPost-header-item:nth-child(2),.listPost-boxD-item:nth-child(2){
+.userlist-header-item:nth-child(2),.userlist-userboxD-item:nth-child(2){
     width: 33%;
 }
-.listPost-header-item:nth-child(3),.listPost-boxD-item:nth-child(3){
+.userlist-header-item:nth-child(3),.userlist-userboxD-item:nth-child(3){
     width: 37%;
     border:0;
 }
 
-@media only screen and (max-width: 1000px) {
-    .listPostUser-header, .listPost-header ,.listPostUser-userboxD, .listPost-boxD{
-        display: none !important;
+@media only screen and (max-width: 1024px) {
+    .userlist-userboxD-actions button span{
+        display: none;
     }
 
-    .listPostUser-content{
+    .userlist-content{
         width: 90%;
     }
 
-    .listPostUser-userboxM{
+}
+
+@media only screen and (max-width: 767px) {
+    .userlist-header,.userlist-userboxD{
+        display: none !important;
+    }
+
+    .userlist-content{
+        width: 90%;
+    }
+
+    .userlist-userboxM{
         display: inline;
+    }
+
+    .userlist-title-card{
+        flex-direction: column;
+        text-align: center;
     }
 
 }
