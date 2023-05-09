@@ -1,42 +1,56 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --white: #FFFFFF;
+    --anti-flash-white: #F0F0F0;
+    --platinum: #E0E0E0;
+    --gold-light: #D9B328;
+    --gold-dark: #D3A809;
+    --smoky-black: #070601;
+    --black: #000000;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
 }
 
-
 body {
-    background-color: #e0e0e0;
+    background-color: var(--platinum);
 }
 
-
-.navbar {
-    height: 3vw;
-    width: 100%;
-    background-color: #d3a809;
-    display: block;
-
-    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
+.grid-container {
+    display: grid;
+    grid-template-columns: 2.5% 60% 3% 32% 2.5%;
+    grid-template-rows: 14vh 42vh 10vh 10vh;
 }
 
+.header {
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+}
 
 .header img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     padding-top: 1.5vw;
     padding-bottom: 1.5vw;
     width: 15%;
 }
 
+.retrospectiva {
+    grid-column: 1 / 6;
+    grid-row: 2 / 3;
+}
 
 .line {
     height: 1px;
     width: 95%;
-    background-color: black;
+    background-color: var(--black);
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1px auto 0px auto;
 }
 
 
@@ -47,10 +61,8 @@ body {
 
 
 main {
-    display: flex;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    margin-top: 2.5%;
+    grid-column: 2 / 3;
+    margin-top: 20px;
 }
 
 .posts {
@@ -60,10 +72,8 @@ main {
 
 .posts article {
 	margin-bottom: 40px;
-	background-color: white;
+	background-color: var(--white);
 	padding-bottom: 500px;
-    border-radius: 30px;
-
     box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -84,50 +94,118 @@ main {
     text-align: justify;
 }
 
-.sidebar {
-	flex: 1;
-	padding: 20px;
-    padding-top: 0px;
+aside {
+    grid-column: 3 / 5;
+
 }
 
-.sidebar h2 {
-	margin-top: 0;
+aside ul li {
+    list-style: none;
+    position: relative;
 }
 
-.sidebar ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.destaque {
+    margin-top: 20px;
+    background-color: var(--gold-light);
+    width: 100%;
+}
+
+.destaque .text {
+    display: block;
+    margin-top: 15px;
+    font-size: larger;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.image-container {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding-top: 25px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; 
 }
 
-.sidebar .destaque li {
-    display: inline-flex;
-	width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.sidebar .destaque li img{
-    margin-left: 0px;
-	width: 80%;
-    border-radius: 20px;
+.image-container img {
+    width: 30%;
+    border-radius: 20%;
 
     box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
+    
 }
 
-.sidebar .pesquisa li {
-    display: inline-flex;
-    justify-content: center;
+.image-container img:first-child {
+    margin-left: 0;
+}
+
+.image-container img:last-child {
+    margin-right: 0;
+}
+
+.image-container img:nth-child(1) {
+    margin-right: auto;
+}
+  
+.image-container img:nth-child(2) {
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.image-container img:nth-child(3) {
+    margin-left: auto;
+}
+
+.sobre {
+    margin-top: 20px;
+}
+
+.sobre p {
+    margin-top: 10px;
+    margin-left: 90px;
+    text-align: end;
+}
+
+.container-sobre {
+    margin-left: 90px;
+    height: 45px;
+    display: flex;
     align-items: center;
 }
+  
+.container-sobre .text {
+    padding: 10px;
+    font-size: 25px;
+}
 
-.sidebar .pesquisa li img{
-    margin-top: 2vw;
-    width: 70%;
-    border-radius: 20px;
 
-    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
+.container-sobre:not(:first-child) {
+    margin-top: -20px;
+}
+
+.container-sobre::before {
+    content: "";
+    width: 15px;
+    height: 100%;
+    background-color: var(--gold-light);
+    margin-right: 10px;
+}
+
+.animation {
+    position: relative;
+}
+
+.animation img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#my-image {
+    transition: all 0.3s ease;
+}
+  
+  #my-image:hover {
+    transform: scale(0.8) rotate(45deg);
 }
