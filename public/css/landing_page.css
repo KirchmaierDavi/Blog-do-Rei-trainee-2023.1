@@ -18,31 +18,16 @@
 }
 
 body {
+    font-size: 18px;
     background-color: var(--platinum);
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 2.5% 60% 3% 32% 2.5%;
-    grid-template-rows: 14vh 42vh 10vh 10vh;
-}
-
-.header {
-    grid-column: 1 / 6;
-    grid-row: 1 / 2;
 }
 
 .header img {
     display: block;
     margin: auto;
-    padding-top: 1.5vw;
-    padding-bottom: 1.5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
     width: 15%;
-}
-
-.retrospectiva {
-    grid-column: 1 / 6;
-    grid-row: 2 / 3;
 }
 
 .line {
@@ -53,52 +38,81 @@ body {
     margin: 1px auto 0px auto;
 }
 
-
 .retrospectiva img {
     width: 100%;
     padding-bottom: 10px;
 }
 
+.retrospectiva_vertical {
+    display: none;
+}
 
+.box {
+    direction: rtl;
+    display: flex;
+}
+ 
 main {
-    grid-column: 2 / 3;
+    flex: 2;
+    margin-left: 2.5%;
     margin-top: 20px;
 }
 
 .posts {
-    flex: 1.75;
 	margin-right: 20px;
 }
 
 .posts article {
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	background-color: var(--white);
-	padding-bottom: 500px;
+	padding-bottom: 5%;
+    border-radius: 20px;
     box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
 }
 
-.posts article header {
-	padding: 2vw;
+.posts article .content {
+    text-align: center;
+    padding-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .posts article h1 {
+    text-transform: uppercase;
 	margin: 0;
-	font-size: 36px;
+	font-size: 25px;
     text-align: center;
     font-weight: 700;
+    direction: ltr;
+}
+
+.posts article h2 {
+    direction: ltr;
+    color: var(--gold-dark);
+    text-transform: uppercase;
+	margin: 0;
+	font-size: 18px;
+    text-align: center;
+    font-weight: 500;
 }
 
 .posts article p {
+    direction: ltr;
 	margin-top: 1vw;
-    margin-left: 2.5%;
     text-align: justify;
 }
 
-aside {
-    grid-column: 3 / 5;
-
+.posts article img {
+    margin-top: 2vw;
+    width: 60%;
+    border-radius: 20px;
 }
 
+aside {
+    flex: 1.1;
+    margin-right: 2.5%;
+}
+ 
 aside ul li {
     list-style: none;
     position: relative;
@@ -108,6 +122,9 @@ aside ul li {
     margin-top: 20px;
     background-color: var(--gold-light);
     width: 100%;
+    border-radius: 20px;
+
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
 }
 
 .destaque .text {
@@ -158,33 +175,44 @@ aside ul li {
 }
 
 .sobre {
-    margin-top: 20px;
+    margin-left: 2.5%;
+    background-color: var(--white);
+    margin-top: 30px;
+    direction: ltr;
+    align-items: center;
+    justify-items: end;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    border-radius: 20px;
+
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
 }
 
 .sobre p {
     margin-top: 10px;
-    margin-left: 90px;
-    text-align: end;
+    padding-left: 25%;
 }
 
-.container-sobre {
-    margin-left: 90px;
+.container {
     height: 45px;
     display: flex;
     align-items: center;
+    margin-right: 10%;
+    margin-left: 10%;
 }
   
-.container-sobre .text {
+.container .text {
     padding: 10px;
     font-size: 25px;
 }
 
 
-.container-sobre:not(:first-child) {
-    margin-top: -20px;
+.container:not(:first-child) {
+    margin-top: -15px;
 }
 
-.container-sobre::before {
+.container::before {
     content: "";
     width: 15px;
     height: 100%;
@@ -193,10 +221,17 @@ aside ul li {
 }
 
 .animation {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 400px;
+    width: 100%;
+    display: block;
     position: relative;
 }
 
 .animation img {
+    width: 90%;
+    margin-left: 5%;
     position: absolute;
     top: 0;
     left: 0;
@@ -206,6 +241,129 @@ aside ul li {
     transition: all 0.3s ease;
 }
   
-  #my-image:hover {
+#my-image:hover {
     transform: scale(0.8) rotate(45deg);
+}
+
+@media (max-width: 950px) {
+    .header img {
+        display: block;
+        margin: auto;
+        width: 20%;
+    }
+    main {
+        margin-top: 30px;
+    }
+    .retrospectiva {
+        display: none;
+    }
+    .responsividade {
+        display: flex;
+    }
+    .retrospectiva_vertical {
+        margin-left: 2.5%;
+        display: block;
+        flex: 1;
+    }
+    .animation {
+        margin-right: 2.5%;
+        width: 97%;
+    }
+    .posts article img {
+        width: 70%;
+    }
+    .retrospectiva_vertical img {
+        width: 100%;
+    }
+    .box {
+        margin-left: 20px;
+        display: block;
+        flex: 2;
+        direction: ltr;
+    }
+    .sobre p {
+        text-align: end;
+    }
+    .destaque {
+        width: auto;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .sobre {
+        margin-right: 2.5%;
+    }
+    .box .animation {
+        display: none;
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header img {
+        width: 25%;
+    }
+    body {
+        font-size: 14px;
+    }
+    .posts article h1 {
+        font-size: larger;
+    }
+    .posts article h2 {
+        font-size: smaller;
+    }
+    .posts article img {
+        width: 80%;
+    }
+    .container .text {
+        font-size: 20px;
+    }
+    .container:not(:first-child) {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .header img {
+        width: 35%;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+    .responsividade {
+        display: block;
+    }
+    .retrospectiva_vertical img{
+        display: none;
+    }
+    .retrospectiva_vertical .line {
+        display: none;
+    }
+    .posts article img {
+        width: 90%;
+    }
+    .animation {
+        margin-top: 0;
+        height: 40vw;
+        text-align: center;
+        width: 100%;
+    }
+    .animation img {
+        margin-left: 15%;
+    }
+    .retrospectiva_vertical .animation img{
+        margin-right: 0;
+        display: block;
+        width: 70%;
+    }
+}
+
+@media (max-width: 300px) {
+    .header img {
+        width: 45%;
+    }
+    .line {
+        height: 0.1px;
+    }
+    aside {
+        margin-right: 5%;
+    }
 }
