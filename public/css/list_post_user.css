@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 html {
     font-size: 16px;
 }
@@ -124,6 +126,14 @@ body{
 .userlist-header-item:nth-child(3),.userlist-userboxD-item:nth-child(3){
     width: 37%;
     border:0;
+}
+
+#modal-post-editing {
+    margin-top: 20vh;
+}
+
+#modal-post-editing .modal-header h2 {
+    font-weight: 600;
 }
 
 @media only screen and (max-width: 1136px) {
