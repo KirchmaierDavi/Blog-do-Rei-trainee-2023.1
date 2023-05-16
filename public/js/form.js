@@ -15,4 +15,4 @@ document.addEventListener("DOMContentLoaded", function() {
     confirmar.addEventListener("click", function() {
       modal.style.display = "none";
     });
-  });
+  }); 
