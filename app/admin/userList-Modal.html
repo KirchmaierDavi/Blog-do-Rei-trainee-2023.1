@@ -17,9 +17,9 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../../public/css/userlist-modal_style.css" />
     <link rel="stylesheet" href="../../public/css/form.css">
-    <link rel="stylesheet" href="../../../public/css/forms.css">
-    <link rel="stylesheet" href="../../../public/css/edit.css">
-    <script src="../../../public/js/modal-usuario.js"></script>
+    <link rel="stylesheet" href="../../public/css/forms.css">
+    <link rel="stylesheet" href="../../public/css/edit.css">
+    <script src="../../public/js/modal-usuario.js"></script>
     <title>UserList</title>
 </head>
 
@@ -68,45 +68,11 @@
                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                     <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                     </svg><span>Visualizar</span></button>
-                    <button type="button" class="btn btn-warning">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill"
-                        viewBox="0 0 16 16">
-                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                        </svg><span>Editar</span></button>
-                      <div class="modal" id="modal-edit-user">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h2>Editar Usuário</h2>
-                            <span class="modal-close">&times;</span>
-                          </div>
-                          <form>
-                            <div class="form-group">
-                              <label class="modal-label" for="username">Editar Usuário (@username):</label>
-                              <input type="text" id="username" name="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                              <label class="modal-label" for="new-email">E-mail:</label>
-                              <input type="new-email" id="email" name="new-email" class="form-control">
-                            </div>
-                            <div class="form-group">
-                              <label class="modal-label" for="password">Senha Atual:</label>
-                              <input type="password" id="password" name="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                              <label class="modal-label" for="new-password">Nova Senha:</label>
-                              <input type="new-password" id="new-password" name="new-password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                              <label class="modal-label" for="confirm-password">Confirmar Senha</label>
-                              <input type="confirm-password" id="confirm-password" name="confirm-password" class="form-control">
-                            </div>
-                            <div class="buttons">
-                              <button class="modal-button" type="submit" id="edit-user">Salvar</button>
-                              <button class="modal-button" type="reset" id="edit-user-reset">Limpar</button>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
+                <button type="button" class="btn btn-warning" id="EditarUsuario">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill"
+                     viewBox="0 0 16 16">
+                    <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                    </svg><span>Editar</span></button>
                 <button type="button" class="btn btn-danger">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill"
                     viewBox="0 0 16 16">
@@ -131,7 +97,7 @@
                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                     <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                     </svg><span>Visualizar</span></button>
-                <button type="button" class="btn btn-warning">
+                <button type="button" class="btn btn-warning" id="EditarUsuario">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill"
                     viewBox="0 0 16 16">
                     <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
@@ -159,7 +125,7 @@
                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                     <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                     </svg><span>Visualizar</span></button>
-                <button type="button" class="btn btn-warning">
+                <button type="button" class="btn btn-warning" id="EditarUsuario">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill"
                     viewBox="0 0 16 16">
                     <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
@@ -457,6 +423,41 @@
         </form>
     </div>
 
+    <div class="modal" style="display: none"; id="edit-user">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Editar Usuário</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label class="modal-label" for="username">Editar Usuário (@username):</label>
+                    <input type="text" id="username" name="username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="modal-label" for="new-email">E-mail:</label>
+                    <input type="new-email" id="email" name="new-email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="modal-label" for="password">Senha Atual:</label>
+                    <input type="password" id="password" name="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="modal-label" for="new-password">Nova Senha:</label>
+                    <input type="new-password" id="new-password" name="new-password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="modal-label" for="confirm-password">Confirmar Senha</label>
+                    <input type="confirm-password" id="confirm-password" name="confirm-password" class="form-control">
+                </div>
+                <div class="buttons">
+                    <button class="modal-button" type="submit" id="edit-user">Salvar</button>
+                    <button class="modal-button" type="reset" id="edit-user-reset">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     </br>
 
     <div id="modal-new-post" class="dashboard-modal shadow">
@@ -494,10 +495,10 @@
 </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <script src="../../public/js/modal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+crossorigin="anonymous"></script>
+<script src="../../public/js/modal.js"></script>
 </body>
 
 </html>

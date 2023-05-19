@@ -1,13 +1,18 @@
-const editarBtn = document.querySelector('.btn-warning');
-
-const modalEditUser = document.getElementById('modal-edit-user');
-
-editarBtn.addEventListener('click', function() {
-  modalEditUser.style.display = 'block';
-});
-
-const modalClose = document.querySelector('.modal-close');
-
-modalClose.addEventListener('click', function() {
-  modalEditUser.style.display = 'none';
-});
+document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("edit-user");
+    const cancelar = document.getElementById("cancelar");
+    const confirmar = document.getElementById("confirmar");
+    const excluir = document.getElementById("EditarUsuario");
+  
+    excluir.addEventListener("click", function() {
+      modal.style.display = "block";
+    });
+  
+    cancelar.addEventListener("click", function() {
+      modal.style.display = "none";
+    });
+  
+    confirmar.addEventListener("click", function() {
+      modal.style.display = "none";
+    });
+  }); 

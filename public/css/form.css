@@ -159,9 +159,7 @@
 .modal-header h2 {
 	color: #d9b32b;
 }
-#modal-edit-user {
-    display: none;
-}
+
 #modal-new-user,
 #modal-new-post {
 	display: none;
