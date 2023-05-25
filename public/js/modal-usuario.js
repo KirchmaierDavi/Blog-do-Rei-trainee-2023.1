@@ -1,18 +1,55 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const modal = document.getElementById("edit-user");
-  const abrirModal = document.getElementById("abrir-modal");
-  const cancelar = document.getElementById("cancelar");
-  const confirmar = document.getElementById("confirmar");
+  const abrirModalDashboard = document.getElementById("abrir-modal");
+  const cancelarDashboard = document.getElementById("cancelar");
+  const confirmarDashboard = document.getElementById("confirmar");
+  const modalDashboard = document.getElementById("dashboard-functions");
+  const modalEditar = document.getElementById("edit-user-modal");
 
-  abrirModal.addEventListener("click", function() {
-      modal.style.display = "block";
+  abrirModalDashboard.addEventListener("click", function() {
+    openModal(modalDashboard);
+    closeModal(modalEditar);
   });
 
-  cancelar.addEventListener("click", function() {
-      modal.style.display = "none";
+  const abrirModalEditar = document.getElementById("editar-usuario");
+  const cancelarEditar = document.getElementById("cancelar-edicao");
+  const confirmarEditar = document.getElementById("confirmar-edicao");
+
+  abrirModalEditar.addEventListener("click", function() {
+    openModal(modalEditar);
+    closeModal(modalDashboard);
   });
 
-  confirmar.addEventListener("click", function() {
-      modal.style.display = "none";
+  cancelarDashboard.addEventListener("click", function() {
+    closeModal(modalDashboard);
   });
+
+  confirmarDashboard.addEventListener("click", function() {
+    closeModal(modalDashboard);
+  });
+
+  cancelarEditar.addEventListener("click", function() {
+    closeModal(modalEditar);
+  });
+
+  confirmarEditar.addEventListener("click", function() {
+    closeModal(modalEditar);
+  });
+
+  window.onclick = function(event) {
+    if (event.target == modalDashboard) {
+      closeModal(modalDashboard);
+    } else if (event.target == modalEditar) {
+      closeModal(modalEditar);
+    }
+  };
 });
+
+function openModal(modal) {
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal(modal) {
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+}

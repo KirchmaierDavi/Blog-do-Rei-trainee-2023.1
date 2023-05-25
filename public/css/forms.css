@@ -71,17 +71,20 @@
 	background-color: #dd4444;
 	transform: scale(1.1);
   }
-  .modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.4);
-  }
-  
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal.show {
+    display: block;
+}
   .modal-content {
 	background-color: #ffffff;
 	margin: 15% auto;
@@ -142,4 +145,14 @@
 	box-shadow: 0px 0px 5px grey;
 	padding: 10px;
 	border-radius: 4px;
+}
+.edt{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
 }
