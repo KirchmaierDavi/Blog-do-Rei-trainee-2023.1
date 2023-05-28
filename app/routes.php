@@ -1,8 +1,8 @@
 <?php
 
-use App\Controllers\AdmController;
+use App\Controllers\AdmControllerPost;
 use App\Core\Router;
 
-    $router->get('admin', 'AdmController@view');
+    $router->get('admin', 'AdmControllerPost@view');
 
 ?> 
