@@ -48,4 +48,13 @@ class AdmControllerPost
         header('Location: /admin');
     }
 
+    public function delete()
+    {
+        $id = $_POST['id'];
+
+        App::get('database')->delete('usuarios', $id);
+
+        header('Location: /admin');
+    }
+
 }
