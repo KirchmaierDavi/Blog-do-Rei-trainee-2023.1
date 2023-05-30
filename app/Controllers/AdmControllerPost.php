@@ -52,9 +52,26 @@ class AdmControllerPost
     {
         $id = $_POST['id'];
 
-        App::get('database')->delete('usuarios', $id);
+        App::get('database')->delete('posts', $id);
 
         header('Location: /admin');
+    }
+
+    public function create()
+    {
+        $parameters = [
+            'title' => $_POST['title'],
+            'content' => $_POST['content'],
+            'image' => $_POST['image'],
+            'created_at' => $_POST['created_at'],
+            'author' => $_POST['author'],
+            'tag' => $_POST['tag'],
+        ];
+
+        App::get('database')->insert('posts', $parameters);
+
+        header('Location: /admin');
+
     }
 
 }
