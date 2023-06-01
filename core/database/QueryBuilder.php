@@ -97,4 +97,8 @@ class QueryBuilder
         }
     }
 
+    public function login($table, $parameters){
+                
+    }
+
 }

@@ -13,10 +13,11 @@
 
 #### Desenvolvedores:
 
-* Sara Ingrid
-* Rayssa Amaral
-* Gabriel Domingos
 * Breno Lino
+* Gabriel Domingos
+* Rayssa Amaral
+* Sara Ingrid
+* Saulo Sureros
 
 
 #### Scrum Master:
