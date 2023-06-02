@@ -7,16 +7,29 @@ use Exception;
 
 class LoginController
 {
+
+    public function view()
+    {
+
+        return view('views/site/login');
+    }
     public function confirmLogin()
     {
-        $parameters = [
-            'email' => $_POST['login'],
-            'password' => $_POST['password'],
-        ];
 
-        App::get('database')->login('users', $parameters);
+        $email = $_POST["login"];
+        $password = $_POST["password"];
 
-        header('Location: /admin');
+        $logged = App::get('database')->login('users', $email, $password);
+
+        if($logged){
+            return view('views/site/landing_page');
+        } else { 
+            $erro = [
+                'erro' => "Usuário ou senha inválidos",
+            ] ;
+            return view('views/site/login', $erro);
+        }
+
     }
 
 }

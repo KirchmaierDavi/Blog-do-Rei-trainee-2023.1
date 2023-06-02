@@ -19,7 +19,7 @@
     <div class="container">
         <div class="forms-container">
             <div class="login">
-                <form action="./login.html" class="login-form" method="POST">
+                <form method="post" action="/views" class="login-form">
 
                     <h2 class="title">Login</h2>
 
@@ -32,8 +32,14 @@
                         <i class="fas fa-lock"></i>
                         <input name="password" type="password" placeholder="Senha" />
                     </div>
-
-                    <input type="submit" value="Entrar" class="btn solid" />
+                    <p style="color: red">
+                     <?php 
+                        if(isset($_POST['confirm'])){
+                        echo $erro;
+                        } 
+                     ?> 
+                    </p>
+                    <input type="submit" value="Entrar" name="confirm" class="btn solid" />
                     <input type="reset" value="Limpar" class="btn solid" />
 
                 </form>
