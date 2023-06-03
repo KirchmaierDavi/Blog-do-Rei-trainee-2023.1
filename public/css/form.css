@@ -1,3 +1,4 @@
+
 @font-face {
 	font-family: "Open Sans";
 	src: url("../fonts/OpenSans-Regular.ttf");
@@ -161,16 +162,23 @@
 }
 
 #modal-new-user,
-#modal-new-post {
+#modal-new-post,
+div[id^='modal-edit-user-'],
+div[id^='modal-show-user-'],
+div[id^='modal-delete-user-'] {
 	display: none;
 }
 
-#modal-new-user{
-	margin-top: 10%;
+#modal-new-user,
+#modal-new-post,
+div[id^='modal-delete-user-']{
+	margin-top: 100px;
 }
-#modal-new-post{
-	margin-top: 5%;
+
+div[id^='modal-edit-user-']{
+	margin-top: 40px
 }
+
 
 .dashboard-modal {
 	background-color: white;
@@ -230,7 +238,4 @@
 		width: 100%;
 		padding: 0px 15px 20px 15px;
 	}
-
-	
-
 }

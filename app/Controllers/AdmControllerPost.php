@@ -19,7 +19,25 @@ class AdmControllerPost
 
     public function viewLanding()
     {
-        return view('views/site/landing_page');
+        $posts = App::get('database')->selectLastPosts('posts');
+        $tables = [
+            'posts' => $posts,
+        ];
+        return view('views/site/landing_page', $tables);
+    }
+
+    public function postIndividual()
+    {
+        $id = $_POST['id'];
+        $postagens = App::get('database')->selectPost($id, 'posts');
+
+        $tables = [
+            'post' => $postagens,
+        ];
+
+        $posts = $tables['post'];
+
+        return view('site/post-individual', compact('posts'));
     }
 
     public function viewById()

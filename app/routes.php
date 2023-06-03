@@ -9,6 +9,7 @@ use App\Core\Router;
     $router->get('admin/create', 'AdmControllerPost@create');
 
 
+    $router->post('posts/postIndividual', 'AdmControllerPost@postIndividual');
     $router->get('home', 'AdmControllerPost@viewLanding');
 
     //UserList
