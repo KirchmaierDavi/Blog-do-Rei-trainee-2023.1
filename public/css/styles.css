@@ -19,21 +19,27 @@
   scroll-behavior: auto;
 }
 
+.navbar-box{
+  top: 0;
+  position: relative;
+  z-index: 10;
+}
+
 body,
 input {
   font-family: "Poppins", sans-serif;
 }
 
-a:link{
+.container a:link{
   text-decoration: none;
   color: #fff;
 }
 
-a:visited{
+.container a:visited{
   color: #FFF;
 }
 
-a:hover{
+.container a:hover{
   color: #000;
 }
 

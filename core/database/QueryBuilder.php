@@ -101,8 +101,12 @@ class QueryBuilder
         }
 
         $value = $id - 1;
-        $tableFix = sprintf(" ALTER TABLE users AUTO_INCREMENT =  %s",$value);
-        //"UPDATE users SET id = id - 1";
+        if($value > 0){
+            $tableFix = sprintf(" ALTER TABLE users AUTO_INCREMENT =  %s",$value);
+            //"UPDATE users SET id = id - 1";
+        }else{
+            $tableFix = sprintf(" ALTER TABLE users AUTO_INCREMENT =  %s",1);          
+        }
        
 
         try {

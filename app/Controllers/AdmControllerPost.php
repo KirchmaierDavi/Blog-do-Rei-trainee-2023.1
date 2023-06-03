@@ -26,6 +26,11 @@ class AdmControllerPost
         return view('views/site/landing_page', $tables);
     }
 
+    public function viewLogin()
+    {
+        return view('views/site/login');
+    }
+
     public function postIndividual()
     {
         $id = $_POST['id'];
@@ -37,7 +42,17 @@ class AdmControllerPost
 
         $posts = $tables['post'];
 
-        return view('site/post-individual', compact('posts'));
+        return view('views/site/pvu', compact('posts'));
+    }
+
+    public function postsList()
+    {
+        $posts = App::get('database')->selectAll('posts');
+        $tables = [
+            'posts' => $posts,
+        ];
+
+        return view('views/site/postsList', $tables);
     }
 
     public function viewById()

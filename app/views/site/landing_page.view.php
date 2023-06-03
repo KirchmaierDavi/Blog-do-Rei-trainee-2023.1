@@ -76,7 +76,7 @@
                             <h1><?php echo $post->title?></h1>
                             <h2><?php echo $post->created_at?> | Autor: <?php echo $post->author?></h2>
                             <p><?php echo substr($post->content, 0, 120) . "...";?></p>
-                            <img src="<?php echo $post->image?>" alt="pelé no vasco">
+                            <img class="post-img" src="<?php echo $post->image?>" alt="pelé no vasco">
                             <input type="hidden" name="id" value="<?php echo $post->id?>">
                             <button type="submit" class="modal-button" title="Ler Post Completo">Ler Post Completo</button>
                         </div>

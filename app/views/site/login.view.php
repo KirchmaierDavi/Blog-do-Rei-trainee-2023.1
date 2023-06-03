@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../../public/css/styles.css">
+    <link rel="stylesheet" href="../../../public/css/navbar-footer.css"/>
+    <link rel="stylesheet" href="../../../public/css/reset.css"/>
     <link rel="shortcut icon" href="../../../public/assets/logo_sem_texto.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
@@ -16,6 +18,7 @@
 </head>
 
 <body>
+    <?php require('app/includes/NavBar.php'); ?>
     <div class="container">
         <div class="forms-container">
             <div class="login">
@@ -54,7 +57,7 @@
                     <br>
 
                     <button class="btn transparent">
-                        <a href="./index.html">Voltar</a>
+                        <a href="/home">Voltar</a>
                     </button>
 
                 </div>
@@ -65,6 +68,8 @@
 
         </div>
     </div>
+    <?php require('app/includes/FooterBar.php'); ?>
+    <script src="../../../public/js/navbar.js"></script>
 </body>
 
 </html>

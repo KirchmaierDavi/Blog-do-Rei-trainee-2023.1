@@ -10,7 +10,11 @@ use App\Core\Router;
 
 
     $router->post('posts/postIndividual', 'AdmControllerPost@postIndividual');
+    $router->get('posts', 'AdmControllerPost@postsList');
+
+    
     $router->get('home', 'AdmControllerPost@viewLanding');
+    $router->get('login', 'AdmControllerPost@viewLogin');
 
     //UserList
     

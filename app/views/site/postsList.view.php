@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../../public/css/posts.css">
+    <link rel="stylesheet" href="../../../public/css/navbar-footer.css"/>
+    <link rel="stylesheet" href="../../../public/css/reset.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
@@ -14,7 +16,7 @@
 </head>
 
 <body>
-
+    <?php require('app/includes/NavBar.php'); ?>
     <div class="top">
         <img class="logo-img" src="../../../public/assets/Logo.png" alt="Logo Blog">
 
@@ -25,25 +27,27 @@
 
         <div class="post-container">
             <h1 class="title">Posts recentes</h1>
-
+            <?php foreach($posts as $post): ?>
             <div class="posts">
                 <img src="https://s2.glbimg.com/cg7lC_rtGFoydU0OEVRZnjUkDDA=/0x0:499x499/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/m/6/VCHw5dSZyi1tHN9y7aUw/93947722-913006105786957-7296841504158624479-n.jpg"
                     alt="foto-pele">
-
                 <div class="posts-text">
-                    <h5 class="date">22/04/2023</h5>
+                <form method="post" action="posts/postIndividual">
+                    <h5 class="date"><?=$post->created_at?> </h5>
 
-                    <h1>Título notícia</h1>
+                    <h1> <?= $post->title ?></h1>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra nulla vel risus semper
-                        accumsan. Nunc vel ligula dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <p><?php echo substr($post->content, 0, 120) . "...";?></p>
 
                     <div class="edge">
                         <hr>
-                        <h5>Tags: esportes, futebol, Pelé.</h5>
+                        <input type="hidden" name="id" value="<?php echo $post->id?>">
+                        <button type="submit" class="modal-button" title="Ler Post Completo">Ler Post Completo</button>
                     </div>
+                </form>
                 </div>
             </div>
+            <?php endforeach; ?>
         </div>
 
         <div class="recents">
@@ -75,6 +79,9 @@
                 </p>
             </div>
         </div>
+    </div>
+    <?php require('app/includes/FooterBar.php'); ?>
+    <script src="../../../public/js/navbar.js"></script>
 </body>
 
 </html>

@@ -19,6 +19,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    margin-top: 3em;
 }
 
 .main{
@@ -44,7 +46,7 @@ body{
 
 .post-container{
     background-color: #FFFFFF;
-    box-shadow: 5px 5px 0px #00000032;
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
     border-radius: 40px;
 
     padding-left: 60px;
@@ -81,7 +83,7 @@ body{
     background-color: #FFFFFF;
 
     /* background-color: #FFFFFF; */
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.196);
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
     height: 30px;
     border-radius: 40px;
     padding: 10px;
@@ -119,7 +121,7 @@ body{
     margin-top: 60px;
 
     border-radius: 40px;
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.196);
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
     background-color: #FFFFFF;
 }
 
@@ -136,7 +138,7 @@ body{
 .memorium img{
     filter: grayscale(1);
     border-radius: 5px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.196);
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
 
     margin-left: 30px;
     margin-top: 30px;
@@ -167,7 +169,7 @@ body{
     margin-bottom: 40px;
     margin-right: 60px;
     border-radius: 5px;
-    box-shadow: 5px 5px 0px #00000032;
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
 }
 
 .posts h2{
@@ -184,12 +186,15 @@ body{
     font-size: 14px;
     position: relative;
     border-radius: 5px;
+    width: 100%;
 }
 
 .posts-text h1{
     font-size: large;
     margin-left: 46px;
     text-transform: uppercase;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .posts-text h5{
@@ -203,6 +208,7 @@ body{
 }
 
 .date{
+    margin-top: 10px;
     letter-spacing: 2px;
 }
 
@@ -226,6 +232,10 @@ body{
 .edge hr{
     width: 83%;
     overflow: hidden;
+}
+
+.modal-button{
+    margin-left: 8%;
 }
 
 @media only screen and (max-width: 1024px){

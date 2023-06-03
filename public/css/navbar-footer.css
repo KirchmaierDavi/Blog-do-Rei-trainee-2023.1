@@ -4,7 +4,7 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-.navbar{
+.navbar-box{
 
     padding-right: 1em;
     padding-left: 1em;
@@ -24,7 +24,10 @@
     transition: background-color 1s ease !important;
 }
 
-
+.navbar-box a{
+    width: 100%;
+    text-decoration: none;
+}
 
 .navbar-sticky{
     position: fixed;
@@ -120,9 +123,12 @@
     border: none;
     border-radius: 4px;
 
-    padding: 10px 15px;
+    padding: 15px 5px;
 
     box-shadow: 1px 1px 5px 1px rgb(170, 135, 8);
+
+    text-align: center;
+    width: 130px;
 }
 
 #my-account-button:hover{
