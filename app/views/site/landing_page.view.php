@@ -7,13 +7,17 @@
 
     <title>Blog do Rei - Home</title>
     <link rel="shortcut icon" href="../../../public/assets/favicon.png" type="image/x-icon">
-
+    <link rel="stylesheet" href="../../../public/css/navbar-footer.css"/>
+    <link rel="stylesheet" href="../../../public/css/reset.css"/>
     <link rel="stylesheet" href="../../../public/css/landing_page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <?php require('app/includes/NavBar.php'); ?>
+
     <div class="header">
         <img src="../../../public/assets/landing_page/texto.png" alt="logo do blog">
     </div>
@@ -113,5 +117,8 @@
             </main>
         </div>
     </div>
+
+    <?php require('app/includes/FooterBar.php'); ?>
+    <script src="../../../public/js/navbar.js"></script>
 </body>
 </html>

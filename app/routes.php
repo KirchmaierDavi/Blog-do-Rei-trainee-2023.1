@@ -7,4 +7,7 @@ use App\Core\Router;
     $router->get('admin/delete', 'AdmControllerPost@delete');
     $router->get('admin/create', 'AdmControllerPost@create');
 
+
+    $router->get('home', 'AdmControllerPost@viewLanding');
+
 ?> 

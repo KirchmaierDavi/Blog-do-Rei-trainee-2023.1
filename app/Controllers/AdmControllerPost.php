@@ -17,6 +17,11 @@ class AdmControllerPost
         return view('admin/postList', $tables);
     }
 
+    public function viewLanding()
+    {
+        return view('views/site/landing_page');
+    }
+
     public function viewById()
     {
         if(isset($_POST['id'])) {

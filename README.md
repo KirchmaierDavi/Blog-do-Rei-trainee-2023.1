@@ -17,6 +17,7 @@
 * Rayssa Amaral
 * Gabriel Domingos
 * Breno Lino
+* Saulo Surerus
 
 
 #### Scrum Master:
