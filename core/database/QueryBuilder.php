@@ -84,6 +84,45 @@ class QueryBuilder
         }
     }
 
+    public function deleteUser($table, $id)
+    {
+        $sql = sprintf(
+            'DELETE FROM %s WHERE %s;',
+            $table,
+            "id = :id"
+        );
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute(compact('id'));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+        $value = $id - 1;
+        $tableFix = sprintf(" ALTER TABLE users AUTO_INCREMENT =  %s",$value);
+        //"UPDATE users SET id = id - 1";
+       
+
+        try {
+            $statement = $this->pdo->prepare($tableFix);
+
+            $statement->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+        $updateSql = sprintf('UPDATE %s SET id = id - 1 WHERE id > :id;', $table);
+        try {
+            $updateStatement = $this->pdo->prepare($updateSql);
+            $updateStatement->execute(compact('id'));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+
     public function insert($table, $parameters)
     {
         $sql = sprintf('INSERT INTO %s (%s) VALUES (%s)', $table, implode(', ', array_keys($parameters)), ':' .implode(', :', array_keys($parameters)));
