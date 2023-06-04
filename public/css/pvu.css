@@ -1,4 +1,4 @@
-body{
+/* body{
 	background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
 }
 
@@ -58,8 +58,8 @@ body{
 	color: black;
 }
 .container {
-    max-width: 1200px; /* Largura máxima do elemento pai */
-    margin: 0 auto; /* Centralizar o elemento pai na tela */
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .container img {
@@ -68,7 +68,7 @@ body{
     width: 600px;
     margin-top: 40px;
     margin-bottom: 0px;
-    margin-left: auto; /* Centralizar a imagem na horizontal */
+    margin-left: auto;
     margin-right: auto;
 }
 .post-description {
@@ -85,3 +85,122 @@ body{
 	text-decoration: none;
 	font-size: 1em !important;
 }
+
+
+@media only screen and (max-width: 767px) {
+	
+} */
+
+.singlepost{
+	background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+
+	height: 100%;
+
+	padding: 2em 0;
+
+}
+
+.singlepost-content{
+
+	max-width: 1200px;
+	margin: 0 auto;
+
+	background-color: white;
+
+	display: flex;
+	flex-direction: column;
+
+	padding: 0 2em;
+	padding-bottom: 1em;
+	margin-bottom: 20px;
+
+	border-radius: 10px;
+	box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
+}
+
+.singlepost-content h1{
+
+	font-size: 3em;
+	margin: 20px 0;
+}
+
+.singlepost-content h2{
+	text-align: justify;
+
+	font-size: 1.2em;
+
+	margin-top: 20px;
+}
+
+.singlepost-content h3{
+	padding-top: 1em;
+}
+
+.singlepost-image{
+	margin: 2em 0;
+}
+
+.singlepost-image img{
+	width: 60%;
+}
+
+.singlepost-backtohome{
+	align-self: start;
+
+	margin-left: 20px;
+}
+
+#back-to-home{
+	padding-top: 10px;
+	padding-bottom: 6px;
+
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.singlepost-content h1{
+		text-align: justify;
+		text-align-last: center;
+		font-size: 1.4em;
+	}
+
+	.singlepost-content h2{
+		margin-top: 0;
+		font-size: 0.9em;
+	}
+
+	.singlepost-content h3{
+		padding-bottom: 1em;
+	}
+
+	.post-description{
+		font-size: 0.8em;
+	}
+
+	.singlepost-content{
+		padding: 0 1em;
+		padding-bottom: 0em;
+	}
+
+	.singlepost-image{
+		margin: 1em auto;
+	}
+
+	.singlepost-backtohome{
+		align-self: start;
+	
+		margin-left: 10px;
+	}
+
+
+}
+

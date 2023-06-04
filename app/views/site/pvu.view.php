@@ -3,17 +3,20 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de visualização única </title>
 
-    <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Quicksand:wght@300;400;600&family=Roboto:wght@300;500&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../public/css/reset.css"/>
     <link rel="stylesheet" href="../../../public/css/pvu.css">
     <link rel="stylesheet" href="../../../public/css/navbar-footer.css"/>
-    <link rel="stylesheet" href="../../../public/css/reset.css"/>
+
 
 </head>
 
@@ -21,10 +24,9 @@
 
     <?php require('app/includes/NavBar.php'); ?>
 
-    <div class="main">
+    <div class="singlepost">
         <?php foreach ($posts as $post): ?>
-            <div class="informations">
-                <label for=text>
+            <div class="singlepost-content">
                     <h1>
                         <?= $post->title ?>
                     </h1>
@@ -45,8 +47,8 @@
 
                     <h2><?= $first_half ?></h2>
                     
-                    <div class="container">
-                        <img src="../../../public/assets/copa58.jpg" alt="Copa de 1958">
+                    <div class="singlepost-image">
+                         <img src="../../../public/assets/copa58.jpg" alt="Copa de 1958"> 
                         <figcaption class="post-description">Copa de 1958,Pelé é o terceiro jogador da esquerda para a adireita na fileira dos
                             jogadores que estão abaixados</figcaption>
                     </div>
@@ -55,12 +57,11 @@
 
                     <hr>
                     <h3>Informações Adicionais(Detalhes extras que existem no post)</h3>
-                </label>
             </div>
 
             <br>
-            <div class="voltar">
-               <a class="modal-button back-to-home" href="/home" target="white">Voltar<a>
+            <div class="singlepost-backtohome">
+               <a class="modal-button" id="back-to-home" href="/home" target="white"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg><a>
             </div>
         <?php endforeach; ?>
     </div>

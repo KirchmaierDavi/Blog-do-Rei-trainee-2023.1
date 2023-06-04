@@ -4,8 +4,8 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-.navbar-box{
-
+.navbar-box {
+    position: relative;
     padding-right: 1em;
     padding-left: 1em;
     display: flex;
@@ -19,17 +19,18 @@
     background-color: #d9b32b;
     height: 65px;
 
+    z-index: 10;
     box-shadow: 0px 1px 12px 0px rgba(36, 31, 13, 0.8);
 
     transition: background-color 1s ease !important;
 }
 
-.navbar-box a{
+.navbar-box a {
     width: 100%;
     text-decoration: none;
 }
 
-.navbar-sticky{
+.navbar-sticky {
     position: fixed;
     top: 0;
     width: 100%;
@@ -37,37 +38,37 @@
 
     box-sizing: border-box;
 
-    background-color: #d9b32b; 
+    background-color: #d9b32b;
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
-.navbar-logo{
+.navbar-logo {
     width: 20%;
 }
 
-.navbar-login{
+.navbar-login {
     width: 20%;
     word-break: keep-all;
 }
 
-.navbar-logo-image{
+.navbar-logo-image {
     height: 50px;
     filter: saturate(0%) brightness(70%) contrast(1000%);
     transition: all ease-in-out 0.3s;
 }
 
-.navbar-logo-image:hover{
+.navbar-logo-image:hover {
     transform: scale(1.05);
 
     cursor: pointer;
 }
 
-.navbar-btn{
+.navbar-btn {
     display: none;
 }
 
-.navbar-list{
+.navbar-list {
     display: flex;
 
     width: 80%;
@@ -75,7 +76,7 @@
     justify-content: space-around;
 }
 
-.navbar-list-item{
+.navbar-list-item {
     display: flex;
 
 
@@ -88,7 +89,7 @@
     transition: all ease-in-out 0.3s;
 }
 
-.navbar-list-item svg{
+.navbar-list-item svg {
     height: 28px;
     width: 28px;
     color: black;
@@ -97,27 +98,27 @@
     transition: all ease-in-out 0.3s;
 }
 
-.navbar-list-item:hover{
+.navbar-list-item:hover {
     color: #F0F0F0;
     text-decoration: underline;
 }
 
-.navbar-list-item:hover svg{
+.navbar-list-item:hover svg {
     color: #F0F0F0;
     height: 32px;
     width: 32px;
 }
 
-.navbar-login{
+.navbar-login {
     display: flex;
     justify-content: center;
 }
 
-.navbar-login svg{
+.navbar-login svg {
     display: none;
 }
 
-#my-account-button{
+#my-account-button {
     background-color: #D3A809;
 
     border: none;
@@ -131,15 +132,15 @@
     width: 130px;
 }
 
-#my-account-button:hover{
-    background-color: #D9B328 ;
-    
+#my-account-button:hover {
+    background-color: #D9B328;
+
     border: none;
-    
+
     cursor: pointer;
 }
 
-.footer{
+.footer {
 
     display: flex;
     flex-wrap: wrap;
@@ -151,19 +152,19 @@
     padding: 10px 20px;
 
     margin: auto;
-    margin-top: 3em;
+
 }
 
 
-.footer-signatures{
+.footer-signatures {
 
     padding-left: 3%;
     padding-top: 2%;
 
-    
+
 }
 
-.footer-signatures a{
+.footer-signatures a {
     text-decoration: none;
 
     font-size: 1.2em;
@@ -173,37 +174,37 @@
     transition: all ease-in-out 0.35s;
 }
 
-.footer-signatures a:hover{
+.footer-signatures a:hover {
 
     color: #5d4d02;
 }
 
-.footer-signatures li{
+.footer-signatures li {
     padding-left: 0.8em;
 
     padding-bottom: 0.5em;
 }
 
-.footer-signatures h1{
+.footer-signatures h1 {
 
     font-size: 2em;
 
     padding-bottom: 0.2em;
 }
 
-.footer-logo img{
+.footer-logo img {
     width: 180px;
 
     transition: all ease-in-out 0.3s;
 }
 
-.footer-logo img:hover{
+.footer-logo img:hover {
     transform: scale(1.05);
 
     cursor: pointer;
 }
 
-.footer-social{
+.footer-social {
     font-family: 'Saira';
 
     display: block;
@@ -214,18 +215,18 @@
 
 }
 
-.footer-social h1{
+.footer-social h1 {
 
     font-size: 2em;
 
     padding-bottom: 0.4em;
 }
 
-.footer-social a{
+.footer-social a {
     padding-right: 1em;
 }
 
-.footer-social-icon{
+.footer-social-icon {
     width: 46px;
     height: 46px;
 
@@ -239,211 +240,252 @@
     transition: all ease-in-out 0.35s;
 }
 
-.footer-social-icon:hover{
+.footer-social-icon:hover {
     background-color: #5d4d02;
 }
 
-.footer-social-list{
+.footer-social-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
 .modal-button {
-	margin-top: 10px;
-	padding: 10px;
-	background-color: #d9b32b;
-	color: #ffffff;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d9b32b;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .modal-button:hover {
-	background-color: green;
+    background-color: green;
 }
-@media only screen and (max-width: 1024px) {
-.navbar-logo-image{
-        height: 30px;
-      }
 
-      .footer{
+
+@media only screen and (max-width: 1024px) {
+
+    .navbar-list {
+        justify-content: center;
+    }
+
+    .navbar-list-item {
+        font-size: 0.8em;
+        justify-content: center;
+
+    }
+
+    .navbar-logo-image {
+        height: 30px;
+    }
+
+    .footer {
         display: flex;
         flex-direction: row;
-    
+
         align-items: top;
         justify-content: space-between;
-    
-      }
-    
-      .footer-logo img{
+
+    }
+
+    .footer-logo img {
         width: 160px;
         margin-right: -50px;
-      }
-    
-      .footer-signatures a{
+    }
+
+    .footer-signatures a {
         font-size: 1.5em;
 
     }
-    
-    .footer-signatures li{
+
+    .footer-signatures li {
         display: flex;
-    
+
         justify-content: center;
-    
+
     }
-    
-    .footer-signatures h1{
-        
+
+    .footer-signatures h1 {
+
         font-size: 2em;
     }
-    
-    .footer-social{
+
+    .footer-social {
         text-align: center;
         display: flex;
         flex-direction: column;
     }
-    
-    
-    .footer-social-icon{
+
+
+    .footer-social-icon {
         width: 100%;
     }
-    
+
+    .navbar-login {
+        width: 30%;
+        justify-content: center;
+        padding: 3px 0;
+
+    }
+
+    .navbar-login svg {
+        display: inline;
+
+        width: 16x;
+        height: 16px;
+        color: black;
+    }
+
+    .navbar-login span {
+        display: none;
+    }
+
+    #my-account-button {
+        box-shadow: 1px 1px 5px 1px rgba(15, 14, 7, 0.529);
+        padding: 10px 0px;
+        width: 50px;
+    }
 
 }
 
 @media only screen and (max-width: 767px) {
-   .navbar-logo{
-    width: 50%;
-   } 
+    .navbar-logo {
+        width: 50%;
+    }
 
-   .navbar-mobile{
-    width: 20%;
-   }
+    .navbar-mobile {
+        width: 20%;
+    }
 
-  .navbar-logo-image{
-    height: 30px;
-  }
+    .navbar-logo-image {
+        height: 30px;
+    }
 
-  .navbar-btn{
-    display: block;
-    background-color: #D3A809;
+    .navbar-btn {
+        display: block;
+        background-color: #D3A809;
 
-    border: none;
-    border-radius: 4px;
+        border: none;
+        border-radius: 4px;
 
-    padding: 10px 15px;
+        padding: 10px 15px;
 
-    box-shadow: 1px 1px 5px 1px rgba(15, 14, 7, 0.495);
-  }
+        box-shadow: 1px 1px 5px 1px rgba(15, 14, 7, 0.495);
+    }
 
-  .navbar-btn svg{
-    height: 1em;
-    width: 1em;
-  }
+    .navbar-btn svg {
+        height: 1em;
+        width: 1em;
+    }
 
-  .navbar-list{
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    position: absolute;
-    width: 100%;
-    top: 65px;
-    right: 0;
-    background-color:#D3A809 ;
-    transition: all ease-in-out 0.2s;
-    z-index: 1000;
-    height: 0;
-    visibility: hidden;
-    overflow-y:auto;
-    transition: .2s;
-  }
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        position: absolute;
+        width: 100%;
+        top: 65px;
+        right: 0;
+        background-color: #D3A809;
+        transition: all ease-in-out 0.2s;
+        z-index: 1000;
+        height: 0;
+        visibility: hidden;
+        overflow-y: auto;
+        transition: .2s;
+    }
 
-  #navbar.active .navbar-list{
-    height: auto;
-    visibility: visible;
-    padding: 10px 0;
-  }
-
-
-  .navbar-item {
-    display: none;
-  }
-
-  .navbar-login{
-    width: 30%;
-    justify-content: end;
-    padding: 5px 0;
-    
-  }
-
-  .navbar-login svg{
-    display: inline;
-
-    width: 16x;
-    height: 16px;
-
-    padding-right: 5px;
-
-    color: black;
-  }
-
-  .navbar-login span{
-    display: none;
-  }
-
-#my-account-button{
-    box-shadow: 1px 1px 5px 1px rgba(15, 14, 7, 0.529);
-  }
-
-  .footer{
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-  }
-
-  .footer-logo img{
-    width: 160px;
-    margin-right: 0;
-    margin-bottom: -25px;
-  }
-
-  .footer-signatures a{
-    font-size: 1em;
-  }
-
-  .footer-signatures li{
-    display: flex;
-
-    justify-content: center;
-
-    padding-left: 0;
-  }
-
-.footer-signatures h1,.footer-social h1{
-    
-    font-size: 1.5em;
-}
+    #navbar.active .navbar-list {
+        height: auto;
+        visibility: visible;
+        padding: 10px 0;
+    }
 
 
-.footer-social{
-    margin: 10px 0;
+    .navbar-item {
+        display: none;
+    }
 
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    .navbar-list-item {
+        justify-content: center;
+    }
+
+    .navbar-login {
+        width: 30%;
+        justify-content: center;
+        padding: 3px 0;
+
+    }
+
+    .navbar-login svg {
+        display: inline;
+
+        width: 16x;
+        height: 16px;
+        color: black;
+    }
+
+    .navbar-login span {
+        display: none;
+    }
+
+    #my-account-button {
+        box-shadow: 1px 1px 5px 1px rgba(15, 14, 7, 0.529);
+        padding: 10px 0px;
+        width: 50px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .footer-logo img {
+        width: 160px;
+        margin-right: 0;
+        margin-bottom: -25px;
+    }
+
+    .footer-signatures a {
+        font-size: 1em;
+    }
+
+    .footer-signatures li {
+        display: flex;
+
+        justify-content: center;
+
+        padding-left: 0;
+    }
+
+    .footer-signatures h1,
+    .footer-social h1 {
+
+        font-size: 1.5em;
+    }
+
+
+    .footer-social {
+        margin: 10px 0;
+
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
 
 
-.footer-social-icon{
-    width: 100%;
-}
+    .footer-social-icon {
+        width: 100%;
+    }
 
 
 }
