@@ -161,5 +161,24 @@ class QueryBuilder
         }
     }
 
+    public function search($tituloDoposts, $start_limit = null, $row_amout = null)
+    {
+        $sql = "SELECT * FROM posts WHERE title LIKE '%{$tituloDoposts}%'";
+        if ($start_limit >= 0 && $row_amout > 0) {
+            $sql .= " LIMIT {$start_limit}, {$row_amout}";
+        }
+
+        try {
+            $stnt = $this->pdo->prepare($sql);
+            $stnt->execute();
+
+
+            return $stnt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+
+            die($e->getMEssage());
+        }
+    }
+
 
 }

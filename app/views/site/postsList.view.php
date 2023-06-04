@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../../public/css/posts.css">
-    <link rel="stylesheet" href="../../../public/css/navbar-footer.css"/>
-    <link rel="stylesheet" href="../../../public/css/pagination.css"/>
-    <link rel="stylesheet" href="../../../public/css/reset.css"/>
+    <link rel="stylesheet" href="../../../public/css/navbar-footer.css" />
+    <link rel="stylesheet" href="../../../public/css/pagination.css" />
+    <link rel="stylesheet" href="../../../public/css/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
@@ -28,38 +28,46 @@
 
         <div class="post-container">
             <h1 class="title">Posts recentes</h1>
-            <?php foreach($posts as $post): ?>
-            <div class="posts">
-                <img src="https://s2.glbimg.com/cg7lC_rtGFoydU0OEVRZnjUkDDA=/0x0:499x499/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/m/6/VCHw5dSZyi1tHN9y7aUw/93947722-913006105786957-7296841504158624479-n.jpg"
-                    alt="foto-pele">
-                <div class="posts-text">
-                    <form method="post" action="posts/postIndividual">
-                        <h5 class="date"><?=$post->created_at?> </h5>
+            <?php foreach ($posts as $post): ?>
+                <div class="posts">
+                    <img src="https://s2.glbimg.com/cg7lC_rtGFoydU0OEVRZnjUkDDA=/0x0:499x499/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/m/6/VCHw5dSZyi1tHN9y7aUw/93947722-913006105786957-7296841504158624479-n.jpg"
+                        alt="foto-pele">
+                    <div class="posts-text">
+                        <form method="post" action="posts/postIndividual">
+                            <h5 class="date"><?= $post->created_at ?> </h5>
 
-                        <h1> <?= $post->title ?></h1>
+                            <h1>
+                                <?= $post->title ?>
+                            </h1>
 
-                        <p><?php echo substr($post->content, 0, 120) . "...";?></p>
+                            <p>
+                                <?php echo substr($post->content, 0, 120) . "..."; ?>
+                            </p>
 
-                        <div class="edge">
-                            <hr>
-                            <input type="hidden" name="id" value="<?php echo $post->id?>">
-                            <button type="submit" class="modal-button" title="Ler Post Completo">Ler Post Completo</button>
-                        </div>
-                    </form>
+                            <div class="edge">
+                                <hr>
+                                <input type="hidden" name="id" value="<?php echo $post->id ?>">
+                                <button type="submit" class="modal-button" title="Ler Post Completo">Ler Post
+                                    Completo</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
             <?php endforeach; ?>
         </div>
 
         <div class="recents">
-            <div class="search-box">
-                <input type="text" class="search-text" placeholder="Pesquisar">
+        <form class="search-box" action="posts" method="GET">
+            <input type="text" name="search" class="search-text" list="pesquisa-salva" placeholder="Pesquisar">
+            <button type="submit" href="#" class="search-btn">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path
                         d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
                 </svg>
-            </div>
 
+            </button>
+        </form>
+        
             <div class="memorium">
                 <img src="../../../public/assets/pele.jpg" alt="Foto Pelé" style="width: 340px;">
                 <p>“O sucesso não acontece por acaso. É trabalho duro, perseverança, aprendizado, estudo, sacrifício e,

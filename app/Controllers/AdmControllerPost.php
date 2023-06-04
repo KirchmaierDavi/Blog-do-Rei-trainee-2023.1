@@ -17,65 +17,6 @@ class AdmControllerPost
         return view('admin/postList', $tables);
     }
 
-    public function viewLanding()
-    {
-        $posts = App::get('database')->selectLastPosts('posts');
-        $tables = [
-            'posts' => $posts,
-        ];
-        return view('views/site/landing_page', compact('posts'));
-    }
-
-    public function viewLogin()
-    {
-        return view('views/site/login');
-    }
-
-    public function postIndividual()
-    {
-        $id = $_POST['id'];
-        $postagens = App::get('database')->selectPost($id, 'posts');
-
-        $tables = [
-            'post' => $postagens,
-        ];
-
-        $posts = $tables['post'];
-
-        return view('views/site/pvu', compact('posts'));
-    }
-
-    public function postsList()
-    {
-        $page = 1;
-        
-        if (isset($_GET['pagina']) && !empty($_GET['pagina'])){
-            $page = intval($_GET['pagina']);
-
-            if($page <= 0){
-                return redirect('posts');
-            }
-        }
-
-
-        $items_per_page = 3;
-        $start_limit = $items_per_page * $page - $items_per_page;
-        $rows_count = App::get('database')->countCases('posts');
-
-        if($start_limit > $rows_count){
-            return redirect('posts');
-        }
-
-        $total_pages = ceil($rows_count/$items_per_page);
-
-        $posts = App::get('database')->selectAll('posts', $start_limit, $items_per_page);
-        $tables = [
-            'posts' => $posts,
-        ];
-
-        return view('views/site/postsList', compact('posts','page','total_pages'));
-    }
-
     public function viewById()
     {
         if(isset($_POST['id'])) {

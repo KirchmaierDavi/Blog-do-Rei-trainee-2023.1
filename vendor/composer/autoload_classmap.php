@@ -7,6 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controllers\\AdmControllerPost' => $baseDir . '/app/Controllers/AdmControllerPost.php',
+    'App\\Controllers\\LandingPageController' => $baseDir . '/app/Controllers/LandingPageController.php',
+    'App\\Controllers\\LoginPageController' => $baseDir . '/app/Controllers/LoginController.php',
+    'App\\Controllers\\PostIndividualController' => $baseDir . '/app/Controllers/PostIndividualController.php',
+    'App\\Controllers\\PostListController' => $baseDir . '/app/Controllers/PostListController.php',
     'App\\Controllers\\UserController' => $baseDir . '/app/Controllers/UserController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Database\\Connection' => $baseDir . '/core/database/Connection.php',
