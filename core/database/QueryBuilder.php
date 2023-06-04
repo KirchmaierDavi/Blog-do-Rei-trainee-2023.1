@@ -16,9 +16,13 @@ class QueryBuilder
     }
 
 
-    public function selectAll($table)
+    public function selectAll($table, $start_limit = null, $rows_count = null)
     {
         $sql = "select * from {$table}";
+
+        if($start_limit >= 0 && $rows_count > 0){
+            $sql .= " LIMIT {$start_limit}, {$rows_count}";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -71,20 +75,20 @@ class QueryBuilder
         }
     }
 
+    // public function delete($table, $id)
+    // {
+    //     $sql = sprintf('DELETE FROM $s WHERE $s', $table, 'id = : $id');
+
+    //     try {
+    //         $stmt = $this->pdo->prepare($sql);
+    //         $stmt->execute(compact($id));
+
+    //     } catch (Exception $e) {
+    //         die($e->getMessage());
+    //     }
+    // }
+
     public function delete($table, $id)
-    {
-        $sql = sprintf('DELETE FROM $s WHERE $s', $table, 'id = : $id');
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute(compact($id));
-
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
-    public function deleteUser($table, $id)
     {
         $sql = sprintf(
             'DELETE FROM %s WHERE %s;',
@@ -96,31 +100,6 @@ class QueryBuilder
             $statement = $this->pdo->prepare($sql);
 
             $statement->execute(compact('id'));
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-
-        $value = $id - 1;
-        if($value > 0){
-            $tableFix = sprintf(" ALTER TABLE users AUTO_INCREMENT =  %s",$value);
-            //"UPDATE users SET id = id - 1";
-        }else{
-            $tableFix = sprintf(" ALTER TABLE users AUTO_INCREMENT =  %s",1);          
-        }
-       
-
-        try {
-            $statement = $this->pdo->prepare($tableFix);
-
-            $statement->execute();
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-
-        $updateSql = sprintf('UPDATE %s SET id = id - 1 WHERE id > :id;', $table);
-        try {
-            $updateStatement = $this->pdo->prepare($updateSql);
-            $updateStatement->execute(compact('id'));
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -168,5 +147,19 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function countCases($table){
+        $sql = "SELECT COUNT(*) FROM {$table}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return intval($stmt->fetch(PDO::FETCH_NUM)[0]);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
 
 }

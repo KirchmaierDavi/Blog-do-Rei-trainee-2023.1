@@ -52,13 +52,14 @@
 
 
         <!-- Conteudo -->
-        <?php foreach($users as $user): ?>
+        <?php foreach($users as $key=>$user): ?>
         <div class="userlist-userboxD
                     d-flex flex-row 
                     shadow text-center
                     p-4
                     align-items-center">
-            <div class="userlist-userboxD-item text-left"><?php echo $user->id ?></div>
+                    <!-- <?php echo $user->id ?> -->
+            <div class="userlist-userboxD-item text-left"><?=$key+1?></div>
             <div class="userlist-userboxD-item"><?php echo $user->NAME ?></div>
             <div class="userlist-userboxD-item"><?php echo $user->email ?></div>
             <div class="userlist-userboxD-item userlist-userboxD-actions">
@@ -163,7 +164,7 @@
                 <h2>Novo Usuário</h2>
                 <span class="modal-close">&times;</span>
             </div>
-            <form action="/user/create" METHOD="POST">
+            <form action="userList/create" METHOD="POST">
                 <div class="form-group">
                     <label class="modal-label" for="username">Usuário (@username):</label>
                     <input type="text" id="username" name="username" class="form-control">
@@ -228,7 +229,7 @@
                 <h2>Editar Usuário</h2>
                 <span class="modal-close">&times;</span>
             </div>
-            <form action="/user/update" METHOD="POST">
+            <form action="userList/update" METHOD="POST">
                 <div class="form-group">
                     <label class="modal-label" for="username">Editar Usuário (@username):</label>
                     <input type="text" id="username" name="username" class="form-control"  value="<?php echo $user->NAME ?>">
@@ -283,7 +284,7 @@
                 <h2>Excluir Usuário</h2>
                 <span class="modal-close">&times;</span>
             </div>
-            <form action="/user/delete" METHOD="POST">
+            <form action="userList/delete" METHOD="POST">
                 <div class="form-group">
                     <label class="modal-label" for="username">Tem certeza que deseja excluir esse usuário?</label>
                 </div>

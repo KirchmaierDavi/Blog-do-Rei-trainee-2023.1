@@ -23,7 +23,7 @@ class AdmControllerPost
         $tables = [
             'posts' => $posts,
         ];
-        return view('views/site/landing_page', $tables);
+        return view('views/site/landing_page', compact('posts'));
     }
 
     public function viewLogin()
@@ -47,12 +47,33 @@ class AdmControllerPost
 
     public function postsList()
     {
-        $posts = App::get('database')->selectAll('posts');
+        $page = 1;
+        
+        if (isset($_GET['pagina']) && !empty($_GET['pagina'])){
+            $page = intval($_GET['pagina']);
+
+            if($page <= 0){
+                return redirect('posts');
+            }
+        }
+
+
+        $items_per_page = 3;
+        $start_limit = $items_per_page * $page - $items_per_page;
+        $rows_count = App::get('database')->countCases('posts');
+
+        if($start_limit > $rows_count){
+            return redirect('posts');
+        }
+
+        $total_pages = ceil($rows_count/$items_per_page);
+
+        $posts = App::get('database')->selectAll('posts', $start_limit, $items_per_page);
         $tables = [
             'posts' => $posts,
         ];
 
-        return view('views/site/postsList', $tables);
+        return view('views/site/postsList', compact('posts','page','total_pages'));
     }
 
     public function viewById()

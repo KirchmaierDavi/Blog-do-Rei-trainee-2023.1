@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../../../public/css/posts.css">
     <link rel="stylesheet" href="../../../public/css/navbar-footer.css"/>
+    <link rel="stylesheet" href="../../../public/css/pagination.css"/>
     <link rel="stylesheet" href="../../../public/css/reset.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,6 +81,7 @@
             </div>
         </div>
     </div>
+    <?php require('app/includes/Pagination.php'); ?>
     <?php require('app/includes/FooterBar.php'); ?>
     <script src="../../../public/js/navbar.js"></script>
 </body>
