@@ -270,9 +270,12 @@ aside ul li {
         display: flex;
     }
     .retrospectiva_vertical {
+        position: sticky;
+        top: 0;
         margin-left: 2.5%;
         display: block;
         flex: 1;
+        height: fit-content;
     }
     .animation {
         margin-right: 2.5%;
