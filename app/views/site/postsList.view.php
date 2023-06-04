@@ -32,19 +32,19 @@
                 <img src="https://s2.glbimg.com/cg7lC_rtGFoydU0OEVRZnjUkDDA=/0x0:499x499/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/m/6/VCHw5dSZyi1tHN9y7aUw/93947722-913006105786957-7296841504158624479-n.jpg"
                     alt="foto-pele">
                 <div class="posts-text">
-                <form method="post" action="posts/postIndividual">
-                    <h5 class="date"><?=$post->created_at?> </h5>
+                    <form method="post" action="posts/postIndividual">
+                        <h5 class="date"><?=$post->created_at?> </h5>
 
-                    <h1> <?= $post->title ?></h1>
+                        <h1> <?= $post->title ?></h1>
 
-                    <p><?php echo substr($post->content, 0, 120) . "...";?></p>
+                        <p><?php echo substr($post->content, 0, 120) . "...";?></p>
 
-                    <div class="edge">
-                        <hr>
-                        <input type="hidden" name="id" value="<?php echo $post->id?>">
-                        <button type="submit" class="modal-button" title="Ler Post Completo">Ler Post Completo</button>
-                    </div>
-                </form>
+                        <div class="edge">
+                            <hr>
+                            <input type="hidden" name="id" value="<?php echo $post->id?>">
+                            <button type="submit" class="modal-button" title="Ler Post Completo">Ler Post Completo</button>
+                        </div>
+                    </form>
                 </div>
             </div>
             <?php endforeach; ?>

@@ -100,7 +100,7 @@
 
 .navbar-list-item:hover {
     color: #F0F0F0;
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 .navbar-list-item:hover svg {
@@ -130,11 +130,15 @@
 
     text-align: center;
     width: 130px;
+
+    transition: all .4s;
 }
 
 #my-account-button:hover {
     background-color: #D9B328;
 
+    color: white;
+    font-weight: bold;
     border: none;
 
     cursor: pointer;
@@ -268,6 +272,11 @@
 
 @media only screen and (max-width: 1024px) {
 
+    * {
+        box-sizing: border-box;
+    }
+
+
     .navbar-list {
         justify-content: center;
     }
@@ -285,10 +294,21 @@
     .footer {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+    }
 
-        align-items: top;
-        justify-content: space-between;
 
+    .footer-logo {
+        width: 20%;
+    }
+
+
+    .footer-signatures {
+        width: 40%;
+    }
+
+    .footer-social {
+        width: 40%;
     }
 
     .footer-logo img {
@@ -309,7 +329,7 @@
     }
 
     .footer-signatures h1 {
-
+        text-align: center;
         font-size: 2em;
     }
 
@@ -415,8 +435,8 @@
 
     .navbar-login {
         width: 30%;
-        justify-content: center;
-        padding: 3px 0;
+        justify-content: end;
+        padding: 5px 0;
 
     }
 
@@ -425,6 +445,7 @@
 
         width: 16x;
         height: 16px;
+
         color: black;
     }
 
@@ -434,7 +455,7 @@
 
     #my-account-button {
         box-shadow: 1px 1px 5px 1px rgba(15, 14, 7, 0.529);
-        padding: 10px 0px;
+        padding: 9px 0px;
         width: 50px;
     }
 
@@ -445,6 +466,15 @@
         align-items: center;
         justify-content: center;
 
+    }
+
+    .footer>*{
+        width: 100%;
+    }
+
+    .footer-logo{
+        display: flex;
+        justify-content: center;
     }
 
     .footer-logo img {

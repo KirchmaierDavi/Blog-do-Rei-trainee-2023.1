@@ -65,6 +65,8 @@ body{
 
 .title{
     background-color: #FFFFFF;
+    font-size: 2em;
+    padding: 1em 0;
 }
 
 .recents{
@@ -172,6 +174,7 @@ body{
     box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
 }
 
+
 .posts h2{
     margin-left: 2%;
 }
@@ -182,16 +185,28 @@ body{
 }
 
 .posts-text{
-    display: block;
+    display: flex;
+    flex-direction: column;
     font-size: 14px;
     position: relative;
     border-radius: 5px;
     width: 100%;
 }
 
+.posts-text form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.posts-text form>*{
+    flex-grow: 1;
+}
+
 .posts-text h1{
     font-size: large;
     margin-left: 46px;
+    margin-right: 10px;
     text-transform: uppercase;
     margin-top: 12px;
     margin-bottom: 12px;
@@ -213,12 +228,11 @@ body{
 }
 
 .edge{
-    position:absolute;
-    bottom: 0;
     width: 100%;
-    padding-bottom: 16px;
     overflow: hidden;
     border-radius: 5px;
+    align-self: self-end;
+
 }
 
 .edge h5{
@@ -273,11 +287,10 @@ body{
         display: none;
     }
 
-    .posts{
-        margin-bottom: 20px;
-        width: 100%;
+    .posts {
+        width: 90%;
+        margin: 50px auto;
         height: fit-content;
-
         display: flex;
         flex-direction: column;
     }
@@ -287,7 +300,7 @@ body{
         height: auto;
 
         max-width: 100%;
-        max-height: 600px;
+        max-height: 300px;
     }
 
     .posts p{
@@ -298,9 +311,6 @@ body{
         font-size: x-large;
     }
 
-    .edge{
-        display: none;
-    }
 
     .recents{
         width: 100%;
@@ -318,9 +328,44 @@ body{
     .memorium{
         display: none;
     }
+
+    .edge{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-button{
+        margin: 0 auto;
+        font-size: 1.5em;
+        width: 100%;
+    }
 }
 
-@media only screen and (max-width: 280px){
+@media only screen and (max-width: 767px){
+
+    .posts{
+        width: 100%;
+    }
+
+    .posts-text h1{
+        margin-left: 12px;
+        text-align: justify;
+        text-align-last: center;
+    }
+
+    .posts-text h5 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .modal-button {
+       margin-left: 0;
+    }
+
+    .edge button{
+        width: 100%;
+    }
+
     .logo-img{
         width: 100%;
     }
