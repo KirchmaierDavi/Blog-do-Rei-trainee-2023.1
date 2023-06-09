@@ -13,7 +13,7 @@
 
 #### Desenvolvedores:
 
-* Sara Ingrid
+* Sara Ingrid Sousa
 * Rayssa Amaral
 * Gabriel Domingos
 * Breno Lino

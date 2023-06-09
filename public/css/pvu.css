@@ -1,0 +1,96 @@
+body{
+	background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+}
+
+header img {
+	display: block; 
+	margin: 0 auto; 
+	height: 100px; 
+	width: 320px; 
+	margin-bottom: 35px;
+	margin-top: 20px;
+}
+
+.informations{
+	margin-left: 50px;
+	margin-right: 50px;
+	background-color: white;
+ 	padding: 6px 100px 80px 100px;
+	box-shadow: 5px 5px 0px #00000032;
+	border-radius: 40px;
+}
+.informations h1{
+	text-align: center;
+	line-height:0.7;
+	font-size: 50px;
+	color: #070601;
+	position: relative;
+	margin-bottom: 70px;
+	font-family: 'Quicksand', sans-serif;
+}
+.informations h2{
+	text-align: justify;
+	color: #070601;
+	font-size:20px;
+	margin-top: 30px;
+	font-family: 'Quicksand', sans-serif;
+
+}
+.informations h3{
+     color: #070601;
+     font-size: 14px;
+     font-family: 'Quicksand', sans-serif;
+	 margin-top: 10px;
+}
+.informations img{
+       height:400px;
+  	   width: 600px;
+  	   position: relative;
+  	   element: center;
+
+}
+
+.main a {
+	line-height: 30px;
+	font-size: 10px;
+	font-family: 'Quicksand', sans-serif;
+
+}
+.main hr{
+	color: black;
+}
+.container {
+    max-width: 1200px; /* Largura máxima do elemento pai */
+    margin: 0 auto; /* Centralizar o elemento pai na tela */
+}
+
+.container img {
+    display: block;
+    height: 400px;
+    width: 600px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    margin-left: auto; /* Centralizar a imagem na horizontal */
+    margin-right: auto;
+}
+figcaption {
+  font-size: 11px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+.voltar a{
+	color: #D9B328;
+	text-decoration: none;
+	font-size:18px;
+	display: inline-block;
+	font-family: 'Quicksand', sans-serif;
+	border-radius: 40px;
+	padding: 0.8px 5px 0.8px 5px;
+	margin-bottom: 8px;
+	margin-left: 50px;
+	transition: transform 0.3s ease;
+}
+.voltar a:hover {
+    transform: scale(1.4);
+}

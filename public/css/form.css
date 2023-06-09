@@ -161,16 +161,20 @@
 }
 
 #modal-new-user,
-#modal-new-post {
+#modal-new-post,
+#modal-edit-user {
 	display: none;
 }
 
-#modal-new-user{
-	margin-top: 10%;
-}
+#modal-new-user,
 #modal-new-post{
-	margin-top: 5%;
+	margin-top: 100px;
 }
+
+#modal-edit-user{
+	margin-top: 40px
+}
+
 
 .dashboard-modal {
 	background-color: white;

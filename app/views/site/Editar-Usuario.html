@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Editar Usuário</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Quicksand:wght@300;400;600&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../public/css/forms.css">
+    <link rel="stylesheet" href="../../../public/css/edit.css">
+    <script src="../../../public/js/modal-usuario.js"></script>
+</head>
+
+<body>
+    <div class="modal" id="modal-edit-user">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Editar Usuário</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label class="modal-label" for="username">Editar Usuário (@username):</label>
+                    <input type="text" id="username" name="username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="modal-label" for="new-email">E-mail:</label>
+                    <input type="new-email" id="email" name="new-email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="modal-label" for="password">Senha Atual:</label>
+                    <input type="password" id="password" name="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="modal-label" for="new-password">Nova Senha:</label>
+                    <input type="new-password" id="new-password" name="new-password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="modal-label" for="confirm-password">Confirmar Senha</label>
+                    <input type="confirm-password" id="confirm-password" name="confirm-password" class="form-control">
+                </div>
+                <div class="buttons">
+                    <button class="modal-button" type="submit" id="edit-user">Salvar</button>
+                    <button class="modal-button" type="reset" id="edit-user-reset">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
