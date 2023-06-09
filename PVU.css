@@ -1,0 +1,128 @@
+body{
+	margin: 0;
+	background-size: cover;
+
+}
+
+header {
+    background-color: #D9B328;
+ 	height: 40px;
+  	display: flex;
+	position: fixed;
+    z-index: 9999;
+	top:0;
+	left:0;
+	width:100%;
+}
+header img {
+	margin-top:-5px;
+  	margin-left: 0 auto;
+  	margin-right: 0 auto;
+  	height:55px;
+  	width: 55px;
+}
+.caminho {
+	list-style: none;
+	padding-left: 15px;
+	font-size: 14px;
+
+}
+.caminho a{
+	color: black;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+}
+.caminho li{
+	display: inline-block;
+	font-family: 'Roboto', sans-serif;
+
+
+}
+.fotos-inseridas img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	position: fixed;
+}	
+
+.informations{
+	margin-left: 150px;
+	margin-right: 150px;
+	background-color: white;
+	border-radius: 20px;
+ 	padding: 0px 80px 80px 80px;
+ 	position: relative;
+ 	top: 40px;
+}
+.informations h1{
+	text-align: center;
+	line-height:0.7;
+	font-size: 50px;
+	color: #070601;
+	position: relative;
+	top:30px;
+	margin-bottom: 70px;
+	font-family: 'Roboto', sans-serif;
+}
+.informations h2{
+	text-align: justify;
+	color: #070601;
+	font-size:15px;
+	margin-top: 30px;
+	font-family: 'Roboto', sans-serif;
+
+}
+.informations h3{
+     color: #070601;
+     font-size: 12px;
+     font-family: 'Roboto', sans-serif;
+}
+.informations img{
+       height:400px;
+  	   width: 600px;
+  	   position: relative;
+  	   element: center;
+
+}
+
+.main a {
+	line-height: 30px;
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+
+}
+.main hr{
+	color: black;
+}
+.container{
+   text-align: center;
+   margin-top:30px;
+   display: block;
+   color: black;
+   margin:0;
+   font-size:12px;
+
+}
+figcaption {
+  grid-column-start: 2;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+ #fotos-inseridas {
+   position: relative;
+}
+#fundo {
+   position: absolute;
+   margin:0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   z-index: -1;
+}
+.voltar a{
+	color: #D9B328;
+	text-decoration: none;
+	font-size:16px;
+}
