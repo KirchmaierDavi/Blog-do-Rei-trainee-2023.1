@@ -43,7 +43,7 @@ body{
     margin-top: 6%;
 
     background-color: #FFFFFF;
-    box-shadow: 5px 5px 0px #00000032;
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
     border-radius: 40px;
 
     display: block;
@@ -56,15 +56,15 @@ body{
     padding-bottom: 3%;
     margin: 0;
 
-    background-color: #fceaaa;
-    color: #d3a809;
+    background-color: #d9b32b;
+    color: black;
     font-size: 36px;
     font-weight: bold;
 }
 
 .container-content{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     
     padding: 8% 0% 8% 0%;
@@ -73,7 +73,7 @@ body{
 }
 
 .admin{
-    width: 100%;
+    width: 250px;
 
     margin-left: 8%;
     margin-right: 8%;
@@ -85,12 +85,14 @@ body{
 
     background-color: #fceaaa;
     border-radius: 40px;
-    box-shadow: 4px 5px 0px #00000032;
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
     cursor: pointer;
 }
 
+.adminContent-link{ text-decoration: none;}
+
 .admin-options{
-    color: #d3a809;
+    color: black;
     font-weight: 400px;
     letter-spacing: 1px;
 }
@@ -98,7 +100,7 @@ body{
 .icons{
     width: 40px;
     margin-bottom: 10px;
-    fill: #d3a809
+    fill: black;
 }
 
 @media only screen and (max-width: 912px){
@@ -125,6 +127,35 @@ body{
 
     .admin-options{
         font-size: xx-large;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+@media only screen and (max-width: 762px){
+
+    body{
+        margin-bottom: 10%;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .container-content{
+        display: block;
+        margin-top: 1%;
+        padding-top: 0;
+    }
+
+    .admin{
+        width: auto;
+        margin-top: 6%;
+        padding-top: 40px;
+    }
+
+    .admin-options{
+        font-size: 1em;
         padding-left: 2%;
         padding-right: 2%;
     }

@@ -1,7 +1,10 @@
 <?php
 
-use App\Controllers\AdmControllerPost;
-use App\Core\Router;
+// use App\Controllers\AdmControllerPost;
+// use App\Core\Router;
+
+    //Dashboard
+    $router -> get('admin', 'DashboardController@view');
 
     //UserList
     
@@ -20,7 +23,7 @@ use App\Core\Router;
 
     $router->post('posts/postIndividual', 'PostIndividualController@postIndividual');
     $router->get('posts', 'PostListController@postsList');
-    $router->get('home', 'LandingPageController@view');
+    $router->get('', 'LandingPageController@view');
     $router->get('login', 'LoginPageController@view');
 
 
