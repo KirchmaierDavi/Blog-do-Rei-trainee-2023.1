@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --white: #FFFFFF;
+    --anti-flash-white: #F0F0F0;
+    --platinum: #E0E0E0;
+    --gold-light: #D9B328;
+    --gold-dark: #D3A809;
+    --smoky-black: #070601;
+    --black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    font-size: 18px;
+    background-color: var(--platinum);
+}
+
+.header img {
+    display: block;
+    margin: auto;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    width: 15%;
+}
+
+.line {
+    height: 1px;
+    width: 95%;
+    background-color: var(--black);
+    display: block;
+    margin: 1px auto 0px auto;
+}
+
+.retrospectiva img {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.retrospectiva_vertical {
+    display: none;
+}
+
+.box {
+    direction: rtl;
+    display: flex;
+}
+ 
+main {
+    flex: 2;
+    margin-left: 2.5%;
+    margin-top: 20px;
+}
+
+.posts {
+	margin-right: 20px;
+}
+
+.posts article {
+	margin-bottom: 30px;
+	background-color: var(--white);
+	padding-bottom: 5%;
+    border-radius: 20px;
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
+}
+
+.posts article .content {
+    text-align: center;
+    padding-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.posts article h1 {
+    text-transform: uppercase;
+	margin: 0;
+	font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+    direction: ltr;
+}
+
+.posts article h2 {
+    direction: ltr;
+    color: var(--gold-dark);
+    text-transform: uppercase;
+	margin: 0;
+	font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.posts article p {
+    direction: ltr;
+	margin-top: 1vw;
+    text-align: justify;
+}
+
+.posts article img {
+    margin-top: 2vw;
+    width: 60%;
+    border-radius: 20px;
+}
+
+aside {
+    flex: 1.1;
+    margin-right: 2.5%;
+}
+ 
+aside ul li {
+    list-style: none;
+    position: relative;
+}
+
+.destaque {
+    margin-top: 20px;
+    background-color: var(--gold-light);
+    width: 100%;
+    border-radius: 20px;
+
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
+}
+
+.destaque .text {
+    display: block;
+    margin-top: 15px;
+    font-size: larger;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.image-container {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.image-container img {
+    width: 30%;
+    border-radius: 20%;
+
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
+    
+}
+
+.image-container img:first-child {
+    margin-left: 0;
+}
+
+.image-container img:last-child {
+    margin-right: 0;
+}
+
+.image-container img:nth-child(1) {
+    margin-right: auto;
+}
+  
+.image-container img:nth-child(2) {
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.image-container img:nth-child(3) {
+    margin-left: auto;
+}
+
+.sobre {
+    margin-left: 2.5%;
+    background-color: var(--white);
+    margin-top: 30px;
+    direction: ltr;
+    align-items: center;
+    justify-items: end;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    border-radius: 20px;
+
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
+}
+
+.sobre p {
+    margin-top: 10px;
+    padding-left: 25%;
+}
+
+.container {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+  
+.container .text {
+    padding: 10px;
+    font-size: 25px;
+}
+
+
+.container:not(:first-child) {
+    margin-top: -15px;
+}
+
+.container::before {
+    content: "";
+    width: 15px;
+    height: 100%;
+    background-color: var(--gold-light);
+    margin-right: 10px;
+}
+
+.animation {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 400px;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.animation img {
+    width: 90%;
+    margin-left: 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#my-image {
+    transition: all 0.3s ease;
+}
+  
+#my-image:hover {
+    transform: scale(0.8) rotate(45deg);
+}
+
+@media (max-width: 950px) {
+    .header img {
+        display: block;
+        margin: auto;
+        width: 20%;
+    }
+    main {
+        margin-top: 30px;
+    }
+    .retrospectiva {
+        display: none;
+    }
+    .responsividade {
+        display: flex;
+    }
+    .retrospectiva_vertical {
+        margin-left: 2.5%;
+        display: block;
+        flex: 1;
+    }
+    .animation {
+        margin-right: 2.5%;
+        width: 97%;
+    }
+    .posts article img {
+        width: 70%;
+    }
+    .retrospectiva_vertical img {
+        width: 100%;
+    }
+    .box {
+        margin-left: 20px;
+        display: block;
+        flex: 2;
+        direction: ltr;
+    }
+    .sobre p {
+        text-align: end;
+    }
+    .destaque {
+        width: auto;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .sobre {
+        margin-right: 2.5%;
+    }
+    .box .animation {
+        display: none;
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header img {
+        width: 25%;
+    }
+    body {
+        font-size: 14px;
+    }
+    .posts article h1 {
+        font-size: larger;
+    }
+    .posts article h2 {
+        font-size: smaller;
+    }
+    .posts article img {
+        width: 80%;
+    }
+    .container .text {
+        font-size: 20px;
+    }
+    .container:not(:first-child) {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .header img {
+        width: 35%;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+    .responsividade {
+        display: block;
+    }
+    .retrospectiva_vertical img{
+        display: none;
+    }
+    .retrospectiva_vertical .line {
+        display: none;
+    }
+    .posts article img {
+        width: 90%;
+    }
+    .animation {
+        margin-top: 0;
+        height: 40vw;
+        text-align: center;
+        width: 100%;
+    }
+    .animation img {
+        margin-left: 15%;
+    }
+    .retrospectiva_vertical .animation img{
+        margin-right: 0;
+        display: block;
+        width: 70%;
+    }
+}
+
+@media (max-width: 300px) {
+    .header img {
+        width: 45%;
+    }
+    .line {
+        height: 0.1px;
+    }
+    aside {
+        margin-right: 5%;
+    }
+}
