@@ -30,5 +30,6 @@
     //login
     $router->get('views', 'LoginController@view');
     $router->post('views', 'LoginController@confirmLogin');
+    $router->post('logout', 'LoginController@logout');
 
 ?> 

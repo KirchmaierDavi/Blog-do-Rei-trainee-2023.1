@@ -37,4 +37,9 @@ class LoginController
 
     }
 
+public function logout(){
+    session_abort();
+    header('Location: /login');
+}
+
 }

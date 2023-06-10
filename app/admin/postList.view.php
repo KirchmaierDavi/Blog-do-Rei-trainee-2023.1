@@ -223,7 +223,7 @@
                     </div>
                     <div class="form-group">
                         <label class="modal-label" for="imagem">Imagem:</label>
-                        <input type="file" id="imagem" name="imagem" class="form-control" required>
+                        <input type="url" value="<?=$post->image?>"id="imagem" name="imagem" class="form-control" required>
                     </div>
                     <input type="hidden" name="id" value="<?php echo $post->id; ?>">
                     <div class="buttons">
