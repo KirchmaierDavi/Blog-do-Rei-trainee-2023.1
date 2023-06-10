@@ -1,4 +1,4 @@
-<?php session_start()?>
+<?php require('app/includes/Validation.php')?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +16,8 @@
 
 <body>
 
-    <div class="logout">
+<form   action="/logout" method="POST">
+    <div onclick="javascript:this.parentNode.submit()" class="logout">
         <div class="logout-buttom" style="cursor: pointer;">
             <svg style="width: 12px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path
@@ -25,6 +26,10 @@
             <p>Log out</p>
         </div>
     </div>
+</form>
+    
+        
+
 
     <div class="container">
         <h1>Dashboard</h1>

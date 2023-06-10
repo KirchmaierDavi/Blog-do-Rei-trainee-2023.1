@@ -32,10 +32,12 @@
                 </a>
             </li>
             <li class="logout">
-                <a href="#">
-                    <span class="icon"><ion-icon name="exit"></ion-icon></span>
-                    <span class="text">Log Out</span>
-                </a>
+                <form action="/logout" method="POST">
+                    <a onclick="javascript:this.parentNode.submit()">
+                        <span class="icon"><ion-icon name="exit"></ion-icon></span>
+                        <span class="text">Log Out</span>
+                    </a>
+                </form>
             </li>
         </ul>
     </div>

@@ -9,15 +9,13 @@ class PostIndividualController
     public function postIndividual()
     {
         $id = $_POST['id'];
-        $postagens = App::get('database')->selectPost($id, 'posts');
-
+        $posts = App::get('database')->selectPost($id, 'posts');
+        $users = App::get('database')->selectAll('users');
         $tables = [
-            'post' => $postagens,
+            'posts' => $posts,
+            'users' => $users,
         ];
-
-        $posts = $tables['post'];
-
-        return view('views/site/pvu', compact('posts'));
+        return view('views/site/pvu', compact('posts' , 'users'));
     }
 }
 

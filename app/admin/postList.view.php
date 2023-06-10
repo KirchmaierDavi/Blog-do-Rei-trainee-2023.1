@@ -1,4 +1,4 @@
-<?php session_start()?>
+<?php require('app/includes/Validation.php')?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

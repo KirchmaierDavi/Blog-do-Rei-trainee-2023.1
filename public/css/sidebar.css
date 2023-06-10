@@ -188,6 +188,7 @@
     transition: 0.5s;
     opacity: 0;
     visibility: hidden;
+    cursor: pointer;
 }
 
 .navigation.open ul li.logout{
