@@ -124,6 +124,14 @@
     color: var(--white);
 }
 
+.navigation ul li a:hover .icon {
+    color: var(--gold-dark);
+}
+
+.navigation ul li a:hover .text {
+    color: var(--gold-dark);
+}
+
 .navigation ul li.active a .icon {
     color: var(--smoky-black);
     background: var(--gold-dark);
@@ -201,4 +209,22 @@
 
 .navigation ul li.logout:hover span{
     color: black;
+}
+
+@media (max-width: 1100px) { 
+    .navigation {
+        height: 60px;
+    }
+    .navigation .menuToggle {
+        border-bottom: 0px solid var(--platinum);
+    }
+    .navigation.open {
+        height: auto;
+    }
+    .navigation li {
+        display: none;
+    }
+    .navigation.open li {
+        display: flex;
+    }
 }
