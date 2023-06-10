@@ -170,19 +170,19 @@
             <form action="postList/create" METHOD="POST">
                 <div class="form-group">
                     <label class="modal-label" for="titulo">Título:</label>
-                    <input type="text" id="titulo" name="titulo" class="form-control">
+                    <input type="text" id="titulo" name="titulo" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="texto">Texto:</label>
-                    <textarea id="texto" name="texto" class="form-control"></textarea>
+                    <textarea id="texto" name="texto" class="form-control" required></textarea>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="autor">Autor:</label>
-                    <input type="text" id="autor" name="autor" class="form-control">
+                    <input type="text" id="autor" name="autor" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="data">Data de Criação:</label>
-                    <input type="date" id="data" name="data" class="form-control">
+                    <input type="date" id="data" name="data" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="imagem">Imagem:</label>
