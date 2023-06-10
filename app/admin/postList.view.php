@@ -52,102 +52,111 @@
 
 
         <!-- Conteudo -->
-        <?php foreach($posts as $key=>$post): ?>
-        <div class="userlist-userboxD
+        <?php foreach ($posts as $key => $post): ?>
+            <div class="userlist-userboxD
                     d-flex flex-row 
                     shadow text-center
                     p-4
                     align-items-center">
-                     <!-- <?php echo $post->id ?> -->
-            <div class="userlist-userboxD-item text-left"><?=$key+1?></div>
-            <div class="userlist-userboxD-item"><?php echo $post->title ?></div>
-            <div class="userlist-userboxD-item userlist-userboxD-actions">
-                <button type="button" class="btn btn-info" id="show-post-<?php echo $post->id ?>" onclick="dashboardFunctions(this)">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-eye-fill" viewBox="0 0 16 16">
-                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                        <path
-                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                    </svg><span> Visualizar</span></button>
-                <button type="button" class="btn btn-warning" id="post-editing-<?php echo $post->id ?>" onclick="dashboardFunctions(this)">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                    </svg><span> Editar</span></button>
-                <button type="button" class="btn btn-danger" id="delete-post-<?php echo $post->id ?>" onclick="dashboardFunctions(this)">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-trash-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
-                    </svg><span> Deletar</span></button>
+                <!-- <?php echo $post->id ?> -->
+                <div class="userlist-userboxD-item text-left">
+                    <?= $key + 1 ?>
+                </div>
+                <div class="userlist-userboxD-item">
+                    <?php echo $post->title ?>
+                </div>
+                <div class="userlist-userboxD-item userlist-userboxD-actions">
+                    <button type="button" class="btn btn-info" id="show-post-<?php echo $post->id ?>"
+                        onclick="dashboardFunctions(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-eye-fill" viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                            <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                        </svg><span> Visualizar</span></button>
+                    <button type="button" class="btn btn-warning" id="post-editing-<?php echo $post->id ?>"
+                        onclick="dashboardFunctions(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                        </svg><span> Editar</span></button>
+                    <button type="button" class="btn btn-danger" id="delete-post-<?php echo $post->id ?>"
+                        onclick="dashboardFunctions(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-trash-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                        </svg><span> Deletar</span></button>
+                </div>
             </div>
-        </div>
 
-        <!--Versão Mobile-->
-        <div class="userlist-userboxM accordion " id="user_card_1">
-            <div class="accordion-item">
-                <h2 class=" userlist-userboxM-header 
+            <!--Versão Mobile-->
+            <div class="userlist-userboxM accordion " id="user_card_1">
+                <div class="accordion-item">
+                    <h2 class=" userlist-userboxM-header 
                                   accordion-header" id="user_card_1_head">
-                    <button class=" accordion-button collapsed 
+                        <button class=" accordion-button collapsed 
                                     d-flex justify-content-around" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#user_card_<?php echo $post->id ?>_collapse" aria-expanded="true"
-                        aria-controls="user_card_<?php echo $post->id ?>_collapse">
+                            data-bs-target="#user_card_<?php echo $post->id ?>_collapse" aria-expanded="true"
+                            aria-controls="user_card_<?php echo $post->id ?>_collapse">
 
-                        <div class="d-flex flex-column justify-content-around flex-fill ">
-                            <div class="d-flex flew-row justify-content-between ">
-                                <div class="userlist-userboxM-header-title ">
-                                    Id
+                            <div class="d-flex flex-column justify-content-around flex-fill ">
+                                <div class="d-flex flew-row justify-content-between ">
+                                    <div class="userlist-userboxM-header-title ">
+                                        Id
+                                    </div>
+                                    <div class="userlist-userboxM-header-title">
+                                        Post
+                                    </div>
                                 </div>
-                                <div class="userlist-userboxM-header-title">
-                                    Post
+                                <div class="d-flex flew-row justify-content-between">
+                                    <div class="userlist-userboxM-header-content">
+                                        <?php echo $post->id ?>
+                                    </div>
+                                    <div class="userlist-userboxM-header-content">
+                                        <?php echo $post->title ?>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="d-flex flew-row justify-content-between">
-                                <div class="userlist-userboxM-header-content">
-                                <?php echo $post->id ?>
-                                </div>
-                                <div class="userlist-userboxM-header-content">
-                                <?php echo $post->title ?>
-                                </div>
-                            </div>
-                        </div>
-                    </button>
-                </h2>
+                        </button>
+                    </h2>
 
-                <div id="user_card_<?php echo $post->id ?>_collapse"  class="accordion-collapse collapse " aria-labelledby="user_card_1_head"
-                    data-bs-parent="#user_<?php echo $post->id ?>">
-                    <div class="userlist-userboxM-body accordion-body">
-                        <div class="userlist-userboxM-body-content
+                    <div id="user_card_<?php echo $post->id ?>_collapse" class="accordion-collapse collapse "
+                        aria-labelledby="user_card_1_head" data-bs-parent="#user_<?php echo $post->id ?>">
+                        <div class="userlist-userboxM-body accordion-body">
+                            <div class="userlist-userboxM-body-content
                                     d-flex justify-content-around">
-                            <button type="button" class="btn btn-info"  onclick="dashboardFunctions(this)">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                    <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                                </svg>
-                            </button>
-                            <button type="button" class="btn btn-warning" id="post-editing"
-                                onclick="dashboardFunctions(this)">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                                </svg>
-                            </button>
-                            <button type="button" class="btn btn-danger"  onclick="dashboardFunctions(this)">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
-                                </svg>
-                            </button>
+                                <button type="button" class="btn btn-info" id="show-post-<?php echo $post->id ?>"
+                                    onclick="dashboardFunctions(this)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                        <path
+                                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="btn btn-warning" id="post-editing-<?php echo $post->id ?>"
+                                    onclick="dashboardFunctions(this)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="btn btn-danger" onclick="dashboardFunctions(this)"
+                                    id="delete-post-<?php echo $post->id ?>">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         <?php endforeach; ?>
     </div>
 
@@ -186,84 +195,91 @@
             </form>
         </div>
 
-        <?php foreach($posts as $post): ?>
-        <div id="modal-post-editing-<?php echo $post->id ?>" data-second-id="<?php echo $post->id ?>" class="dashboard-modal shadow">
-            <div class="modal-header">
-                <span><ion-icon name="create"></ion-icon></span>
-                <h2>Editar Post</h2>
-                <span class="modal-close">&times;</span>
+        <?php foreach ($posts as $post): ?>
+            <div id="modal-post-editing-<?php echo $post->id ?>" data-second-id="<?php echo $post->id ?>"
+                class="dashboard-modal shadow">
+                <div class="modal-header">
+                    <span><ion-icon name="create"></ion-icon></span>
+                    <h2>Editar Post</h2>
+                    <span class="modal-close">&times;</span>
+                </div>
+                <form action="postList/update" METHOD="POST">
+                    <div class="form-group">
+                        <label class="modal-label" for="titulo">Título:</label>
+                        <textarea id="titulo" name="titulo" class="form-control"><?php echo $post->title ?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="modal-label" for="texto">Texto:</label>
+                        <textarea id="texto" name="texto" class="form-control"><?php echo $post->content ?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="modal-label" for="autor">Autor:</label>
+                        <input type="text" id="autor" name="autor" class="form-control" value="<?php echo $post->author ?>">
+                    </div>
+                    <div class="form-group">
+                        <label class="modal-label" for="data">Data de Criação:</label>
+                        <input type="date" id="data" name="data" class="form-control"
+                            value="<?php echo $post->created_at ?>">
+                    </div>
+                    <div class="form-group">
+                        <label class="modal-label" for="imagem">Imagem:</label>
+                        <input type="file" id="imagem" name="imagem" class="form-control">
+                    </div>
+                    <input type="hidden" name="id" value="<?php echo $post->id; ?>">
+                    <div class="buttons">
+                        <button class="modal-button" type="submit" id="post-editing">Salvar</button>
+                        <button class="modal-button" type="reset" id="new-post-reset">Limpar</button>
+                    </div>
+                </form>
             </div>
-            <form action="postList/update" METHOD="POST">
-                <div class="form-group">
-                    <label class="modal-label" for="titulo">Título:</label>
-                    <textarea id="titulo" name="titulo" class="form-control"><?php echo $post->title ?></textarea>
-                </div>
-                <div class="form-group">
-                    <label class="modal-label" for="texto">Texto:</label>
-                    <textarea id="texto" name="texto" class="form-control"><?php echo $post->content ?></textarea>
-                </div>
-                <div class="form-group">
-                    <label class="modal-label" for="autor">Autor:</label>
-                    <input type="text" id="autor" name="autor" class="form-control" value="<?php echo $post->author ?>">
-                </div>
-                <div class="form-group">
-                    <label class="modal-label" for="data">Data de Criação:</label>
-                    <input type="date" id="data" name="data" class="form-control" value ="<?php echo $post->created_at ?>">
-                </div>
-                <div class="form-group">
-                    <label class="modal-label" for="imagem">Imagem:</label>
-                    <input type="file" id="imagem" name="imagem" class="form-control">
-                </div>
-                <input type="hidden" name="id" value="<?php echo $post->id;?>">
-                <div class="buttons">
-                    <button class="modal-button" type="submit" id="post-editing">Salvar</button>
-                    <button class="modal-button" type="reset" id="new-post-reset">Limpar</button>
-                </div>
-            </form>
-        </div>
 
-        <div id="modal-show-post-<?php echo $post->id ?>" class="dashboard-modal shadow">
-            <div class="modal-header">
-                <h2>Visualizar Post</h2>
-                <span class="modal-close">&times;</span>
-            </div>
-            <form>
-                <div class="form-group">
-                    <label class="modal-label" for="titulo">Título:</label>
-                    <textarea id="texto" name="texto" disabled class="form-control"><?php echo $post->title ?></textarea>
+            <div id="modal-show-post-<?php echo $post->id ?>" class="dashboard-modal shadow">
+                <div class="modal-header">
+                    <h2>Visualizar Post</h2>
+                    <span class="modal-close">&times;</span>
                 </div>
-                <div class="form-group">
-                    <label class="modal-label" for="texto">Texto:</label>
-                    <textarea id="texto" name="texto" disabled class="form-control"><?php echo $post->content ?></textarea>
-                </div>
-                <div class="form-group">
-                    <label class="modal-label" for="autor">Autor:</label>
-                    <input type="text" id="autor" name="autor" disabled class="form-control" value="<?php echo $post->author ?>">
-                </div>
-                <div class="form-group">
-                    <label class="modal-label" for="data">Data de Criação:</label>
-                    <input type="date" id="data" name="data" disabled class="form-control" value ="<?php echo $post->created_at ?>">
-                </div>
+                <form>
+                    <div class="form-group">
+                        <label class="modal-label" for="titulo">Título:</label>
+                        <textarea id="texto" name="texto" disabled
+                            class="form-control"><?php echo $post->title ?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="modal-label" for="texto">Texto:</label>
+                        <textarea id="texto" name="texto" disabled
+                            class="form-control"><?php echo $post->content ?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="modal-label" for="autor">Autor:</label>
+                        <input type="text" id="autor" name="autor" disabled class="form-control"
+                            value="<?php echo $post->author ?>">
+                    </div>
+                    <div class="form-group">
+                        <label class="modal-label" for="data">Data de Criação:</label>
+                        <input type="date" id="data" name="data" disabled class="form-control"
+                            value="<?php echo $post->created_at ?>">
+                    </div>
 
-            </form>
-        </div>
-        
-        <div id="modal-delete-post-<?php echo $post->id ?>" data-second-id="<?php echo $post->id ?>" class="dashboard-modal shadow">
-            <div class="modal-header">
-                <h2>Excluir Post</h2>
-                <span class="modal-close">&times;</span>
+                </form>
             </div>
-            <form action="postList/delete" METHOD="POST">
-                <div class="form-group">
-                    <label class="modal-label" for="username">Tem certeza que deseja excluir esse post?</label>
+
+            <div id="modal-delete-post-<?php echo $post->id ?>" data-second-id="<?php echo $post->id ?>"
+                class="dashboard-modal shadow">
+                <div class="modal-header">
+                    <h2>Excluir Post</h2>
+                    <span class="modal-close">&times;</span>
                 </div>
-                <input type="hidden" name="id" value="<?php echo $post->id;?>">
-                <div class="buttons">
-                    <button class="modal-button" type="submit" id="delete-user">Excluir</button>
-                    <button class="modal-button" type="reset" id="delete-user-reset">Cancelar</button>
-                </div>
-            </form>
-        </div>
+                <form action="postList/delete" METHOD="POST">
+                    <div class="form-group">
+                        <label class="modal-label" for="username">Tem certeza que deseja excluir esse post?</label>
+                    </div>
+                    <input type="hidden" name="id" value="<?php echo $post->id; ?>">
+                    <div class="buttons">
+                        <button class="modal-button" type="submit" id="delete-user">Excluir</button>
+                        <button class="modal-button" type="reset" id="delete-user-reset">Cancelar</button>
+                    </div>
+                </form>
+            </div>
 
         <?php endforeach; ?>
     </div>
@@ -292,7 +308,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    
+
 </body>
 
 </html>
