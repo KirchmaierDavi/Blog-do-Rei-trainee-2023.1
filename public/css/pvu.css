@@ -80,9 +80,8 @@ figcaption {
 }
 
 .voltar a{
-	color: #D9B328;
 	text-decoration: none;
-	font-size:30px;
+	font-size:15px;
 	display: inline-block;
 	font-family: 'Quicksand', sans-serif;
 	border-radius: 40px;
