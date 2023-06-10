@@ -60,7 +60,7 @@
                     align-items-center">
                     <!-- <?php echo $user->id ?> -->
             <div class="userlist-userboxD-item text-left"><?=$key+1?></div>
-            <div class="userlist-userboxD-item"><?php echo $user->NAME ?></div>
+            <div class="userlist-userboxD-item"><?php echo $user->name ?></div>
             <div class="userlist-userboxD-item"><?php echo $user->email ?></div>
             <div class="userlist-userboxD-item userlist-userboxD-actions">
                 <button type="button" class="btn btn-info" id="show-user-<?php echo $user->id ?>" onclick="dashboardFunctions(this)">
@@ -107,7 +107,7 @@
                                 <?php echo $user->id ?>
                                 </div>
                                 <div class="userlist-userboxM-header-content">
-                                <?php echo $user->NAME ?>
+                                <?php echo $user->name ?>
                                 </div>
                             </div>
                         </div>
@@ -128,21 +128,21 @@
                         </div>
                         <div class="userlist-userboxM-body-content
                                     d-flex justify-content-around">
-                            <button type="button" class="btn btn-info">
+                            <button type="button" class="btn btn-info"  onclick="dashboardFunctions(this)">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                                     <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                                 </svg>
                             </button>
-                            <button type="button" class="btn btn-warning">
+                            <button type="button" class="btn btn-warning"  onclick="dashboardFunctions(this)">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-pencil-fill" viewBox="0 0 16 16">
                                     <path
                                         d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
                                 </svg>
                             </button>
-                            <button type="button" class="btn btn-danger">
+                            <button type="button" class="btn btn-danger"  onclick="dashboardFunctions(this)">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-trash-fill" viewBox="0 0 16 16">
                                     <path
@@ -190,39 +190,6 @@
 
         </br>
 
-        <div id="modal-new-post" class="dashboard-modal shadow">
-            <div class="modal-header">
-                <h2>Novo Post</h2>
-                <span class="modal-close">&times;</span>
-            </div>
-            <form>
-                <div class="form-group">
-                    <label class="modal-label" for="titulo">Título:</label>
-                    <input type="text" id="titulo" name="titulo" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label class="modal-label" for="texto">Texto:</label>
-                    <textarea id="texto" name="texto" class="form-control"></textarea>
-                </div>
-                <div class="form-group">
-                    <label class="modal-label" for="autor">Autor:</label>
-                    <input type="text" id="autor" name="autor" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label class="modal-label" for="data">Data de Criação:</label>
-                    <input type="date" id="data" name="data" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label class="modal-label" for="imagem">Imagem:</label>
-                    <input type="file" id="imagem" name="imagem" class="form-control">
-                </div>
-                <div class="buttons">
-                    <button class="modal-button" type="submit" id="new-post-new">Salvar</button>
-                    <button class="modal-button" type="reset" id="new-post-reset">Limpar</button>
-                </div>
-            </form>
-        </div>
-
         <?php foreach($users as $user): ?>
         <div id="modal-edit-user-<?php echo $user->id ?>" data-second-id="<?php echo $user->id ?>" class="dashboard-modal shadow">
             <div class="modal-header">
@@ -232,7 +199,7 @@
             <form action="userList/update" METHOD="POST">
                 <div class="form-group">
                     <label class="modal-label" for="username">Editar Usuário (@username):</label>
-                    <input type="text" id="username" name="username" class="form-control"  value="<?php echo $user->NAME ?>">
+                    <input type="text" id="username" name="username" class="form-control"  value="<?php echo $user->name ?>">
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="new-email" src="<?php echo $user->email ?>">E-mail:</label>
@@ -240,7 +207,7 @@
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="password">Senha Atual:</label>
-                    <input type="password" id="password" name="password" class="form-control" value="<?php echo $user->PASSWORD?>">
+                    <input type="password" id="password" name="password" class="form-control" value="<?php echo $user->password?>">
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="new-password">Nova Senha:</label>
@@ -266,7 +233,7 @@
             <form >
                 <div class="form-group">
                     <label class="modal-label" for="username">Usuário (@username):</label>
-                    <input type="text" id="username" disabled name="username" class="form-control text-center"  value="<?php echo $user->NAME ?>">
+                    <input type="text" id="username" disabled name="username" class="form-control text-center"  value="<?php echo $user->name ?>">
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="new-email" src="<?php echo $user->email ?>">E-mail:</label>
@@ -274,7 +241,7 @@
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="password">Senha</label>
-                    <input type="password" id="password" disabled name="password" class="form-control text-center" value="<?php echo $user->PASSWORD?>">
+                    <input type="password" id="password" disabled name="password" class="form-control text-center" value="<?php echo $user->password?>">
                 </div>
             </form>
         </div>

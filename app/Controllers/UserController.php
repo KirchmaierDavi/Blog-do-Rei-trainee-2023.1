@@ -19,9 +19,9 @@ class UserController
     public function newUser()
     {
         $parameters = [
-            'NAME' => $_POST['username'],
+            'name' => $_POST['username'],
             'email' => $_POST['email'],
-            'PASSWORD' => $_POST['password'],
+            'password' => $_POST['password'],
         ];
 
         App::get('database')->insert('users', $parameters);

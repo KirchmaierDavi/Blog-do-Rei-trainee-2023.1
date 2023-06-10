@@ -74,9 +74,9 @@
                     <article>
                         <div class="content">
                             <h1><?php echo $post->title?></h1>
-                            <h2><?php echo $post->created_at?> | Autor: <?php echo $post->author?></h2>
+                            <h2><?php echo $post->created_at?> | Autor: <?php foreach($users as $user):$aux = $post->author; if($user->id == $aux) echo $user->name; endforeach;?></h2>
                             <p><?php echo substr($post->content, 0, 120) . "...";?></p>
-                            <img class="post-img" src="<?php echo $post->image?>" alt="pelé no vasco">
+                            <img class="post-img" src="<?php echo $post->image?>" alt="Imagem">
                             <input type="hidden" name="id" value="<?php echo $post->id?>">
                             <button type="submit" class="modal-button" title="Ler Post Completo">Ler Post Completo</button>
                         </div>

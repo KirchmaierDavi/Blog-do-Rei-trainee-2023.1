@@ -12,10 +12,12 @@ class LandingPageController
     public function view()
     {
         $posts = App::get('database')->selectLastPosts('posts');
+        $users = App::get('database')->selectLastPosts('users');
         $tables = [
             'posts' => $posts,
+            'users' => $users,
         ];
-        return view('views/site/landing_page', compact('posts'));
+        return view('views/site/landing_page', compact('users', 'posts'));
     }
 
 }

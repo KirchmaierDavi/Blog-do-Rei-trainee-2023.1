@@ -34,18 +34,18 @@ class AdmControllerPost
 
     public function edit()
     {
+        $id = $_POST['id'];
         $parameters = [
-            'title' => $_POST['title'],
-            'content' => $_POST['content'],
-            'image' => $_POST['image'],
-            'created_at' => $_POST['created_at'],
-            'author' => $_POST['author'],
-            'tag' => $_POST['tag'],
+            'title' => $_POST['titulo'],
+            'content' => $_POST['texto'],
+            'image' => $_POST['imagem'],
+            'created_at' => $_POST['data'],
+            'author' => $_POST['autor'],
         ];
 
-        App::get('database')->edit('posts', $_POST['id'], $parameters);
+        App::get('database')->edit('posts', $id, $parameters);
 
-        header('Location: /admin');
+        header('Location: /admin/postList');
     }
 
     public function delete()
@@ -54,23 +54,22 @@ class AdmControllerPost
 
         App::get('database')->delete('posts', $id);
 
-        header('Location: /admin');
+        header('Location: /admin/postList');
     }
 
     public function create()
     {
         $parameters = [
-            'title' => $_POST['title'],
-            'content' => $_POST['content'],
-            'image' => $_POST['image'],
-            'created_at' => $_POST['created_at'],
-            'author' => $_POST['author'],
-            'tag' => $_POST['tag'],
+            'title' => $_POST['titulo'],
+            'content' => $_POST['texto'],
+            'image' => $_POST['imagem'],
+            'created_at' => $_POST['data'],
+            'author' => $_POST['autor'],
         ];
 
         App::get('database')->insert('posts', $parameters);
 
-        header('Location: /admin');
+        header('Location: /admin/postList');
 
     }
 
