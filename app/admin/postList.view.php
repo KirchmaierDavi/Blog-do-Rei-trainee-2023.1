@@ -185,8 +185,8 @@
                     <input type="date" id="data" name="data" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label class="modal-label" for="imagem">Imagem:</label>
-                    <input type="file" id="imagem" name="imagem" class="form-control">
+                    <label class="modal-label" for="imagem">Imagem: (URL da imagem)</label>
+                    <input type="url" id="imagem" name="imagem" class="form-control" required>
                 </div>
                 <div class="buttons">
                     <button class="modal-button" type="submit" id="new-post-new">Salvar</button>
@@ -199,31 +199,30 @@
             <div id="modal-post-editing-<?php echo $post->id ?>" data-second-id="<?php echo $post->id ?>"
                 class="dashboard-modal shadow">
                 <div class="modal-header">
-                    <span><ion-icon name="create"></ion-icon></span>
                     <h2>Editar Post</h2>
                     <span class="modal-close">&times;</span>
                 </div>
                 <form action="postList/update" METHOD="POST">
                     <div class="form-group">
                         <label class="modal-label" for="titulo">Título:</label>
-                        <textarea id="titulo" name="titulo" class="form-control"><?php echo $post->title ?></textarea>
+                        <textarea id="titulo" name="titulo" class="form-control" required><?php echo $post->title ?></textarea>
                     </div>
                     <div class="form-group">
                         <label class="modal-label" for="texto">Texto:</label>
-                        <textarea id="texto" name="texto" class="form-control"><?php echo $post->content ?></textarea>
+                        <textarea id="texto" name="texto" class="form-control" required><?php echo $post->content ?></textarea>
                     </div>
                     <div class="form-group">
                         <label class="modal-label" for="autor">Autor:</label>
-                        <input type="text" id="autor" name="autor" class="form-control" value="<?php echo $post->author ?>">
+                        <input type="text" id="autor" name="autor" class="form-control" value="<?php echo $post->author ?>" required>
                     </div>
                     <div class="form-group">
                         <label class="modal-label" for="data">Data de Criação:</label>
                         <input type="date" id="data" name="data" class="form-control"
-                            value="<?php echo $post->created_at ?>">
+                            value="<?php echo $post->created_at ?>" required>
                     </div>
                     <div class="form-group">
                         <label class="modal-label" for="imagem">Imagem:</label>
-                        <input type="file" id="imagem" name="imagem" class="form-control">
+                        <input type="file" id="imagem" name="imagem" class="form-control" required>
                     </div>
                     <input type="hidden" name="id" value="<?php echo $post->id; ?>">
                     <div class="buttons">

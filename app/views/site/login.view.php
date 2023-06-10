@@ -63,7 +63,7 @@
                     <br>
 
                     <button class="btn transparent">
-                        <a href="/home">Voltar</a>
+                        <a href="/">Voltar</a>
                     </button>
 
                 </div>

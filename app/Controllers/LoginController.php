@@ -22,7 +22,7 @@ class LoginController
         $logged = App::get('database')->login('users', $email, $password);
 
         if($logged){
-            return view('views/site/landing_page');
+            header('Location: /');
         } else { 
             $erro = [
                 'erro' => "Usuário ou senha inválidos",

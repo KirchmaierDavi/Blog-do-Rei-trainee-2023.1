@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 use App\Core\App;
 use Exception;
-
 class UserController
 {
 
@@ -33,9 +32,9 @@ class UserController
     {
         $id = $_POST['id'];
         $parameters = [
-            'NAME' => $_POST['username'],
+            'name' => $_POST['username'],
             'email' => $_POST['new-email'],
-            'PASSWORD' => $_POST['new-password'],
+            'password' => $_POST['new-password'],
         ];
         App::get('database')->edit('users', $id, $parameters);
         

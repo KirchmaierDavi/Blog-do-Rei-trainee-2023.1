@@ -48,15 +48,12 @@
                     <h2><?= $first_half ?></h2>
                     
                     <div class="singlepost-image">
-                         <img src="../../../public/assets/copa58.jpg" alt="Copa de 1958"> 
-                        <figcaption class="post-description">Copa de 1958,Pelé é o terceiro jogador da esquerda para a adireita na fileira dos
-                            jogadores que estão abaixados</figcaption>
+                         <img src="<?= $post->image ?>" alt="Imagem"> 
                     </div>
 
                     <h2> <?= $second_half ?></h2>
 
                     <hr>
-                    <h3>Informações Adicionais(Detalhes extras que existem no post)</h3>
             </div>
 
             <br>

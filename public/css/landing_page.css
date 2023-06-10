@@ -332,6 +332,10 @@ aside ul li {
     .container:not(:first-child) {
         margin-top: -20px;
     }
+
+    .retrospectiva, .retrospectiva_vertical{
+        display: none;
+    }
 }
 
 @media (max-width: 450px) {

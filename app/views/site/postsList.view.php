@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -30,7 +30,7 @@
             <h1 class="title">Posts recentes</h1>
             <?php foreach ($posts as $post): ?>
                 <div class="posts">
-                    <img src="https://s2.glbimg.com/cg7lC_rtGFoydU0OEVRZnjUkDDA=/0x0:499x499/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/m/6/VCHw5dSZyi1tHN9y7aUw/93947722-913006105786957-7296841504158624479-n.jpg"
+                    <img src="<?= $post->image ?>"
                         alt="foto-pele">
                     <div class="posts-text">
                         <form method="post" action="posts/postIndividual">

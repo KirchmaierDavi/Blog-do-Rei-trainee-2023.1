@@ -167,19 +167,19 @@
             <form action="userList/create" METHOD="POST">
                 <div class="form-group">
                     <label class="modal-label" for="username">Usuário (@username):</label>
-                    <input type="text" id="username" name="username" class="form-control">
+                    <input type="text" id="username" name="username" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" class="form-control">
+                    <input type="email" id="email" name="email" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="password">Senha</label>
-                    <input type="password" id="password" name="password" class="form-control">
+                    <input type="password" id="password" name="password" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="confirmpassword">Confirmar Senha</label>
-                    <input type="password" id="confirmpassword" name="confirm-password" class="form-control">
+                    <input type="password" id="confirmpassword" name="confirm-password" class="form-control" required>
                 </div>
                 <div class="buttons">
                     <button class="modal-button" type="submit" id="new-user-new">Salvar</button>
@@ -199,23 +199,23 @@
             <form action="userList/update" METHOD="POST">
                 <div class="form-group">
                     <label class="modal-label" for="username">Editar Usuário (@username):</label>
-                    <input type="text" id="username" name="username" class="form-control"  value="<?php echo $user->name ?>">
+                    <input type="text" id="username" name="username" class="form-control"  value="<?php echo $user->name ?>" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="new-email" src="<?php echo $user->email ?>">E-mail:</label>
-                    <input type="new-email" id="email" name="new-email" class="form-control" value="<?php echo $user->email ?>">
+                    <input type="new-email" id="email" name="new-email" class="form-control" value="<?php echo $user->email ?>" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="password">Senha Atual:</label>
-                    <input type="password" id="password" name="password" class="form-control" value="<?php echo $user->password?>">
+                    <input type="password" id="password" name="password" class="form-control" value="<?php echo $user->password?>" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="new-password">Nova Senha:</label>
-                    <input type="new-password" id="new-password" name="new-password" class="form-control">
+                    <input type="new-password" id="new-password" name="new-password" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="confirm-password">Confirmar Senha</label>
-                    <input type="confirm-password" id="confirm-password" name="confirm-password" class="form-control">
+                    <input type="confirm-password" id="confirm-password" name="confirm-password" class="form-control" required>
                 </div>
                 <input type="hidden" name="id" value="<?php echo $user->id;?>">
                 <div class="buttons">

@@ -19,7 +19,7 @@ class PostListController
           }
         }
     
-        $itens_per_page = 3;
+        $itens_per_page = 5;
         $start_limit = $itens_per_page * $page - $itens_per_page;
     
         if (isset($_GET['search'])) {
