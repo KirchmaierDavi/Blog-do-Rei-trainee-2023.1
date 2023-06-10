@@ -15,15 +15,20 @@ class LoginController
     }
     public function confirmLogin()
     {
-
+        session_start();
         $email = $_POST["login"];
         $password = $_POST["password"];
 
         $logged = App::get('database')->login('users', $email, $password);
 
-        if($logged){
+        if(isset($logged)){
+            $_SESSION['id'] = $logged['email'];
+            $_SESSION['password'] = $logged['password'];
+            $_SESSION['logado'] = true;
             header('Location: /');
         } else { 
+            unset($_SESSION['id']);
+            unset($_SESSION['password']);
             $erro = [
                 'erro' => "Usuário ou senha inválidos",
             ] ;

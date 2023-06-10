@@ -100,6 +100,7 @@ main {
     color: var(--gold-dark);
     text-transform: uppercase;
 	margin: 0;
+    padding-top: 15px;
 	font-size: 18px;
     text-align: center;
     font-weight: 500;
