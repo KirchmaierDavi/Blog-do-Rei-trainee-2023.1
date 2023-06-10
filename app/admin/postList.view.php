@@ -196,7 +196,7 @@
             <form action="postList/update" METHOD="POST">
                 <div class="form-group">
                     <label class="modal-label" for="titulo">Título:</label>
-                    <textarea id="texto" name="texto" class="form-control"><?php echo $post->title ?></textarea>
+                    <textarea id="titulo" name="titulo" class="form-control"><?php echo $post->title ?></textarea>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="texto">Texto:</label>
@@ -214,8 +214,9 @@
                     <label class="modal-label" for="imagem">Imagem:</label>
                     <input type="file" id="imagem" name="imagem" class="form-control">
                 </div>
+                <input type="hidden" name="id" value="<?php echo $post->id;?>">
                 <div class="buttons">
-                    <button class="modal-button" type="submit" id="new-post-new">Alterar</button>
+                    <button class="modal-button" type="submit" id="post-editing">Salvar</button>
                     <button class="modal-button" type="reset" id="new-post-reset">Limpar</button>
                 </div>
             </form>
@@ -234,6 +235,14 @@
                 <div class="form-group">
                     <label class="modal-label" for="texto">Texto:</label>
                     <textarea id="texto" name="texto" disabled class="form-control"><?php echo $post->content ?></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="modal-label" for="autor">Autor:</label>
+                    <input type="text" id="autor" name="autor" disabled class="form-control" value="<?php echo $post->author ?>">
+                </div>
+                <div class="form-group">
+                    <label class="modal-label" for="data">Data de Criação:</label>
+                    <input type="date" id="data" name="data" disabled class="form-control" value ="<?php echo $post->created_at ?>">
                 </div>
 
             </form>

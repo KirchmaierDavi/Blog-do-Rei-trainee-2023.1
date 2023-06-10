@@ -75,19 +75,6 @@ class QueryBuilder
         }
     }
 
-    // public function delete($table, $id)
-    // {
-    //     $sql = sprintf('DELETE FROM $s WHERE $s', $table, 'id = : $id');
-
-    //     try {
-    //         $stmt = $this->pdo->prepare($sql);
-    //         $stmt->execute(compact($id));
-
-    //     } catch (Exception $e) {
-    //         die($e->getMessage());
-    //     }
-    // }
-
     public function delete($table, $id)
     {
         $sql = sprintf(
