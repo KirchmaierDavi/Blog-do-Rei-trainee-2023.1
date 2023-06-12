@@ -5,6 +5,8 @@
 
     //Dashboard
     $router -> get('admin', 'DashboardController@view');
+    $router -> get('admin/customize', 'CustomContentController@view');
+    $router -> post('admin/customize', 'CustomContentController@edit');
 
     //UserList
     

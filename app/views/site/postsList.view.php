@@ -1,4 +1,15 @@
-<?php session_start(); ?>
+<?php 
+namespace App\Controllers;
+use App\Core\App;
+
+session_start(); 
+
+$costumables = App::get('database')->selectAll("blog_content");
+$tables = [
+    'costumables' => $costumables,
+];
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -71,8 +82,7 @@
         
             <div class="memorium">
                 <img src="../../../public/assets/pele.jpg" alt="Foto Pelé" style="width: 340px;">
-                <p>“O sucesso não acontece por acaso. É trabalho duro, perseverança, aprendizado, estudo, sacrifício e,
-                    acima de tudo, amor pelo que você está fazendo ou aprendendo a fazer.”</p>
+                <p><?=$costumables[0]->memorium?></p>
                 <hr width="65%">
 
                 <p class="dates">

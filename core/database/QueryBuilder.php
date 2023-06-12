@@ -18,7 +18,7 @@ class QueryBuilder
 
     public function selectAll($table, $start_limit = null, $rows_count = null)
     {
-        $sql = "select * from {$table}";
+        $sql = "SELECT * FROM {$table}";
 
         if($start_limit >= 0 && $rows_count > 0){
             $sql .= " LIMIT {$start_limit}, {$rows_count}";

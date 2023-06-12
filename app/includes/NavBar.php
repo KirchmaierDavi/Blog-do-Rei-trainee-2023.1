@@ -1,8 +1,19 @@
+<?php 
+
+namespace App\Controllers;
+
+use App\Core\App;
+$costumables = App::get('database')->selectAll("blog_content");
+$tables = [
+    'costumables' => $costumables,
+];
+
+?>
 <header>
         <nav class="navbar-box" id="navbar">
 
             <div class="navbar-logo" >
-                <a href="/"><img class="navbar-logo-image" src="../../../public/assets/Logo.png"/></a>
+                <a href="/"><img class="navbar-logo-image" src="<?= $costumables[0]->logo_image ?>"/></a>
             </div>
 
             <div class="navbar-mobile">

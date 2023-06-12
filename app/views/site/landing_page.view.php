@@ -1,4 +1,16 @@
-<?php session_start(); ?>
+<?php 
+namespace App\Controllers;
+use App\Core\App;
+
+session_start(); 
+
+$costumables = App::get('database')->selectAll("blog_content");
+$tables = [
+    'costumables' => $costumables,
+];
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -58,7 +70,7 @@
                         <div class="container">
                             <div class="text" style="font-weight: 700;">NÓS</div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet. Et saepe necessitatibus est incidunt eaque et repudiandae sunt. Et eligendi minus et facere sint ut debitis nemo.</p>
+                        <p><?=$costumables[0]->about_us?></p>
                     </li>
                     
                     <li class="animation">
