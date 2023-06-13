@@ -83,6 +83,10 @@ body{
     display: none;
 }
 
+.userlist-userboxM-body-content{
+    overflow: scroll;
+}
+
 .userlist-userboxM-header,.userlist-userboxM-body{
     border-left: #fed647 solid 5px;
     box-sizing: border-box;

@@ -9,7 +9,7 @@
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.436);
-	z-index: 1;
+	z-index: 99;
 	top: 0;
 	position: fixed;
 	overflow: auto;
@@ -28,6 +28,7 @@ div[id^='modal-post-editing-'],
 div[id^='modal-show-post-'],
 div[id^='modal-delete-post-'] {
 	display: none;
+
 }
 
 #modal-new-user,

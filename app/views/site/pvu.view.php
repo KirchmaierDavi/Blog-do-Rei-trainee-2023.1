@@ -71,7 +71,8 @@ $tables = [
 
                     <hr>
 
-                    <?php foreach($users as $user):$aux = $post->author; if($user->id == $aux) echo $user->name; endforeach;?>
+                    <p class="post-author">Autor: <?php foreach($users as $user):$aux = $post->author; if($user->id == $aux) echo $user->name; endforeach;?></p>
+                    <hr>
             </div>
 
             <br>
@@ -84,7 +85,6 @@ $tables = [
     <?php require('app/includes/BackToTop.php'); ?>
     <?php require('app/includes/FooterBar.php'); ?>
     <script src="../../../public/js/navbar.js"></script>
-    <script src="../../../public/js/backToTop.js"></script>
 </body>
 
 </html>

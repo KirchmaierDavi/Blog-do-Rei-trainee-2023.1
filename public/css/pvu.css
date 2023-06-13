@@ -156,6 +156,13 @@
 	margin-left: 20px;
 }
 
+.post-author{
+	align-self: flex-end;
+	font-weight: 400;
+	font-style: italic;
+	color: rgb(201, 158, 3);
+}
+
 #back-to-home{
 	padding-top: 10px;
 	padding-bottom: 6px;

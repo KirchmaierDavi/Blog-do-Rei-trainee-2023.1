@@ -108,7 +108,7 @@
                                 <?php echo $user->id ?>
                                 </div>
                                 <div class="userlist-userboxM-header-content">
-                                <?php echo $user->name ?>
+                                <?php echo substr($user->name, 0, 8) . "..";?>
                                 </div>
                             </div>
                         </div>
@@ -118,6 +118,12 @@
                 <div id="user_card_<?php echo $user->id ?>_collapse" class="accordion-collapse collapse " aria-labelledby="user_card_<?php echo $user->id ?>_head"
                     data-bs-parent="#user_card_<?php echo $user->id ?>">
                     <div class="userlist-userboxM-body accordion-body">
+                        <div class="userlist-userboxM-body-title pb-2">
+                            User:
+                        </div>
+                        <div class="userlist-userboxM-body-content pb-2">
+                        <?php echo $user->name ?>
+                        </div>
                         <div class="userlist-userboxM-body-title pb-2">
                             E-mail:
                         </div>

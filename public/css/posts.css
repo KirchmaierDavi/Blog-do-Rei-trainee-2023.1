@@ -341,7 +341,7 @@ body{
 
     .modal-button{
         margin: 0 auto;
-        font-size: 1.5em;
+        font-size: 1em;
         width: 100%;
     }
 }
@@ -349,13 +349,14 @@ body{
 @media only screen and (max-width: 767px){
 
     .posts{
-        width: 100%;
+        width: 90%;
     }
 
     .posts-text h1{
         margin-left: 12px;
         text-align: justify;
         text-align-last: center;
+        font-size: 1em;
     }
 
     .posts-text h5 {
@@ -363,6 +364,7 @@ body{
         text-align: center;
     }
 
+    
     .modal-button {
        margin-left: 0;
     }
@@ -372,7 +374,7 @@ body{
     }
 
     .logo-img{
-        width: 100%;
+        width: 80%;
     }
 
     .search-box{

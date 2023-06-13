@@ -319,7 +319,8 @@ aside ul li {
         font-size: 14px;
     }
     .posts article h1 {
-        font-size: larger;
+        font-size: 1em;
+        text-align:center;
     }
     .posts article h2 {
         font-size: smaller;

@@ -116,7 +116,7 @@
                                         <?php echo $post->id ?>
                                     </div>
                                     <div class="userlist-userboxM-header-content">
-                                        <?php echo $post->title ?>
+                                    <?php echo substr($post->title, 0, 20) . "..";?>
                                     </div>
                                 </div>
                             </div>
