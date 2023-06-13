@@ -10,6 +10,7 @@ body{
     font-weight: 500;
 
     height: fit-content;
+    padding-bottom: 2em;
 }
 
 .userlist-content{

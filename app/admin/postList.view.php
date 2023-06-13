@@ -1,4 +1,4 @@
-<?php require('app/includes/Validation.php')?>
+<?php require('app/includes/Validation.php') ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -206,15 +206,18 @@
                 <form action="postList/update" METHOD="POST">
                     <div class="form-group">
                         <label class="modal-label" for="titulo">Título:</label>
-                        <textarea id="titulo" name="titulo" class="form-control" required><?php echo $post->title ?></textarea>
+                        <textarea id="titulo" name="titulo" class="form-control"
+                            required><?php echo $post->title ?></textarea>
                     </div>
                     <div class="form-group">
                         <label class="modal-label" for="texto">Texto:</label>
-                        <textarea id="texto" name="texto" class="form-control" required><?php echo $post->content ?></textarea>
+                        <textarea id="texto" name="texto" class="form-control"
+                            required><?php echo $post->content ?></textarea>
                     </div>
                     <div class="form-group">
                         <label class="modal-label" for="autor">Autor:</label>
-                        <input type="text" id="autor" name="autor" class="form-control" value="<?php echo $post->author ?>" required>
+                        <input type="text" id="autor" name="autor" class="form-control" value="<?php echo $post->author ?>"
+                            required>
                     </div>
                     <div class="form-group">
                         <label class="modal-label" for="data">Data de Criação:</label>
@@ -223,7 +226,7 @@
                     </div>
                     <div class="form-group">
                         <label class="modal-label" for="imagem">Imagem:</label>
-                        <input type="url" value="<?=$post->image?>"id="imagem" name="imagem" class="form-control" required>
+                        <input type="url" value="<?= $post->image ?>" id="imagem" name="imagem" class="form-control" required>
                     </div>
                     <input type="hidden" name="id" value="<?php echo $post->id; ?>">
                     <div class="buttons">
@@ -284,6 +287,8 @@
         <?php endforeach; ?>
     </div>
 
+    <?php require('app/includes/BackToTop.php'); ?>
+    <script src="../../../public/js/backToTop.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
@@ -307,7 +312,6 @@
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
 
 </body>
 

@@ -4,8 +4,8 @@
     --white: #FFFFFF;
     --anti-flash-white: #F0F0F0;
     --platinum: #E0E0E0;
-    --gold-light: #D9B328;
-    --gold-dark: #D3A809;
+    --gold-light: rgb(217, 179, 40);
+    --gold-dark: rgb(211, 168, 9);
     --smoky-black: #070601;
     --black: #000000;
 }

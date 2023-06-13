@@ -16,7 +16,7 @@
 
     box-sizing: border-box;
 
-    background-color: #d9b32b;
+    background-color: rgb(217, 179, 43);
     height: 65px;
 
     z-index: 10;
@@ -266,7 +266,7 @@
 }
 
 .modal-button:hover {
-    background-color: green;
+    background-color: rgb(0, 128, 0);
 }
 
 

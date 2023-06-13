@@ -19,7 +19,7 @@ $tables = [
     }
 </style>
 <footer class="footer " style="background-color: <?=$costumables[0]->main_color?>">
-        <div class="footer-logo"><img src="../../../public/assets/Logo2.png"/></div>
+        <div class="footer-logo"> <a href="/"><img src="../../../public/assets/Logo2.png"/></a></div>
 
         <div class="footer-signatures">
                 <h1>Sobre nós</h1>
