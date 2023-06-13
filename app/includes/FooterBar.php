@@ -1,4 +1,24 @@
-<footer class="footer">
+<?php 
+
+namespace App\Controllers;
+
+use App\Core\App;
+$costumables = App::get('database')->selectAll("blog_content");
+$tables = [
+    'costumables' => $costumables,
+];
+
+?>
+<style>
+    .footer-social-icon{
+        color: <?=$costumables[0]->headers_colors?>;
+    }
+
+    .footer-signatures a{
+        color: <?=$costumables[0]->about_us_links_colors?>;
+    }
+</style>
+<footer class="footer " style="background-color: <?=$costumables[0]->main_color?>">
         <div class="footer-logo"><img src="../../../public/assets/Logo2.png"/></div>
 
         <div class="footer-signatures">

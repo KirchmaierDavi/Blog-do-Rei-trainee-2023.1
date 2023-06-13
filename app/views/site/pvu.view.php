@@ -1,4 +1,15 @@
-<?php session_start()?>
+<?php 
+namespace App\Controllers;
+use App\Core\App;
+
+session_start(); 
+
+$costumables = App::get('database')->selectAll("blog_content");
+$tables = [
+    'costumables' => $costumables,
+];
+
+?>
 <!DOCTYPE html>
 
 <html>
@@ -20,7 +31,11 @@
     <link rel="stylesheet" href="../../../public/css/reset.css"/>
 
 </head>
-
+<style>
+.modal-button {
+    background-color: <?=$costumables[0]->main_color?>;
+    }
+</style>
 <body>
 
     <?php require('app/includes/NavBar.php'); ?>

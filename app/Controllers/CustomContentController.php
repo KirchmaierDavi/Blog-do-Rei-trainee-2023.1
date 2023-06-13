@@ -25,6 +25,12 @@ class CustomContentController
                 'about_us' => $_POST['about_us'],
                 // 'image' =>  $pasta . $novoNome . "." . $extencao,
                 'memorium' => $_POST['memorium'],
+                'main_color' => $_POST['main-color'],
+                'main_color_hover' => $_POST['main-color-hover'],
+                'secondary_color' => $_POST['second-color'],
+                'secondary_color_hover' => $_POST['second-color-hover'],
+                'headers_colors' => $_POST['headers-colors'],
+                'about_us_links_colors' => $_POST['about-us-link-color'],
             ];
             App::get('database')->edit('blog_content',1,$parameters);
             header('location: /admin/customize');
@@ -40,6 +46,12 @@ class CustomContentController
                 'logo_image' =>  $pasta . $novoNome . "." . $extencao,
                 'about_us' => $_POST['about_us'],
                 'memorium' => $_POST['memorium'],
+                'main_color' => $_POST['main-color'],
+                'main_color_hover' => $_POST['main-color-hover'],
+                'secondary_color' => $_POST['secondary-color'],
+                'secondary_color_hover' => $_POST['secondary-color-hover'],
+                'headers_colors' => $_POST['headers-colors'],
+                'about_us_link_color' => $_POST['about-us-link-color'],
             ];
             App::get('database')->edit('blog_content',1,$parameters);
             header('location: /admin/customize');

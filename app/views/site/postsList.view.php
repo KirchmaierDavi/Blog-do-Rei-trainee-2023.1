@@ -27,7 +27,15 @@ $tables = [
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
     <title>Lista de Postagens</title>
 </head>
+<style>
+   .pagination-box-link:hover, .pagination-box-link:active, .pagination-box-link.pagination-box-link--active, .modal-button {
+    background-color: <?=$costumables[0]->main_color?>;
+    }
 
+   .posts-text h1{
+    color: <?=$costumables[0]->headers_colors?>;
+   }
+</style>
 <body>
     <?php require('app/includes/NavBar.php'); ?>
     <div class="top">

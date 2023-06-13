@@ -9,11 +9,16 @@ $tables = [
 ];
 
 ?>
+<style>
+    #my-account-button{
+        background-color: <?=$costumables[0]->secondary_color?>;
+    }
+</style>
 <header>
-        <nav class="navbar-box" id="navbar">
+        <nav class="navbar-box" id="navbar" style="background-color: <?=$costumables[0]->main_color?>">
 
             <div class="navbar-logo" >
-                <a href="/"><img class="navbar-logo-image" src="<?= $costumables[0]->logo_image ?>"/></a>
+                <a href="/"><img class="navbar-logo-image" src="../<?= $costumables[0]->logo_image ?>"/></a>
             </div>
 
             <div class="navbar-mobile">

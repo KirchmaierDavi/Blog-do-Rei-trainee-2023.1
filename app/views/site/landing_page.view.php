@@ -27,6 +27,24 @@ $tables = [
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
+<style>
+    .container:before, .destaque{
+        background-color: <?=$costumables[0]->secondary_color?>;
+        }
+
+    .modal-button{
+        background-color: <?=$costumables[0]->main_color?>;
+    }
+    .modal-button:hover{
+        background-color: <?=$costumables[0]->main_color_hover?>;
+    }
+
+    .posts article h2 {
+        color: <?=$costumables[0]->headers_colors?>;
+    }
+</style>
+
 <body>
 
     <?php require('app/includes/NavBar.php'); ?>
@@ -55,7 +73,7 @@ $tables = [
             <aside>
             <ul>
                     <li class="destaque">
-                        <div class="image-container">
+                        <div class="image-container" >
                             <img src="../../../public/assets/landing_page/santos.png" alt="">
                             <img src="../../../public/assets/landing_page/vasco.png" alt="">
                             <img src="../../../public/assets/landing_page/copa.png" alt="">
@@ -63,7 +81,7 @@ $tables = [
                         <span class="text">DESTAQUES</span>
                     </li>
     
-                    <li class="sobre">
+                    <li class="sobre" >
                         <div class="container">
                             <div class="text">SOBRE</div>
                         </div>
