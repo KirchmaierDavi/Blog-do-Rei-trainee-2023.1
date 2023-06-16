@@ -214,11 +214,11 @@
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="new-password">Nova Senha:</label>
-                    <input type="new-password" id="new-password" name="new-password" class="form-control" minlength="8" required>
+                    <input type="password" id="new-password" name="new-password" class="form-control" minlength="8" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="confirm-password">Confirmar Senha</label>
-                    <input type="confirm-password" id="confirm-password" name="confirm-password" class="form-control" minlength="8" required>
+                    <input type="password" id="confirm-password" name="confirm-password" class="form-control" minlength="8" required>
                 </div>
                 <input type="hidden" name="id" value="<?php echo $user->id;?>">
                 <div class="buttons">

@@ -31,14 +31,36 @@ div[id^='modal-delete-post-'] {
 
 }
 
-#modal-new-user,
-#modal-new-post,
-div[id^='modal-delete-user-']{
+#modal-new-user{
 	margin-top: 100px;
+}
+div[id^='modal-delete-user-']{
+	margin-top: 70px;
 }
 
 div[id^='modal-edit-user-']{
-	margin-top: 40px
+	margin-top: 70px;
+}
+
+div[id^='modal-show-user-']{
+	margin-top: 70px;
+}
+
+
+#modal-new-post{
+	margin-top: 65px;
+}
+
+div[id^='modal-delete-post-']{
+	margin-top: 100px;
+}
+
+div[id^='modal-post-editing-']{
+	margin-top: 55px;
+}
+
+div[id^='modal-show-post-']{
+	margin-top: 100px;
 }
 
 
