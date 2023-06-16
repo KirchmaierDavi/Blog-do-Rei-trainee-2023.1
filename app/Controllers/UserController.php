@@ -48,6 +48,12 @@ class UserController
         App::get('database')->delete('users', $id);
 
         header('Location: /admin/userList');
+        
+    }
+
+    public function error()
+    {
+        return view('admin/userListError');
     }
 
 }

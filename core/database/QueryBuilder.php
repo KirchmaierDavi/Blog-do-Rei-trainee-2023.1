@@ -88,7 +88,7 @@ class QueryBuilder
 
             $statement->execute(compact('id'));
         } catch (Exception $e) {
-            die($e->getMessage());
+            die(header('Location: /admin/error'));
         }
     }
 

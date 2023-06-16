@@ -14,6 +14,7 @@
     $router -> post('admin/userList/create', 'UserController@newUser');
     $router -> post('admin/userList/update', 'UserController@editUser');
     $router -> post('admin/userList/delete', 'UserController@delete');
+    $router -> get('admin/error', 'UserController@error');
 
     //PostList
  
