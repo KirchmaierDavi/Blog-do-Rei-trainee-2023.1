@@ -10,8 +10,10 @@ class AdmControllerPost
     public function view()
     {
         $posts = App::get('database')->selectAll('posts');
+        $users = App::get('database')->selectAll('users');
         $tables = [
             'posts' => $posts,
+            'users' => $users,
         ];
 
         return view('admin/postList', $tables);

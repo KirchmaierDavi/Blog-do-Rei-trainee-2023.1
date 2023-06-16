@@ -105,7 +105,7 @@
                             </div>
                             <div class="d-flex flew-row justify-content-between">
                                 <div class="userlist-userboxM-header-content">
-                                <?php echo $user->id ?>
+                                <?=$key+1?>
                                 </div>
                                 <div class="userlist-userboxM-header-content">
                                 <?php echo substr($user->name, 0, 8) . "..";?>

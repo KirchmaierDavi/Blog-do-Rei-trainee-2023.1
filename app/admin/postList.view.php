@@ -91,6 +91,9 @@
                         </svg><span> Deletar</span></button>
                 </div>
             </div>
+            <?php endforeach; ?>
+
+            <?php foreach ($posts as $key => $post): ?>
 
             <!--Versão Mobile-->
             <div class="userlist-userboxM accordion " id="user_card_1">
@@ -113,7 +116,8 @@
                                 </div>
                                 <div class="d-flex flew-row justify-content-between">
                                     <div class="userlist-userboxM-header-content">
-                                        <?php echo $post->id ?>
+                                        
+                                        <?= $key + 1 ?>
                                     </div>
                                     <div class="userlist-userboxM-header-content">
                                     <?php echo substr($post->title, 0, 20) . "..";?>
@@ -179,7 +183,13 @@
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="autor">Autor:</label>
-                    <input type="text" id="autor" name="autor" class="form-control" required>
+                    
+                    <select name="autor" id="autor" class="form-control" required>
+                    <?php foreach ($users as $user):?>
+                        <option value="<?php echo $user->id ?>"><?php echo $user->name ?></option>
+                     <?php endforeach; ?>
+                    </select>
+                    
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="data">Data de Criação:</label>

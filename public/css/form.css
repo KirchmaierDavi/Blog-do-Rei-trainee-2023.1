@@ -78,6 +78,7 @@ div[id^='modal-edit-user-']{
 }
 
 .dashboard-modal input,
+.dashboard-modal select,
 .dashboard-modal textarea {
 	border: solid 1px black;
 }
