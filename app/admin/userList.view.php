@@ -182,11 +182,11 @@
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="password">Senha</label>
-                    <input type="password" id="password" name="password" class="form-control" minlength="8">
+                    <input type="password" id="password" name="password" class="form-control" minlength="8" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="confirmpassword">Confirmar Senha</label>
-                    <input type="password" id="confirmpassword" name="confirm-password" class="form-control" minlength="8">
+                    <input type="password" id="confirmpassword" name="confirm-password" class="form-control" minlength="8" required>
                 </div>
                 <div class="buttons">
                     <button class="modal-button" type="submit" id="new-user-new">Salvar</button>
@@ -214,11 +214,11 @@
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="new-password">Nova Senha:</label>
-                    <input type="new-password" id="new-password" name="new-password" class="form-control" minlength="8">
+                    <input type="new-password" id="new-password" name="new-password" class="form-control" minlength="8" required>
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="confirm-password">Confirmar Senha</label>
-                    <input type="confirm-password" id="confirm-password" name="confirm-password" class="form-control" minlength="8">
+                    <input type="confirm-password" id="confirm-password" name="confirm-password" class="form-control" minlength="8" required>
                 </div>
                 <input type="hidden" name="id" value="<?php echo $user->id;?>">
                 <div class="buttons">

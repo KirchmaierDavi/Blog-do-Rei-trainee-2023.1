@@ -225,10 +225,16 @@
                             required><?php echo $post->content ?></textarea>
                     </div>
                     <div class="form-group">
-                        <label class="modal-label" for="autor">Autor:</label>
-                        <input type="text" id="autor" name="autor" class="form-control" value="<?php echo $post->author ?>"
-                            required>
-                    </div>
+                    <label class="modal-label" for="autor">Autor:</label>
+                    
+                    <select name="autor" id="autor" class="form-control" required>
+                    <option value="<?php foreach( $users as $user): if($user->id == $post->author) echo $user->name; endforeach; ?>"><?php foreach( $users as $user): if($user->id == $post->author) echo $user->name; endforeach; ?></option>
+                    <?php foreach ($users as $user):?>
+                        <option value="<?php echo $user->id ?>"><?php echo $user->name ?></option>
+                     <?php endforeach; ?>
+                    </select>
+                    
+                </div>
                     <div class="form-group">
                         <label class="modal-label" for="data">Data de Criação:</label>
                         <input type="date" id="data" name="data" class="form-control"
@@ -265,7 +271,7 @@
                     <div class="form-group">
                         <label class="modal-label" for="autor">Autor:</label>
                         <input type="text" id="autor" name="autor" disabled class="form-control"
-                            value="<?php echo $post->author ?>">
+                            value="<?php foreach( $users as $user): if($user->id == $post->author) echo $user->name; endforeach; ?>">
                     </div>
                     <div class="form-group">
                         <label class="modal-label" for="data">Data de Criação:</label>
