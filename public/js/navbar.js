@@ -23,7 +23,6 @@ function toggleMenu(){
 navbarBtn.addEventListener('click', toggleMenu)
 
 
-// Get the button
 let btt_button = document.getElementById("backToTop");
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -33,7 +32,6 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;

@@ -11,7 +11,7 @@ $tables = [
 ?>
 
 <style>
-div {
+.btt-div {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
@@ -43,7 +43,7 @@ div {
 }
 </style>
 
-<div>
+<div class="btt-div">
 <button onclick="topFunction()" id="backToTop" title="Go to top">
 <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 330 330" xml:space="preserve">

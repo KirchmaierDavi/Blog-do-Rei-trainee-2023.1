@@ -91,9 +91,9 @@
                         </svg><span> Deletar</span></button>
                 </div>
             </div>
-            <?php endforeach; ?>
+        <?php endforeach; ?>
 
-            <?php foreach ($posts as $key => $post): ?>
+        <?php foreach ($posts as $key => $post): ?>
 
             <!--Versão Mobile-->
             <div class="userlist-userboxM accordion " id="user_card_1">
@@ -116,11 +116,11 @@
                                 </div>
                                 <div class="d-flex flew-row justify-content-between">
                                     <div class="userlist-userboxM-header-content">
-                                        
+
                                         <?= $key + 1 ?>
                                     </div>
                                     <div class="userlist-userboxM-header-content">
-                                    <?php echo substr($post->title, 0, 20) . "..";?>
+                                        <?php echo substr($post->title, 0, 20) . ".."; ?>
                                     </div>
                                 </div>
                             </div>
@@ -183,13 +183,13 @@
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="autor">Autor:</label>
-                    
+
                     <select name="autor" id="autor" class="form-control" required>
-                    <?php foreach ($users as $user):?>
-                        <option value="<?php echo $user->id ?>"><?php echo $user->name ?></option>
-                     <?php endforeach; ?>
+                        <?php foreach ($users as $user): ?>
+                            <option value="<?php echo $user->id ?>"><?php echo $user->name ?></option>
+                        <?php endforeach; ?>
                     </select>
-                    
+
                 </div>
                 <div class="form-group">
                     <label class="modal-label" for="data">Data de Criação:</label>
@@ -225,16 +225,22 @@
                             required><?php echo $post->content ?></textarea>
                     </div>
                     <div class="form-group">
-                    <label class="modal-label" for="autor">Autor:</label>
-                    
-                    <select name="autor" id="autor" class="form-control" required>
-                    <option value="<?php foreach( $users as $user): if($user->id == $post->author) echo $user->name; endforeach; ?>"><?php foreach( $users as $user): if($user->id == $post->author) echo $user->name; endforeach; ?></option>
-                    <?php foreach ($users as $user):?>
-                        <option value="<?php echo $user->id ?>"><?php echo $user->name ?></option>
-                     <?php endforeach; ?>
-                    </select>
-                    
-                </div>
+                        <label class="modal-label" for="autor">Autor:</label>
+
+                        <select name="autor" id="autor" class="form-control" required>
+                            <option
+                                value="<?php foreach ($users as $user):
+                                    if ($user->id == $post->author)
+                                        echo $user->name; endforeach; ?>">
+                                <?php foreach ($users as $user):
+                                    if ($user->id == $post->author)
+                                        echo $user->name; endforeach; ?></option>
+                            <?php foreach ($users as $user): ?>
+                                <option value="<?php echo $user->id ?>"><?php echo $user->name ?></option>
+                            <?php endforeach; ?>
+                        </select>
+
+                    </div>
                     <div class="form-group">
                         <label class="modal-label" for="data">Data de Criação:</label>
                         <input type="date" id="data" name="data" class="form-control"
@@ -242,7 +248,8 @@
                     </div>
                     <div class="form-group">
                         <label class="modal-label" for="imagem">Imagem:</label>
-                        <input type="url" value="<?= $post->image ?>" id="imagem" name="imagem" class="form-control" required>
+                        <input type="url" value="<?= $post->image ?>" id="imagem" name="imagem" class="form-control"
+                            required>
                     </div>
                     <input type="hidden" name="id" value="<?php echo $post->id; ?>">
                     <div class="buttons">
@@ -271,7 +278,9 @@
                     <div class="form-group">
                         <label class="modal-label" for="autor">Autor:</label>
                         <input type="text" id="autor" name="autor" disabled class="form-control"
-                            value="<?php foreach( $users as $user): if($user->id == $post->author) echo $user->name; endforeach; ?>">
+                            value="<?php foreach ($users as $user):
+                                if ($user->id == $post->author)
+                                    echo $user->name; endforeach; ?>">
                     </div>
                     <div class="form-group">
                         <label class="modal-label" for="data">Data de Criação:</label>
@@ -304,11 +313,6 @@
     </div>
 
     <?php require('app/includes/BackToTop.php'); ?>
-    <script src="../../../public/js/backToTop.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-
     <script src="../../public/js/new-post.js"></script>
     <script>
         const menuToggle = document.querySelector('.menuToggle');
@@ -325,7 +329,26 @@
         }
         list.forEach((item) =>
             item.addEventListener('click', activeLink));
+
+        let btt_button = document.getElementById("backToTop");
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btt_button.style.display = "block";
+            } else {
+                btt_button.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        window.onscroll = function() {scrollFunction();};
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
