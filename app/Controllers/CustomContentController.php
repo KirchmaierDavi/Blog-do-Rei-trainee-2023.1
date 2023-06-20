@@ -51,7 +51,7 @@ class CustomContentController
                 'secondary_color' => $_POST['secondary-color'],
                 'secondary_color_hover' => $_POST['secondary-color-hover'],
                 'headers_colors' => $_POST['headers-colors'],
-                'about_us_link_color' => $_POST['about-us-link-color'],
+                'about_us_link_colors' => $_POST['about-us-link-color'],
             ];
             App::get('database')->edit('blog_content',1,$parameters);
             header('location: /admin/customize');

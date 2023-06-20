@@ -232,7 +232,7 @@
                             <option
                                 value="<?php foreach ($users as $user):
                                     if ($user->id == $post->author)
-                                        echo $user->name; endforeach; ?>">
+                                        echo $user->id; endforeach; ?>">
                                 <?php foreach ($users as $user):
                                     if ($user->id == $post->author)
                                         echo $user->name; endforeach; ?></option>
@@ -255,7 +255,6 @@
                     <input type="hidden" name="id" value="<?php echo $post->id; ?>">
                     <div class="buttons">
                         <button class="modal-button" type="submit" id="post-editing">Salvar</button>
-                        <button class="modal-button" type="reset" id="new-post-reset">Limpar</button>
                     </div>
                 </form>
             </div>
@@ -305,7 +304,6 @@
                     <input type="hidden" name="id" value="<?php echo $post->id; ?>">
                     <div class="buttons">
                         <button class="modal-button" type="submit" id="delete-user">Excluir</button>
-                        <button class="modal-button" type="reset" id="delete-user-reset">Cancelar</button>
                     </div>
                 </form>
             </div>

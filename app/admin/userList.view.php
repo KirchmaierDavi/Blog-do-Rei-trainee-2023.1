@@ -200,11 +200,6 @@
                     <label class="modal-label" for="password">Senha</label>
                     <input type="password" id="password" name="password" class="form-control" minlength="8" required>
                 </div>
-                <div class="form-group">
-                    <label class="modal-label" for="confirmpassword">Confirmar Senha</label>
-                    <input type="password" id="confirmpassword" name="confirm-password" class="form-control"
-                        minlength="8" required>
-                </div>
                 <div class="buttons">
                     <button class="modal-button" type="submit" id="new-user-new">Salvar</button>
                     <button class="modal-button" type="reset" id="new-user-reset">Limpar</button>
@@ -237,15 +232,9 @@
                         <input type="password" id="new-password" name="new-password" class="form-control" minlength="8"
                             required>
                     </div>
-                    <div class="form-group">
-                        <label class="modal-label" for="confirm-password">Confirmar Senha</label>
-                        <input type="password" id="confirm-password" name="confirm-password" class="form-control"
-                            minlength="8" required>
-                    </div>
                     <input type="hidden" name="id" value="<?php echo $user->id; ?>">
                     <div class="buttons">
                         <button class="modal-button" type="submit" id="edit-user">Salvar</button>
-                        <button class="modal-button" type="reset" id="edit-user-reset">Limpar</button>
                     </div>
                 </form>
             </div>
@@ -282,7 +271,6 @@
                     <input type="hidden" name="id" value="<?php echo $user->id; ?>">
                     <div class="buttons">
                         <button class="modal-button" type="submit" id="delete-user">Excluir</button>
-                        <button class="modal-button" type="reset" id="delete-user-reset">Cancelar</button>
                     </div>
                 </form>
             </div>
