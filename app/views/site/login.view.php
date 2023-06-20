@@ -14,7 +14,7 @@
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
     <title>Login</title>
-
+    <link rel="shortcut icon" href="../../../public/assets/favicon.png" type="image/x-icon">
 </head>
 
 <body>

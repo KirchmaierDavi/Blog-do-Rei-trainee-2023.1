@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../../../public/css/sidebar.css">
     <link rel="stylesheet" href="../../../public/css/form.css">
     <title>Customize o Site</title>
+    <link rel="shortcut icon" href="../../../public/assets/favicon.png" type="image/x-icon">
 </head>
 
 <body class="d-flex flex-row">

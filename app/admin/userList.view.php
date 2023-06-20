@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../../public/css/form.css">
     <link rel="stylesheet" href="../../../public/css/sidebar.css">
     <title>UserList</title>
+    <link rel="shortcut icon" href="../../../public/assets/favicon.png" type="image/x-icon">
 </head>
 
 <body class="d-flex flex-row">
