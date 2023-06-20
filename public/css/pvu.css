@@ -1,94 +1,3 @@
-/* body{
-	background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
-}
-
-
-.main{
-    margin-top: 120px;
-}
-
-.informations{
-	margin-left: 50px;
-	margin-right: 50px;
-	background-color: white;
- 	padding: 6px 100px 80px 100px;
-    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
-	border-radius: 40px;
-}
-.informations h1{
-	text-align: center;
-    padding-top: 1em;
-	line-height:0.7;
-	font-size: 50px;
-	color: #070601;
-	position: relative;
-	margin-bottom: 70px;
-	font-family: 'Quicksand', sans-serif;
-}
-
-.informations h2{
-	text-align: justify;
-	color: #070101;
-	font-size:20px;
-	margin-top: 30px;
-	font-family: 'Quicksand', sans-serif;
-
-}
-.informations h3{
-     color: #070601;
-     font-size: 14px;
-     font-family: 'Quicksand', sans-serif;
-	 margin-top: 10px;
-}
-.informations img{
-       height:400px;
-  	   width: 600px;
-  	   position: relative;
-
-}
-
-.main a {
-	line-height: 30px;
-	font-size: 10px;
-	font-family: 'Quicksand', sans-serif;
-
-}
-.main hr{
-	color: black;
-}
-.container {
-    max-width: 1200px; 
-    margin: 0 auto; 
-}
-
-.container img {
-    display: block;
-    height: 400px;
-    width: 600px;
-    margin-top: 40px;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.post-description {
-  font-size: 15px;
-  font-family: 'Quicksand', sans-serif;
-  text-align: center;
-  margin-bottom: 40px;
-  margin-top: 10px;
-}
-
-.back-to-home {
-
-	margin-left: 40px;
-	text-decoration: none;
-	font-size: 1em !important;
-}
-
-
-@media only screen and (max-width: 767px) {
-	
-} */
 
 .singlepost{
 	background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
@@ -125,17 +34,17 @@
 }
 
 .singlepost-content h1{
-
-	font-size: 3em;
-	margin: 20px 0;
+	font-weight: 700;
+	font-size: 2.5em;
+	margin-top: 1em;
+	text-transform: uppercase;
 }
 
 .singlepost-content h2{
-	text-align: justify;
-
-	font-size: 1.2em;
-
-	margin-top: 20px;
+	text-align: center;
+	font-size: 1.3em;
+	font-weight: 400;
+	margin-top: 1em;
 }
 
 .singlepost-content h3{
@@ -147,6 +56,7 @@
 }
 
 .singlepost-image img{
+	border-radius: 30px;
 	width: 60%;
 }
 
@@ -157,8 +67,10 @@
 }
 
 .post-author{
+	text-transform: uppercase;
 	align-self: flex-end;
-	font-weight: 400;
+	font-weight: 600;
+	font-size: 1em;
 	font-style: italic;
 	color: rgb(201, 158, 3);
 }

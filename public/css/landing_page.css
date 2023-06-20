@@ -105,6 +105,7 @@ main {
 }
 
 .posts article p {
+    line-height: 125%;
     direction: ltr;
 	margin-top: 1vw;
     text-align: justify;
@@ -199,6 +200,7 @@ aside ul li {
 
 .sobre p {
     margin-top: 10px;
+    line-height: 125%;
     padding-left: 25%;
 }
 
