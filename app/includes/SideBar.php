@@ -26,9 +26,9 @@
                 </a>
             </li>
             <li class="list">
-                <a href="/admin/postList" >
+                <a href="/admin/customize" >
                     <span class="icon"><ion-icon name="create"></ion-icon></span>
-                    <span class="text">Publique um Post</span>
+                    <span class="text">Customize o Site</span>
                 </a>
             </li>
             <li class="logout">
