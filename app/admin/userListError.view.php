@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../public/css/userlist-modal_style.css" />
     <link rel="stylesheet" href="../../public/css/form.css">
     <link rel="stylesheet" href="../../../public/css/sidebar.css">
-    <title>UserList</title>
+    <title>Dashboard de usuários</title>
 </head>
 
 <body class="d-flex flex-row">

@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../../public/css/list_post_user.css">
     <link rel="stylesheet" href="../../public/css/form.css">
     <link rel="stylesheet" href="../../../public/css/sidebar.css">
-    <title>Lista de postagem</title>
+    <title>Dashboard de posts</title>
     <link rel="shortcut icon" href="../../../public/assets/favicon.png" type="image/x-icon">
 </head>
 
