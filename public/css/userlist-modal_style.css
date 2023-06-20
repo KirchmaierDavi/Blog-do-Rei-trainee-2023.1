@@ -1,10 +1,13 @@
+* {
+    font-family: 'Quicksand' !important; 
+}
+
 html {
     font-size: 16px;
 }
 
 body{
-    background-color: #E0E0E0;
-    font-family: 'Quicksand';   
+    background-color: #E0E0E0;  
     font-weight: 500;
 
     height: fit-content;

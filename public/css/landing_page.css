@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
 :root {
     --white: #FFFFFF;
     --anti-flash-white: #F0F0F0;
@@ -213,6 +211,7 @@ aside ul li {
 }
   
 .container .text {
+    font-family: 'Quicksand', sans-serif;
     padding: 10px;
     font-size: 25px;
 }
