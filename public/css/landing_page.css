@@ -145,6 +145,7 @@ aside ul li {
 }
 
 .image-container {
+    direction: ltr;
     width: 90%;
     margin-right: 5%;
     margin-left: 5%;
@@ -155,8 +156,8 @@ aside ul li {
 }
 
 .image-container img {
-    height: 17vh;
-    width: 19vh;
+    height: 9vw;
+    width: 9vw;
     border-radius: 20px;
 
     box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
@@ -312,8 +313,8 @@ aside ul li {
         height: 250px;
     }
     .image-container img {
-        height: 10vh;
-        width: 12vh; 
+        height: 15vw;
+        width: 15vw; 
     }
 }
 
@@ -343,6 +344,10 @@ aside ul li {
 
     .retrospectiva, .retrospectiva_vertical{
         display: none;
+    }
+    .image-container img {
+        height: 25vw;
+        width: 25vw; 
     }
 }
 
@@ -377,10 +382,6 @@ aside ul li {
         margin-right: 0;
         display: block;
         width: 70%;
-    }
-    .image-container img {
-        height: 12vh;
-        width: 14vh; 
     }
 }
 
