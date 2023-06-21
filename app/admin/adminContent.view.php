@@ -37,49 +37,67 @@
         </div>
 
 
-        <form enctype="multipart/form-data" action="customize" METHOD="POST"
-            class="d-flex flex-column justify-content-center">
+        <form enctype="multipart/form-data" action="customize/edit" METHOD="POST"
+            class="d-flex flex-column justify-content-center customize-form">
             <div class="form-group">
                 <label class="modal-label" for="logo_image">Logo:</label>
                 <input type="file" id="logo_image" name="logo_image" class="form-control">
                 <div class="form-control edit-logo-input">
-                    <img src="../<?= $costumables[0]->logo_image ?>">
+                    <img src="../<?= $costumables->logo_image ?>">
                 </div>
             </div>
             <div class="form-group">
                 <label class="modal-label" for="about_us">Sobre nós (Homepage)</label>
                 <textarea id="about_us" name="about_us" class="form-control"
-                    required><?= $costumables[0]->about_us ?></textarea>
+                    required><?= $costumables->about_us ?></textarea>
             </div>
             <div class="form-group">
                 <label class="modal-label" for="memorium">Dedicatoria Lista de Posts:</label>
                 <textarea id="memorium" name="memorium" class="form-control"
-                    required><?= $costumables[0]->memorium ?></textarea>
+                    required><?= $costumables->memorium ?></textarea>
             </div>
-            <div class="form-group d-flex flex-row justify-content-between">
-                <div>
-                    <label for="main-color" class="modal-label">Cor principal do site </br>(Header, Footer, Botoes)</label>
-                    <input type="color" value="<?=$costumables[0]->main_color?>" name="main-color" class="form-control">
-                    <label for="main-color-hover" class="modal-label">Cor Hover principal do site </br>(Botoes)</label>
-                    <input type="color" name="main-color-hover" value="<?=$costumables[0]->main_color_hover?>" class="form-control">
+
+            <div class="customize-colors form-group d-flex flex-row justify-content-between">
+                <div class="customize-colors-row">
+                    <div>
+                        <label for="main-color" class="modal-label">Cor principal do site </br>(Header, Footer, Botoes)</label>
+                        <input type="color" value="<?=$costumables->main_color?>" name="main-color" class="form-control">
+                    </div>
+                    <div>
+                        <label for="main-color-hover" class="modal-label">Cor Hover principal do site </br>(Botoes)</label>
+                        <input type="color" name="main-color-hover" value="<?=$costumables->main_color_hover?>" class="form-control">
+                    </div>
                 </div>
-                <div>
-                    <label for="second-color" class="modal-label">Cor secundaria</br> (Cards Avulsos, Elementos únicos)</label>
-                    <input type="color" name="second-color" value="<?=$costumables[0]->secondary_color?>" class="form-control">
+
+                <div class="customize-colors-row">
+                    <div>
+                        <label for="second-color" class="modal-label">Cor secundaria</br> (Cards Avulsos, Elementos únicos)</label>
+                        <input type="color" name="second-color" value="<?=$costumables->secondary_color?>" class="form-control">
+                    </div>
+                    <div>
                     <label for="second-color-hover" class="modal-label">Cor Hover secundaria do site </br>(Botoes)</label>
-                    <input type="color" name="second-color-hover" value="<?=$costumables[0]->secondary_color_hover?>" class="form-control">
+                    <input type="color" name="second-color-hover" value="<?=$costumables->secondary_color_hover?>" class="form-control">
+                    </div>
                 </div>
-                <div>
-                    <label for="headers-colors" class="modal-label">Cor de marcadores </br>(Titulos coloridos, Redes sociais)</label>
-                    <input type="color" name="headers-colors" value="<?=$costumables[0]->headers_colors?>" class="form-control">
-                    <label for="about-us-link-color" class="modal-label">Cor Links Sobre Nos </br>(Titulos coloridos, Redes sociais)</label>
-                    <input type="color" name="about-us-link-color" value="<?=$costumables[0]->about_us_links_colors?>" class="form-control">
+                <div class="customize-colors-row">
+                    <div>
+                        <label for="headers-colors" class="modal-label">Cor de marcadores </br>(Titulos coloridos, Redes sociais)</label>
+                        <input type="color" name="headers-colors" value="<?=$costumables->headers_colors?>" class="form-control">
+                    </div>
+                    <div> 
+                        <label for="about-us-link-color" class="modal-label">Cor Links Sobre Nos </br>(Titulos coloridos, Redes sociais)</label>
+                        <input type="color" name="about-us-link-color" value="<?=$costumables->about_us_links_colors?>" class="form-control">
+                    </div>
                 </div>
             </div>
-            <div class="m-auto buttons">
+
+            <div class="m-auto buttons mt-4">
                 <button class="modal-button" type="submit" id="post-editing">Salvar</button>
-                <button class="modal-button" type="reset" id="new-post-reset">Limpar</button>
             </div>
+        </form>
+        
+        <form enctype="multipart/form-data" action="customize/reset" METHOD="POST" class="m-auto">
+                    <button class="modal-button" type="submit" id="new-post-reset">Resetar</button>
         </form>
     </div>
 

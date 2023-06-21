@@ -3,10 +3,8 @@
 namespace App\Controllers;
 
 use App\Core\App;
-$costumables = App::get('database')->selectAll("blog_content");
-$tables = [
-    'costumables' => $costumables,
-];
+$costumables = App::get('database')->selectPost(1,'blog_content');
+$costumables = $costumables[0];
 
 ?>
 
@@ -25,7 +23,7 @@ $tables = [
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: <?=$costumables[0]->headers_colors?>;
+  background-color: <?=$costumables->headers_colors?>;
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -39,7 +37,7 @@ $tables = [
 }
 
 #backToTop:hover {
-  background-color: <?=$costumables[0]->main_color_hover?>;
+  background-color: <?=$costumables->main_color_hover?>;
 }
 </style>
 

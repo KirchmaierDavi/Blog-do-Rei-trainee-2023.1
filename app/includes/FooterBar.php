@@ -3,22 +3,20 @@
 namespace App\Controllers;
 
 use App\Core\App;
-$costumables = App::get('database')->selectAll("blog_content");
-$tables = [
-    'costumables' => $costumables,
-];
+$costumables = App::get('database')->selectPost(1,'blog_content');
+$costumables = $costumables[0];
 
 ?>
 <style>
     .footer-social-icon{
-        color: <?=$costumables[0]->headers_colors?>;
+        color: <?=$costumables->headers_colors?>;
     }
 
     .footer-signatures a{
-        color: <?=$costumables[0]->about_us_links_colors?>;
+        color: <?=$costumables->about_us_links_colors?>;
     }
 </style>
-<footer class="footer " style="background-color: <?=$costumables[0]->main_color?>">
+<footer class="footer " style="background-color: <?=$costumables->main_color?>">
         <div class="footer-logo"> <a href="/"><img src="../../../public/assets/Logo2.png"/></a></div>
 
         <div class="footer-signatures">

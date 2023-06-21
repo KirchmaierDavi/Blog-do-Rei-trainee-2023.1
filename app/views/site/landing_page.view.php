@@ -4,10 +4,8 @@ use App\Core\App;
 
 session_start(); 
 
-$costumables = App::get('database')->selectAll("blog_content");
-$tables = [
-    'costumables' => $costumables,
-];
+$costumables = App::get('database')->selectPost(1,'blog_content');
+$costumables = $costumables[0];
 
 ?>
 
@@ -30,18 +28,18 @@ $tables = [
 
 <style>
     .container:before, .destaque{
-        background-color: <?=$costumables[0]->secondary_color?>;
+        background-color: <?=$costumables->secondary_color?>;
         }
 
     .modal-button{
-        background-color: <?=$costumables[0]->main_color?>;
+        background-color: <?=$costumables->main_color?>;
     }
     .modal-button:hover{
-        background-color: <?=$costumables[0]->main_color_hover?>;
+        background-color: <?=$costumables->main_color_hover?>;
     }
 
     .posts article h2 {
-        color: <?=$costumables[0]->headers_colors?>;
+        color: <?=$costumables->headers_colors?>;
     }
 </style>
 
@@ -94,7 +92,7 @@ $tables = [
                         <div class="container">
                             <div class="text" style="font-weight: 700;">NÓS</div>
                         </div>
-                        <p><?=$costumables[0]->about_us?></p>
+                        <p><?=$costumables->about_us?></p>
                     </li>
                     
                     <li class="animation">

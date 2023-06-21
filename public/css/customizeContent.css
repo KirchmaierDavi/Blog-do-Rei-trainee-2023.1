@@ -57,3 +57,51 @@ body{
 .edit-logo-input img{
     width: 300px;
 }
+
+.modal-button{
+    width: 300px;
+}
+
+@media only screen and (max-width: 1240px) {
+
+    .customize-colors{
+        font-size: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+.customize-content{
+font-size: 0.8em;
+}
+
+textarea{
+    font-size: 0.8em !important;
+    height: 100px;
+}
+.edit-logo-input img{
+    width: 150px;
+}
+
+.customize-colors{
+    display: flex;
+    flex-direction: column !important;
+}
+
+.customize-colors-row{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.85em;
+    text-align:left;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.customize-colors-row>div{
+    width: 45%;
+}
+
+.modal-button{
+    width: 200px;
+}
+
+}

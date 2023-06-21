@@ -3,22 +3,20 @@
 namespace App\Controllers;
 
 use App\Core\App;
-$costumables = App::get('database')->selectAll("blog_content");
-$tables = [
-    'costumables' => $costumables,
-];
+$costumables = App::get('database')->selectPost(1,'blog_content');
+$costumables = $costumables[0];
 
 ?>
 <style>
     #my-account-button{
-        background-color: <?=$costumables[0]->secondary_color?>;
+        background-color: <?=$costumables->secondary_color?>;
     }
 </style>
 <header>
-        <nav class="navbar-box" id="navbar" style="background-color: <?=$costumables[0]->main_color?>">
+        <nav class="navbar-box" id="navbar" style="background-color: <?=$costumables->main_color?>">
 
             <div class="navbar-logo" >
-                <a href="/"><img class="navbar-logo-image" src="../<?= $costumables[0]->logo_image ?>"/></a>
+                <a href="/"><img class="navbar-logo-image" src="../<?= $costumables->logo_image ?>"/></a>
             </div>
 
             <div class="navbar-mobile">
