@@ -46,7 +46,7 @@ $costumables = $costumables[0];
     <div class="main">
 
         <div class="post-container">
-            <h1 class="title">Posts recentes</h1>
+            <h1 class="title">Posts Anteriores</h1>
             <?php foreach ($posts as $post): ?>
                 <div class="posts">
                     <img class="imagem-post" src="<?= $post->image ?>"
