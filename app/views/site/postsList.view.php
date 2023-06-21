@@ -4,10 +4,8 @@ use App\Core\App;
 
 session_start(); 
 
-$costumables = App::get('database')->selectAll("blog_content");
-$tables = [
-    'costumables' => $costumables,
-];
+$costumables = App::get('database')->selectPost(1,'blog_content');
+$costumables = $costumables[0];
 
 ?>
 <!DOCTYPE html>
@@ -30,11 +28,11 @@ $tables = [
 </head>
 <style>
    .pagination-box-link:hover, .pagination-box-link:active, .pagination-box-link.pagination-box-link--active, .modal-button {
-    background-color: <?=$costumables[0]->main_color?>;
+    background-color: <?=$costumables->main_color?>;
     }
 
    .posts-text h1{
-    color: <?=$costumables[0]->headers_colors?>;
+    color: <?=$costumables->headers_colors?>;
    }
 </style>
 <body>
@@ -91,7 +89,7 @@ $tables = [
         
             <div class="memorium">
                 <img src="../../../public/assets/pele.jpg" alt="Foto Pelé" style="width: 340px;">
-                <p><?=$costumables[0]->memorium?></p>
+                <p><?=$costumables->memorium?></p>
                 <hr width="65%">
 
                 <p class="dates">

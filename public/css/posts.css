@@ -186,6 +186,8 @@ body{
 
 .posts img{
     height: 230px;
+    max-width: 45%;
+    min-width: 45%;
     border-radius: 5px;
 }
 
@@ -236,8 +238,10 @@ body{
     width: 100%;
     overflow: hidden;
     border-radius: 5px;
-    align-self: self-end;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .edge h5{
@@ -255,6 +259,8 @@ body{
 
 .modal-button{
     margin-left: 8%;
+    margin-bottom: 2%;
+    width: 40%;
 }
 
 @media only screen and (max-width: 1024px){

@@ -10,10 +10,8 @@ class CustomContentController
 
     public function view()
     {
-        $costumables = App::get('database')->selectAll("blog_content");
-        $tables = [
-            'costumables' => $costumables,
-        ];
+        $costumables = App::get('database')->selectPost(1,'blog_content');
+        $costumables = $costumables[0];
         return view('admin/adminContent', compact('costumables'));
     }
 
@@ -45,6 +43,18 @@ class CustomContentController
 
     public function reset()
     {
-
+        $costumables = App::get('database')->selectAll("blog_content");
+        $parameters = [
+            'about_us' => $costumables[0]->about_us,
+            'memorium' => $costumables[0]->memorium,
+            'main_color' => $costumables[0]->main_color,
+            'main_color_hover' => $costumables[0]->main_color_hover,
+            'secondary_color' => $costumables[0]->secondary_color,
+            'secondary_color_hover' => $costumables[0]->secondary_color_hover,
+            'headers_colors' => $costumables[0]->headers_colors,
+            'about_us_links_colors' => $costumables[0]->about_us_links_colors,
+        ];
+        App::get('database')->edit('blog_content',1,$parameters);
+        header('location: /admin/customize');
     }
 }

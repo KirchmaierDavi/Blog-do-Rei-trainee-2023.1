@@ -4,10 +4,8 @@ use App\Core\App;
 
 session_start(); 
 
-$costumables = App::get('database')->selectAll("blog_content");
-$tables = [
-    'costumables' => $costumables,
-];
+$costumables = App::get('database')->selectPost(1,'blog_content');
+$costumables = $costumables[0];
 
 ?>
 <!DOCTYPE html>
@@ -34,7 +32,7 @@ $tables = [
 </head>
 <style>
 .modal-button {
-    background-color: <?=$costumables[0]->main_color?>;
+    background-color: <?=$costumables->main_color?>;
     }
 </style>
 <body>
