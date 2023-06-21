@@ -51,7 +51,7 @@ $tables = [
             <h1 class="title">Posts recentes</h1>
             <?php foreach ($posts as $post): ?>
                 <div class="posts">
-                    <img src="<?= $post->image ?>"
+                    <img class="imagem-post" src="<?= $post->image ?>"
                         alt="foto-pele">
                     <div class="posts-text">
                         <form method="post" action="posts/postIndividual">
