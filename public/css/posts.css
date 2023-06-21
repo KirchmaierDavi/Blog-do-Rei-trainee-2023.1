@@ -263,6 +263,11 @@ body{
     width: 40%;
 }
 
+.imagem-post{
+    min-width: 300px;
+    max-width: 300px;
+}
+
 @media only screen and (max-width: 1024px){
 
     .top{
@@ -385,5 +390,10 @@ body{
 
     .search-box{
         width: auto;
+    }
+
+    .imagem-post{
+        min-width: none;
+        max-width: none;
     }
 }
