@@ -72,14 +72,20 @@ $tables = [
         <div class="box">
             <aside>
             <ul>
-                    <li class="destaque">
-                        <div class="image-container" >
-                            <img src="../../../public/assets/landing_page/santos.png" alt="">
-                            <img src="../../../public/assets/landing_page/vasco.png" alt="">
-                            <img src="../../../public/assets/landing_page/copa.png" alt="">
-                        </div>
-                        <span class="text">DESTAQUES</span>
-                    </li>
+                <li class="destaque">
+                    <div class="image-container" >
+                    <?php
+                        $limiteImagens = 3;
+                        foreach ($posts as $post) {
+                            if ($limiteImagens > 0) {
+                                echo '<img src="' . $post->image . '" alt="' . $post->title . '">';
+                                $limiteImagens--;
+                            }
+                        }
+                    ?>
+                    </div>
+                    <span class="text">DESTAQUES</span>
+                </li>
     
                     <li class="sobre" >
                         <div class="container">

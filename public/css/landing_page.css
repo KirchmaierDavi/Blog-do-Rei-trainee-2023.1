@@ -155,8 +155,9 @@ aside ul li {
 }
 
 .image-container img {
-    width: 30%;
-    border-radius: 20%;
+    height: 17vh;
+    width: 19vh;
+    border-radius: 20px;
 
     box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.4);
     
@@ -310,6 +311,10 @@ aside ul li {
         display: none;
         height: 250px;
     }
+    .image-container img {
+        height: 10vh;
+        width: 12vh; 
+    }
 }
 
 @media (max-width: 600px) {
@@ -372,6 +377,10 @@ aside ul li {
         margin-right: 0;
         display: block;
         width: 70%;
+    }
+    .image-container img {
+        height: 12vh;
+        width: 14vh; 
     }
 }
 
