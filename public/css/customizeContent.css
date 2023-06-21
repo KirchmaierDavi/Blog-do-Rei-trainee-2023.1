@@ -58,6 +58,9 @@ body{
     width: 300px;
 }
 
+.modal-button{
+    width: 300px;
+}
 
 @media only screen and (max-width: 1240px) {
 
@@ -95,6 +98,10 @@ textarea{
 
 .customize-colors-row>div{
     width: 45%;
+}
+
+.modal-button{
+    width: 200px;
 }
 
 }
