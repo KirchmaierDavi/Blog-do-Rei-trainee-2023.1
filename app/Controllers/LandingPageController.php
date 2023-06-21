@@ -12,7 +12,7 @@ class LandingPageController
     public function view()
     {
         $posts = App::get('database')->selectLastPosts('posts');
-        $users = App::get('database')->selectLastPosts('users');
+        $users = App::get('database')->selectAll('users');
         $tables = [
             'posts' => $posts,
             'users' => $users,
